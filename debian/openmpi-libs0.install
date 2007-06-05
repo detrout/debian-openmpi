@@ -1,0 +1,13 @@
+usr/lib/libmca_common_sm.so.0.0.0
+usr/lib/libmca_common_sm.so.0
+usr/lib/libmpi.so.0.0.0
+usr/lib/libmpi.so.0
+usr/lib/libmpi_cxx.so.0.0.0
+usr/lib/libmpi_cxx.so.0
+usr/lib/libopal.so.0.0.0
+usr/lib/libopal.so.0
+usr/lib/liborte.so.0.0.0
+usr/lib/liborte.so.0
+usr/lib/openmpi/*.so
+usr/lib/mpi.mod
+usr/lib/libmpi_f90.a

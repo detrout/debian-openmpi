@@ -1,0 +1,4 @@
+usr/include/*
+usr/lib/*.la
+usr/lib/openmpi/*.la
+usr/lib/*.so

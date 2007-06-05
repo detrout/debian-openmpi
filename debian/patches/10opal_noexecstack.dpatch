@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10opal_noexecstack.dpatch by Florian Ragwitz <rafl@debian.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Compile opal without executable stack
+
+@DPATCH@
+
+diff -Nur openmpi-1.0.2.orig/opal/asm/Makefile.am openmpi-1.0.1/opal/asm/Makefile.am
+--- openmpi-1.1.orig/opal/asm/Makefile.am	2005-11-11 20:21:26.000000000 +0100
++++ openmpi-1.1/opal/asm/Makefile.am	2006-01-16 22:20:45.340741088 +0100
+@@ -50,6 +50,7 @@
+ libasm_la_DEPENDENCIES = generated/@OMPI_ASM_FILE@
+ noinst_LTLIBRARIES = libasm.la
+ dist_libasm_la_SOURCES = asm.c
++AM_CCASFLAGS = -Wa,--noexecstack
+ 
+ EXTRA_DIST	= \
+ 	asm-data.txt \

@@ -1,0 +1,85 @@
+Source: openmpi
+Section: net
+Priority: optional
+Maintainer: Florian Ragwitz <rafl@debian.org>
+Build-Depends: debhelper (>= 5.0.0), dpatch, libibverbs-dev, gfortran, libsysfs-dev
+Standards-Version: 3.7.2
+
+Package: openmpi-bin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
+Suggests: gfortran
+Description: high performance message passing library
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ Features:
+  * Full MPI-2 standards conformance
+  * Thread safety and concurrency
+  * Dynamic process spawning
+  * High performance on all platforms
+  * Reliable and fast job management
+  * Network and process fault tolerance
+  * Support network heterogeneity
+  * Single library supports all networks
+  * Run-time instrumentation
+  * Many job schedulers supported
+  * Internationalized error messages
+  * Component-based design, documented APIs
+ .
+ This package contains the Open MPI utility programs.
+
+Package: openmpi-dev
+Section: libdevel
+Architecture: any
+Depends: openmpi-libs0 (= ${binary:Version})
+Conflicts: libopal-dev, pgapack
+Description: high performance message passing library
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ This package contains the header files which are needed to compile programs
+ against openmpi-libs.
+
+Package: openmpi-libs0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: high performance message passing library
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ This package contains the Open MPI shared libraries.
+
+Package: openmpi-common
+Architecture: all
+Description: high performance message passing library
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ This package contains platform independent files for Open MPI.
+
+Package: openmpi-dbg
+Section: devel
+Architecture: any
+Depends: openmpi-bin (= ${binary:Version}), openmpi-libs0 (= ${binary:Version})
+Description: high performance message passing library
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ This package ontains debugging symbols for Open MPI.

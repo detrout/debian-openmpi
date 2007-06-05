@@ -1,0 +1,114 @@
+#!/usr/bin/make -f
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_GNU_CPU  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_CPU)
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+ifeq (sparc,$(DEB_HOST_GNU_CPU))
+	CFLAGS += -mcpu=v9
+endif
+
+config.status: configure
+	dh_testdir
+	CFLAGS="$(CFLAGS)" ./configure --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc/openmpi --with-devel-headers
+
+
+build: build-arch build-indep
+
+build-arch: build-arch-stamp
+build-arch-stamp: patch-stamp config.status
+	$(MAKE) 
+	touch build-arch-stamp
+
+build-indep: build-indep-stamp
+build-indep-stamp:  config.status
+	#$(MAKE) doc
+	touch build-indep-stamp
+
+clean: clean1 unpatch
+clean1:
+	dh_testdir
+	dh_testroot
+	rm -rf build-arch-stamp build-indep-stamp debian/openmpi
+	xargs rm -f < debian/clean_symlinks
+	-$(MAKE) distclean
+	dh_clean 
+
+install: install-indep install-arch
+install-indep:
+	dh_testdir
+	dh_testroot
+	dh_clean -k -i 
+	dh_installdirs -i
+	dh_install -i --sourcedir=$(CURDIR)/debian/openmpi
+
+install-arch:
+	dh_testdir
+	dh_testroot
+	dh_clean -k -s 
+	dh_installdirs -popenmpi-libs0 -s /usr/share/lintian/overrides/
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
+	cp debian/openmpi/usr/bin/mpicc debian/openmpi/usr/bin/mpicc.openmpi
+	cp debian/openmpi/usr/bin/mpic++ debian/openmpi/usr/bin/mpic++.openmpi
+	cp debian/openmpi/usr/bin/mpif77 debian/openmpi/usr/bin/mpif77.openmpi
+	cp debian/openmpi/usr/bin/mpif90 debian/openmpi/usr/bin/mpif90.openmpi
+	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
+	install -m0644 debian/openmpi-libs0.lintian-overrides $(CURDIR)/debian/openmpi-libs0/usr/share/lintian/overrides/openmpi-libs0
+
+binary-indep: build-indep install-indep
+	dh_testdir -i
+	dh_testroot -i
+	dh_installchangelogs  -i
+	dh_installdocs -i
+	dh_installexamples -i
+	dh_installman -i
+	dh_link -i
+	dh_strip -i
+	dh_compress  -i
+	dh_fixperms -i
+	dh_makeshlibs -i
+	dh_installdeb -i
+	dh_shlibdeps -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+binary-arch: build-arch install-arch
+	dh_testdir -a
+	dh_testroot -a
+	dh_installchangelogs  -a
+	dh_installdocs -a
+	dh_installexamples -a
+	dh_installman -a
+	dh_link -a
+	dh_strip -a --dbg-package=openmpi-dbg
+	dh_compress  -a
+	dh_fixperms -a
+	dh_makeshlibs -a
+	dh_installdeb -a
+	dh_shlibdeps -a -l$(CURDIR)/debian/openmpi/lib -Lopenmpi-libs
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
+
+patch: patch-stamp
+patch-stamp:
+	dpatch apply-all
+	touch patch-stamp
+
+unpatch:
+	dpatch deapply-all
+	rm -rf patch-stamp debian/patched
+
+binary: binary-arch binary-indep
+.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch 

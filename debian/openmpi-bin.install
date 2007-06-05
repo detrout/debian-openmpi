@@ -1,0 +1,4 @@
+etc/*
+usr/bin/orte*
+usr/bin/ompi_info
+usr/bin/mpi*.openmpi

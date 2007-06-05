@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" != "upgrade" ]; then
+	update-alternatives --remove mpicc /usr/bin/mpicc.openmpi
+	update-alternatives --remove mpiexec /usr/bin/orterun
+fi
+
+#DEBHELPER#
+
+exit 0

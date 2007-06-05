@@ -1,0 +1,71 @@
+openmpi (1.1-2.5) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * High urgency upload for RC bugfix.
+  * Add missing build-dependency on libsysfs-dev, which is used in the build
+    but was previously pulled in via libibverbs-dev.
+
+ -- Steve Langasek <vorlon@debian.org>  Sun, 29 Apr 2007 22:03:58 -0700
+
+openmpi (1.1-2.4) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * 0-day alpha porter upload.
+  * Fix wrong inline assembler check on alpha: 'zero' is not recognized
+    as a mnemonic for $31 with binutils.  This broken check resulted
+    in various atomic operations remaining undefined, leading to a build
+    failure on alpha.  Likewise, fix the inline assembly provided in
+    opal/include/opal/sys/alpha/atomic.h so that it's valid under GNU
+    binutils.  Closes: #384792.
+
+ -- Steve Langasek <vorlon@debian.org>  Sun, 29 Apr 2007 02:27:51 -0700
+
+openmpi (1.1-2.3) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Add conflicts between openmpi-dev and libopal-dev, pgapack.
+    Closes: #404003, #404026
+
+ -- Andreas Barth <aba@not.so.argh.org>  Fri, 22 Dec 2006 13:57:13 +0000
+
+openmpi (1.1-2.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Remove --host=* from debian/rules to make autoconf not enable
+    cross-building mode.  Thanks to Steve Langasek for pointing this out.
+    Closes: #392633.
+   
+ -- Mark Hymers <mark@hymers.org.uk>  Sun, 15 Oct 2006 00:46:11 +0100
+
+openmpi (1.1-2.1) unstable; urgency=high
+
+  * NMU
+  * Make sparc build UltraSPARC-only, since upstream seems to have
+    dropped support for 32-bit machines.  closes: #386491.
+
+ -- Clint Adams <schizo@debian.org>  Tue, 26 Sep 2006 00:31:36 -0400
+
+openmpi (1.1-2) unstable; urgency=low
+
+  * Apply patch by Tilman Koschnick <til@subnetz.org> to add a new package
+    with debugging symbols (Closes: #383997).
+
+ -- Florian Ragwitz <rafl@debian.org>  Wed, 23 Aug 2006 12:43:16 +0200
+
+openmpi (1.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Applied patch by dann frazier <dannf@debian.org> to fix an implicit
+    pointer conversion on 64bit platforms (Closes: #377725).
+  * Fixed mix-up in package descriptions (Closes: #379594).
+  * Use the alternatives system for the mpi* executables in openmpi-bin
+    (Closes: #377297).
+
+ -- Florian Ragwitz <rafl@debian.org>  Mon,  7 Aug 2006 16:57:42 +0200
+
+openmpi (1.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #340426).
+
+ -- Florian Ragwitz <rafl@debian.org>  Fri,  6 Jan 2006 15:13:31 +0100
+

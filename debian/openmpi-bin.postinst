@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+update-alternatives --install /usr/bin/mpicc mpicc /usr/bin/mpicc.openmpi 40 \
+		--slave /usr/bin/mpic++ mpic++ /usr/bin/mpic++.openmpi \
+		--slave /usr/bin/mpicxx mpicxx /usr/bin/mpic++.openmpi \
+		--slave /usr/bin/mpiCC mpiCC /usr/bin/mpic++.openmpi \
+		--slave /usr/bin/mpif77 mpif77 /usr/bin/mpif77.openmpi \
+		--slave /usr/bin/mpif90 mpif90 /usr/bin/mpif90.openmpi
+
+update-alternatives --install /usr/bin/mpiexec mpiexec /usr/bin/orterun 40 \
+		--slave /usr/bin/mpirun mpirun /usr/bin/orterun
+
+#DEBHELPER#
+
+exit 0
