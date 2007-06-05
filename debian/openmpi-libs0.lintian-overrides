@@ -1,1 +1,1 @@
-openmpi-libs0: package-name-doesnt-match-sonames libmpi0 libmca-common_sm0 liborte0 libmpi-cxx0 libopal0
+openmpi-libs0: package-name-doesnt-match-sonames libmpi0 libopen-pal0 libmca-common_sm0 libopen-rte0 libmpi-f90-0 libmpi-cxx0 libmpi-f77-0

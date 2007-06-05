@@ -1,0 +1,17 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 30fix_manpage_link.dpatch by Tilman Koschnick <til@subnetz.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Fix link between manpages.
+
+@DPATCH@
+diff -urNad openmpi-1.2~/ompi/mpi/man/man3/MPI_Status_c2f.3 
+openmpi-1.2/ompi/mpi/man/man3/MPI_Status_c2f.3
+--- openmpi-1.2~/ompi/mpi/man/man3/MPI_Status_c2f.3     2006-11-09 
+19:53:42.000000000 +0100
++++ openmpi-1.2/ompi/mpi/man/man3/MPI_Status_c2f.3      2007-03-18 
+00:18:20.513262103 +0100
+@@ -1,2 +1,2 @@
+-.so man3/MPI_Status_c2f.3
++.so man3/MPI_Status_f2c.3
+ ' @(#)MPI_Status_c2f.3 1.12 06/03/09

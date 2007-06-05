@@ -20,7 +20,7 @@ endif
 
 config.status: configure
 	dh_testdir
-	CFLAGS="$(CFLAGS)" ./configure --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc/openmpi --with-devel-headers
+	CFLAGS="$(CFLAGS)" ./configure --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc/openmpi --with-devel-headers --enable-mpi-threads --enable-progress-threads
 
 
 build: build-arch build-indep
@@ -58,10 +58,12 @@ install-arch:
 	dh_clean -k -s 
 	dh_installdirs -popenmpi-libs0 -s /usr/share/lintian/overrides/
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
-	cp debian/openmpi/usr/bin/mpicc debian/openmpi/usr/bin/mpicc.openmpi
-	cp debian/openmpi/usr/bin/mpic++ debian/openmpi/usr/bin/mpic++.openmpi
-	cp debian/openmpi/usr/bin/mpif77 debian/openmpi/usr/bin/mpif77.openmpi
-	cp debian/openmpi/usr/bin/mpif90 debian/openmpi/usr/bin/mpif90.openmpi
+	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
+		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
+	done
+	chmod 644 debian/openmpi/usr/lib/mpi.mod
+	# TODO check if that works?!
+	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
 	install -m0644 debian/openmpi-libs0.lintian-overrides $(CURDIR)/debian/openmpi-libs0/usr/share/lintian/overrides/openmpi-libs0
 
