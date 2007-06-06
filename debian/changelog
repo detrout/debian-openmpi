@@ -9,7 +9,7 @@ openmpi (1.2.2-0.1) unstable; urgency=low
   [ Sylvestre Ledru ]
   * New upstream release 1.2.2 (Closes: #427356)
   * Patch removed: 20implicit_pointer_conversion.dpatch
-  * Apply all of Tilmam's patches below (Closes: #415338)
+  * Apply all of Tilman's patches below (Closes: #415338)
 
   [ Manuel Prinz ]
   * Patch removed: 30_alpha_inline_assembly.dpatch (Fixed upstream)
