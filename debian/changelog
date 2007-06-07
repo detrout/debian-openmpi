@@ -29,7 +29,7 @@ openmpi (1.2.2-0.1) unstable; urgency=low
   [ Andreas Barth ]
   * Spelling mistake in the description of the package (Closes: #390238)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Tue, 05 Jun 2007 23:38:44 +0200
+ -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>  Tue, 05 Jun 2007 23:38:44 +0200
 
 openmpi (1.1-2.5) unstable; urgency=high
 
