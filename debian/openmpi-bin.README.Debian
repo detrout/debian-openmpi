@@ -1,0 +1,24 @@
+OpenMPI for Debian
+------------------
+
+The current OpenMPI version of Debian uses the Debian Alternatives system.
+Altough OpenMPI might replace most of the existing MPI implementations in the
+future (see http://www.open-mpi.org/faq/?category=general#why), we decided to
+not affect any other MPI implementation already installed on your system. You
+can check which version of MPI you use with 
+
+  "update-alternatives --list mpirun"
+
+and list all installed implementations with
+
+  "update-alternatives --display mpirun".
+
+OpenMPI is only listed as default implementation if no other MPI implentation
+is present on the system. If you have several implementations installed, you
+have to enable OpenMPI explicitly with
+
+  "update-alternatives --set mpirun /usr/bin/mpirun.openmpi".
+
+This might change in future versions of the package.
+
+ -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Fri, 08 Jun 2007 12:10:33 +0200
