@@ -3,8 +3,8 @@
 set -e
 
 if [ "$1" != "upgrade" ]; then
-	update-alternatives --remove mpicc /usr/bin/mpicc.openmpi
-	update-alternatives --remove mpirun /usr/bin/orterun
+	update-alternatives --remove mpicc  /usr/bin/mpicc.openmpi
+	update-alternatives --remove mpirun /usr/bin/mpirun.openmpi
 fi
 
 #DEBHELPER#

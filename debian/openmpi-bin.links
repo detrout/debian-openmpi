@@ -1,3 +1,5 @@
+usr/bin/orterun         usr/bin/mpirun.openmpi
+usr/bin/orterun         usr/bin/mpiexec.openmpi
 usr/bin/opal_wrapper	usr/bin/mpic++.openmpi
 usr/bin/opal_wrapper	usr/bin/mpicc.openmpi
 usr/bin/opal_wrapper	usr/bin/mpiCC.openmpi
