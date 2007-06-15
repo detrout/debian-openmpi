@@ -1,0 +1,56 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 30_manpages_fix.diff.dpatch by Sylvestre Ledru <sylvestre.ledru@inria.fr>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Fixes problems with manpages
+
+@DPATCH@
+
+diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Abort.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Abort.3
+--- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Abort.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Abort.3	2007-06-15 11:16:50.000000000 +0200
+@@ -12,7 +12,7 @@
+ int MPI_Abort(MPI_Comm \fIcomm\fP, int\fI errorcode\fP)
+ 
+ .SH Fortran Syntax
+-.ftR
++.ft R
+ .nf
+ INCLUDE 'mpif.h'
+ MPI_ABORT(\fICOMM\fP, \fIERRORCODE\fP, \fIIERROR\fP)			
+diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Reduce.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Reduce.3
+--- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Reduce.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Reduce.3	2007-06-15 11:16:01.000000000 +0200
+@@ -178,7 +178,7 @@
+     RETURN
+ 
+ .SH MINLOC AND MAXLOC
+-.ftR
++.ft R
+ The operator MPI_MINLOC is used to compute a global minimum and also an index attached to the minimum value. MPI_MAXLOC similarly computes a global maximum and index. One application of these is to compute a global minimum (maximum) and the rank of the process containing this value.   
+ 
+ .sp
+diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Request_free.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Request_free.3
+--- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Request_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Request_free.3	2007-06-15 11:16:23.000000000 +0200
+@@ -23,7 +23,7 @@
+ void Request::Free()
+ 
+ .SH INPUT/OUTPUT PARAMETER
+-.ftR
++.ft R
+ .TP 1i
+ request
+       Communication request (handle).
+diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Scatter.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Scatter.3
+--- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Scatter.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Scatter.3	2007-06-15 11:16:54.000000000 +0200
+@@ -56,7 +56,7 @@
+ Communicator (handle).
+ 
+ .SH OUTPUT PARAMETERS
+-.ftR
++.ft R
+ .TP 1i
+ recvbuf
+ Address of receive buffer (choice).

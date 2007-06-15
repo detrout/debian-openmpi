@@ -2,7 +2,7 @@ OpenMPI for Debian
 ------------------
 
 The current OpenMPI version of Debian uses the Debian Alternatives system.
-Altough OpenMPI might replace most of the existing MPI implementations in the
+Although OpenMPI might replace most of the existing MPI implementations in the
 future (see http://www.open-mpi.org/faq/?category=general#why), we decided to
 not affect any other MPI implementation already installed on your system. You
 can check which version of MPI you use with 
