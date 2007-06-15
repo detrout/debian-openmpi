@@ -18,7 +18,7 @@ update-alternatives \
 
 update-alternatives \
 	--install /usr/bin/mpirun mpirun /usr/bin/mpirun.openmpi 5 \
-	--slave /usr/share/man/man1/mpirun.1.gz mpirun.1.gz /usr/share/man/man1/mpirun.openmpi.1.gz \
+	--slave /usr/share/man/man1/mpirun.1.gz mpirun.1.gz /usr/share/man/man1/mpirun.openmpi.1.gz
 
 update-alternatives \
 	--install /usr/bin/mpiexec mpiexec /usr/bin/mpiexec.openmpi 5 \
