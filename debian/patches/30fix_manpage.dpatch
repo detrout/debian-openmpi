@@ -8,7 +8,7 @@
 
 diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Abort.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Abort.3
 --- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Abort.3	2007-02-16 19:20:45.000000000 +0100
-+++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Abort.3	2007-06-15 11:16:50.000000000 +0200
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Abort.3	2007-06-15 11:32:04.000000000 +0200
 @@ -12,7 +12,7 @@
  int MPI_Abort(MPI_Comm \fIcomm\fP, int\fI errorcode\fP)
  
@@ -18,9 +18,21 @@ diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Abort.3 openmpi-1.2.2/ompi/
  .nf
  INCLUDE 'mpif.h'
  MPI_ABORT(\fICOMM\fP, \fIERRORCODE\fP, \fIIERROR\fP)			
+diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_File_write.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_File_write.3
+--- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_File_write.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_File_write.3	2007-06-15 11:53:19.000000000 +0200
+@@ -30,7 +30,7 @@
+ void MPI::File::Write(const void* \fIbuf\fP, int \fIcount\fP,
+ 	const MPI::Datatype& \fIdatatype\fP)
+ 
+-.SH INPUT\OUTPUT PARAMETER
++.SH INPUT/OUTPUT PARAMETER
+ .ft R
+ .TP 1i
+ fh
 diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Reduce.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Reduce.3
 --- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Reduce.3	2007-02-16 19:20:45.000000000 +0100
-+++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Reduce.3	2007-06-15 11:16:01.000000000 +0200
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Reduce.3	2007-06-15 11:32:04.000000000 +0200
 @@ -178,7 +178,7 @@
      RETURN
  
@@ -32,7 +44,7 @@ diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Reduce.3 openmpi-1.2.2/ompi
  .sp
 diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Request_free.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Request_free.3
 --- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Request_free.3	2007-02-16 19:20:45.000000000 +0100
-+++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Request_free.3	2007-06-15 11:16:23.000000000 +0200
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Request_free.3	2007-06-15 11:32:04.000000000 +0200
 @@ -23,7 +23,7 @@
  void Request::Free()
  
@@ -44,7 +56,7 @@ diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Request_free.3 openmpi-1.2.
        Communication request (handle).
 diff -urNad openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Scatter.3 openmpi-1.2.2/ompi/mpi/man/man3/MPI_Scatter.3
 --- openmpi-1.2.2.orig/ompi/mpi/man/man3/MPI_Scatter.3	2007-02-16 19:20:45.000000000 +0100
-+++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Scatter.3	2007-06-15 11:16:54.000000000 +0200
++++ openmpi-1.2.2/ompi/mpi/man/man3/MPI_Scatter.3	2007-06-15 11:32:04.000000000 +0200
 @@ -56,7 +56,7 @@
  Communicator (handle).
  
