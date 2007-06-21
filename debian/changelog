@@ -1,4 +1,4 @@
-openmpi (1.2.2-0.1) unstable; urgency=low
+openmpi (1.2.3-0.1) unstable; urgency=low
 
   * Non-Maintainer Upload (NMU).
 
@@ -7,6 +7,7 @@ openmpi (1.2.2-0.1) unstable; urgency=low
     (Closes: #405472)
 
   [ Sylvestre Ledru ]
+  * New upstream release 1.2.3
   * New upstream release 1.2.2 (Closes: #427356)
   * Patch removed: 20implicit_pointer_conversion.dpatch
   * Apply all of Tilman's patches below (Closes: #415338)
