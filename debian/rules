@@ -20,8 +20,15 @@ endif
 
 config.status: configure
 	dh_testdir
-	CFLAGS="$(CFLAGS)" ./configure --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc/openmpi --with-devel-headers --enable-mpi-threads --enable-progress-threads
-
+	CFLAGS="$(CFLAGS)" ./configure 				\
+			--build=$(DEB_BUILD_GNU_TYPE) 		\
+			--prefix=/usr 				\
+			--mandir=\$${prefix}/share/man 		\
+			--infodir=\$${prefix}/share/info 	\
+			--sysconfdir=/etc/openmpi 		\
+			--with-devel-headers 			\
+			--enable-mpi-threads 			\
+			--enable-progress-threads
 
 build: build-arch build-indep
 
@@ -76,9 +83,9 @@ binary-indep: build-indep install-indep
 	dh_testdir -i
 	dh_testroot -i
 	dh_installchangelogs  -i
-	dh_installdocs --all AUTHORS NEWS README LICENSE
+	dh_installdocs --all AUTHORS NEWS README
 #	dh_installexamples -i 
-	dh_installexamples -popenmpi-doc examples
+	dh_installexamples -popenmpi-doc examples/*
 	dh_installman -i
 	dh_link -i
 	dh_strip -i
@@ -95,7 +102,7 @@ binary-arch: build-arch install-arch
 	dh_testdir -a
 	dh_testroot -a
 	dh_installchangelogs  -a
-	dh_installdocs --all AUTHORS NEWS README LICENSE
+	dh_installdocs --all AUTHORS NEWS README
 	dh_installexamples -a
 	dh_installman -a
 	dh_link -a
