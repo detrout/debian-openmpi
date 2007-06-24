@@ -46,7 +46,7 @@ clean1:
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
 
-install: install-indep install-arch
+install: install-arch install-indep 
 install-indep:
 	dh_testdir
 	dh_testroot
@@ -77,7 +77,8 @@ binary-indep: build-indep install-indep
 	dh_testroot -i
 	dh_installchangelogs  -i
 	dh_installdocs -i
-	dh_installexamples -i
+#	dh_installexamples -i 
+	dh_installexamples -popenmpi-doc examples
 	dh_installman -i
 	dh_link -i
 	dh_strip -i
