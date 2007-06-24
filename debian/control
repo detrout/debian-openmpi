@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Debian OpenMPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
 Uploaders: Dirk Eddelbuettel <edd@debian.org>
-Build-Depends: debhelper (>= 5.0.0), dpatch, libibverbs-dev, gfortran, libsysfs-dev, automake
+Build-Depends: debhelper (>= 5.0.0), dpatch, libibverbs-dev, gfortran, libsysfs-dev, automake, gcc (>= 4:4.1.2)
 Standards-Version: 3.7.2
 XS-Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 XS-Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
@@ -36,10 +36,10 @@ Description: high performance message passing library
  .
  This package contains the Open MPI utility programs.
 
-Package: openmpi-dev
+Package: libopenmpi-dev
 Section: libdevel
 Architecture: any
-Depends: openmpi-libs0 (= ${binary:Version})
+Depends: libopenmpi1 (= ${binary:Version})
 Conflicts: libopal-dev, pgapack
 Description: high performance message passing library
  Open MPI is a project combining technologies and resources from several other
@@ -49,9 +49,9 @@ Description: high performance message passing library
  and computer science researchers.
  .
  This package contains the header files which are needed to compile programs
- against openmpi-libs.
+ against libopenmpi1.
 
-Package: openmpi-libs0
+Package: libopenmpi1
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -75,9 +75,11 @@ Description: high performance message passing library
  .
  This package contains platform independent files for Open MPI.
 
-Package: openmpi-mpidoc
+Package: openmpi-doc
 Architecture: all
-Conflicts: mpi-doc, lam-mpidoc, lam4-dev
+Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc
+Replaces: openmpi-mpidoc
+Provides: openmpi-mpidoc
 Description: high performance message passing library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -88,10 +90,13 @@ Description: high performance message passing library
  This package contains man pages describing the Message Passing Interface
  standard.
 
-Package: openmpi-dbg
+Package: libopenmpi-dbg
 Section: devel
 Architecture: any
-Depends: openmpi-bin (= ${binary:Version}), openmpi-libs0 (= ${binary:Version})
+Depends: openmpi-bin (= ${binary:Version}), libopenmpi1 (= ${binary:Version})
+Conflicts: openmpi-dbg
+Replaces: openmpi-dbg
+Provides: openmpi-dbg
 Description: high performance message passing library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best

@@ -58,16 +58,19 @@ install-arch:
 	dh_testdir
 	dh_testroot
 	dh_clean -k -s 
-	dh_installdirs -popenmpi-libs0 -s /usr/share/lintian/overrides/
+	dh_installdirs -plibopenmpi1 -s /usr/share/lintian/overrides/
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
 	done
+	for f in ompi_info opal_wrapper orted; do \
+		cp debian/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.1 ; \
+	done
 	chmod 644 debian/openmpi/usr/lib/mpi.mod
-	# TODO check if that works?!
+        # TODO check if that works?!
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
-	install -m0644 debian/openmpi-libs0.lintian-overrides $(CURDIR)/debian/openmpi-libs0/usr/share/lintian/overrides/openmpi-libs0
+	install -m0644 debian/libopenmpi1.lintian-overrides $(CURDIR)/debian/libopenmpi1/usr/share/lintian/overrides/libopenmpi1
 
 binary-indep: build-indep install-indep
 	dh_testdir -i
@@ -95,12 +98,12 @@ binary-arch: build-arch install-arch
 	dh_installexamples -a
 	dh_installman -a
 	dh_link -a
-	dh_strip -a --dbg-package=openmpi-dbg
+	dh_strip -a --dbg-package=libopenmpi-dbg
 	dh_compress  -a
 	dh_fixperms -a
 	dh_makeshlibs -a
 	dh_installdeb -a
-	dh_shlibdeps -a -l$(CURDIR)/debian/openmpi/lib -Lopenmpi-libs
+	dh_shlibdeps -a -l$(CURDIR)/debian/openmpi/lib -Llibopenmpi1
 	dh_gencontrol -a
 	dh_md5sums -a
 	dh_builddeb -a
