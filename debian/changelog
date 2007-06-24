@@ -1,3 +1,13 @@
+openmpi (1.2.3-1) unstable; urgency=low
+
+  * UNRELEASED
+  
+  [ Dirk Eddelbuettel ]
+  * debian/rules: Ensure AUTHORS NEWS README LICENSE are installed everywhere
+  * debian/rules: Add examples/ directory to openmpi-doc
+
+ --
+
 openmpi (1.2.3-0) unstable; urgency=low
 
   * First release by the new maintainer group 'pkg-openmpi' 
