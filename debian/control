@@ -40,7 +40,9 @@ Package: libopenmpi-dev
 Section: libdevel
 Architecture: any
 Depends: libopenmpi1 (= ${binary:Version})
-Conflicts: libopal-dev, pgapack
+Conflicts: libopal-dev, pgapack, openmpi-dev
+Replaces: openmpi-dev
+Provides: openmpi-dev
 Description: high performance message passing library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -55,6 +57,9 @@ Package: libopenmpi1
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: openmpi-libs0
+Replaces: openmpi-libs0
+Provides: openmpi-libs0
 Description: high performance message passing library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
