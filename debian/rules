@@ -45,7 +45,7 @@ build-indep-stamp:  configure-stamp
 	touch build-indep-stamp
 
 test: test-stamp
-test-stamp: build
+test-stamp: build-arch-stamp build-indep-stamp
 	-$(MAKE) check 
 	touch test-stamp
 
@@ -133,4 +133,4 @@ unpatch:
 	rm -rf patch-stamp debian/patched
 
 binary: binary-arch binary-indep
-.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch patch configure
+.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch patch configure 
