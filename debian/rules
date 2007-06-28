@@ -18,7 +18,8 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
 
-config.status: configure
+configure: patch configure-stamp
+configure-stamp: 
 	dh_testdir
 	CFLAGS="$(CFLAGS)" ./configure 				\
 			--build=$(DEB_BUILD_GNU_TYPE) 		\
@@ -29,31 +30,37 @@ config.status: configure
 			--with-devel-headers 			\
 			--enable-mpi-threads 			\
 			--enable-progress-threads
+	touch configure-stamp
 
-build: build-arch build-indep
+build: patch configure build-arch build-indep
 
 build-arch: build-arch-stamp
-build-arch-stamp: patch-stamp config.status
+build-arch-stamp: patch-stamp configure-stamp
 	$(MAKE) 
 	touch build-arch-stamp
 
 build-indep: build-indep-stamp
-build-indep-stamp:  config.status
-	#$(MAKE) doc
+build-indep-stamp:  configure-stamp
+        #$(MAKE) doc
 	touch build-indep-stamp
 
-clean: clean1 unpatch
-clean1:
+test: test-stamp
+test-stamp: build
+	-$(MAKE) check 
+	touch test-stamp
+
+clean: clean-work unpatch
+clean-work:
 	dh_testdir
 	dh_testroot
-	rm -rf build-arch-stamp build-indep-stamp debian/openmpi
+	rm -rf build-arch-stamp build-indep-stamp configure-stamp test-stamp debian/openmpi 
 	xargs rm -f < debian/clean_symlinks
 	-$(MAKE) distclean
         # some additional cleanups
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
 
-install: install-arch install-indep 
+install: test install-arch install-indep 
 install-indep:
 	dh_testdir
 	dh_testroot
@@ -126,4 +133,4 @@ unpatch:
 	rm -rf patch-stamp debian/patched
 
 binary: binary-arch binary-indep
-.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch 
+.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch patch configure
