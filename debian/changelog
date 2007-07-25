@@ -3,8 +3,10 @@ openmpi (1.2.3-2) unstable; urgency=low
   [ Manuel Prinz ]
   * Fixed: FTBFS on GNU/kFreeBSD (Closes: #433142). Thanks to Petr Salinger
     for providing the patch!
+  * debian/control: Changed priority to "extra" to comply with the Debian
+    Policy, section 2.5.
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 25 Jul 2007 12:54:08 +0200
+ -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 25 Jul 2007 16:01:25 +0200
 
 openmpi (1.2.3-1) unstable; urgency=low
 
