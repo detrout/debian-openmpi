@@ -13,7 +13,7 @@ Package: openmpi-bin
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
 Suggests: gfortran
-Description: high performance message passing library
+Description: high performance message passing library -- binaries
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
@@ -43,7 +43,7 @@ Depends: libopenmpi1 (= ${binary:Version})
 Conflicts: libopal-dev, pgapack, openmpi-dev
 Replaces: openmpi-dev
 Provides: openmpi-dev
-Description: high performance message passing library
+Description: high performance message passing library -- header files
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
@@ -60,7 +60,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: openmpi-libs0
 Replaces: openmpi-libs0
 Provides: openmpi-libs0
-Description: high performance message passing library
+Description: high performance message passing library -- shared library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
@@ -71,7 +71,7 @@ Description: high performance message passing library
 
 Package: openmpi-common
 Architecture: all
-Description: high performance message passing library
+Description: high performance message passing library -- common files
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
@@ -85,7 +85,7 @@ Architecture: all
 Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc
 Replaces: openmpi-mpidoc
 Provides: openmpi-mpidoc
-Description: high performance message passing library
+Description: high performance message passing library -- man pages
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
@@ -102,7 +102,7 @@ Depends: openmpi-bin (= ${binary:Version}), libopenmpi1 (= ${binary:Version})
 Conflicts: openmpi-dbg
 Replaces: openmpi-dbg
 Provides: openmpi-dbg
-Description: high performance message passing library
+Description: high performance message passing library -- debug library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
  MPI library available. A completely new MPI-2 compliant implementation, Open
