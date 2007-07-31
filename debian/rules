@@ -55,7 +55,7 @@ clean-work:
 	dh_testroot
 	rm -rf build-arch-stamp build-indep-stamp configure-stamp test-stamp debian/openmpi 
 	xargs rm -f < debian/clean_symlinks
-	-$(MAKE) distclean
+	[ ! -f Makefile ] || $(MAKE) distclean
         # some additional cleanups
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
