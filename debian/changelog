@@ -1,3 +1,11 @@
+openmpi (1.2.3-3~1) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * Fixed: openmpi-bin: libibverbs only available for Linux. Thanks to 
+    Uwe Hermann for providing the patch! (Closes: #435573)
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Thu, 02 Aug 2007 18:36:50 +0200
+
 openmpi (1.2.3-2) unstable; urgency=low
 
   [ Dirk Eddelbuettel ]

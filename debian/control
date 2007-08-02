@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Debian OpenMPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
 Uploaders: Dirk Eddelbuettel <edd@debian.org>
-Build-Depends: debhelper (>= 5.0.0), dpatch, libibverbs-dev, gfortran, libsysfs-dev, automake, gcc (>= 4:4.1.2)
+Build-Depends: debhelper (>= 5.0.0), dpatch, libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], gfortran, libsysfs-dev, automake, gcc (>= 4:4.1.2)
 Standards-Version: 3.7.2
 XS-Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 XS-Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
