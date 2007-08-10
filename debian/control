@@ -81,6 +81,7 @@ Description: high performance message passing library -- common files
  This package contains platform independent files for Open MPI.
 
 Package: openmpi-doc
+Section: doc
 Architecture: all
 Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc
 Replaces: openmpi-mpidoc
