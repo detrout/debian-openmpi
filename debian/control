@@ -10,7 +10,7 @@ XS-Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 XS-Autobuild: yes
 
 Package: openmpi-bin
-Architecture: any
+Architecture: alpha amd64 i386 ia64 powerpc 
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
 Suggests: gfortran
 Description: high performance message passing library -- binaries
@@ -38,7 +38,7 @@ Description: high performance message passing library -- binaries
 
 Package: libopenmpi-dev
 Section: libdevel
-Architecture: any
+Architecture: alpha amd64 i386 ia64 powerpc 
 Depends: libopenmpi1 (= ${binary:Version})
 Conflicts: libopal-dev, pgapack, openmpi-dev
 Replaces: openmpi-dev
@@ -55,7 +55,7 @@ Description: high performance message passing library -- header files
 
 Package: libopenmpi1
 Section: libs
-Architecture: any
+Architecture: alpha amd64 i386 ia64 powerpc 
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: openmpi-libs0
 Replaces: openmpi-libs0
@@ -98,7 +98,7 @@ Description: high performance message passing library -- man pages
 
 Package: libopenmpi-dbg
 Section: devel
-Architecture: any
+Architecture: alpha amd64 i386 ia64 powerpc 
 Depends: openmpi-bin (= ${binary:Version}), libopenmpi1 (= ${binary:Version})
 Conflicts: openmpi-dbg
 Replaces: openmpi-dbg

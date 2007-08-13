@@ -1,11 +1,18 @@
-openmpi (1.2.3-3~1) unstable; urgency=low
+openmpi (1.2.3-3) unstable; urgency=low
 
   [ Manuel Prinz ]
   * Fixed: openmpi-bin: libibverbs only available for Linux. Thanks to 
     Uwe Hermann for providing the patch! (Closes: #435573)
   * Changed section of openmpi-doc to doc to satisfy overrides
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Fri, 10 Aug 2007 13:07:27 +0200
+  [ Dirk Eddelbuettel ]
+  * debian/control: Trying something moderately radical here -- we are 
+    switching the binary packages from 'Architecture: any' to the set
+    of five architectures that can actually build the package, given the
+    lack of upstream support for atomistic operations on the other 
+    architectures (c.f. Debian BTS for openmpi)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sun, 12 Aug 2007 19:43:29 -0500
 
 openmpi (1.2.3-2) unstable; urgency=low
 
