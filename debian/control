@@ -10,7 +10,7 @@ XS-Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 XS-Autobuild: yes
 
 Package: openmpi-bin
-Architecture: alpha amd64 i386 ia64 powerpc 
+Architecture: alpha amd64 i386 ia64 powerpc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
 Suggests: gfortran
 Description: high performance message passing library -- binaries

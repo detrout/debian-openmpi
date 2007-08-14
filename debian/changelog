@@ -1,3 +1,10 @@
+openmpi (1.2.3-4~1) unstable; urgency=low
+
+  * Fixed: openmpi-bin: FTBFS on kFreeBSD and maybe Hurd. Thanks to 
+    Uwe Hermann for providing the patch! (Closes: #437839)
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Tue, 14 Aug 2007 15:53:27 +0200
+
 openmpi (1.2.3-3) unstable; urgency=low
 
   [ Manuel Prinz ]
