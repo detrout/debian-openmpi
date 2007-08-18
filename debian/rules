@@ -27,9 +27,10 @@ configure-stamp:
 			--mandir=\$${prefix}/share/man 		\
 			--infodir=\$${prefix}/share/info 	\
 			--sysconfdir=/etc/openmpi 		\
-			--with-devel-headers 			\
-			--enable-mpi-threads 			\
-			--enable-progress-threads
+			--with-devel-headers
+# Thread support disabled because it's broken, see bug #435581
+#			--enable-mpi-threads 			\
+#			--enable-progress-threads
 	touch configure-stamp
 
 build: patch configure build-arch build-indep

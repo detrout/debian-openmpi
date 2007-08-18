@@ -1,9 +1,12 @@
-openmpi (1.2.3-4~2) unstable; urgency=low
+openmpi (1.2.3-4~3) unstable; urgency=low
 
+  [ Manuel Prinz ]
   * Fixed: openmpi-bin: FTBFS on kFreeBSD and maybe Hurd. Thanks to
     Uwe Hermann for providing the patches! (Closes: #437839)
+  * debian/rules: Disabled threading support (Closes: #435581)
+  * debian/openmpi-bin.README.Debian: Documented disabling of threading
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Fri, 17 Aug 2007 12:41:14 +0200
+ -- Manuel Prinz <debian@pinguinkiste.de>  Sat, 18 Aug 2007 11:06:09 +0200
 
 openmpi (1.2.3-3) unstable; urgency=low
 
