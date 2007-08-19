@@ -4,7 +4,7 @@ OpenMPI for Debian
 Thread support
 --------------
 
-Thread support was enabled until package version 1.2.3.-4. It is known to be
+Thread support was enabled until package version 1.2.3-3. It is known to be
 broken in upstream and led to segfaults on several architectures.
 
 We disabled threading for this reason in 1.2.3-4 and will reenable it as soon

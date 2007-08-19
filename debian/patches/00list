@@ -1,6 +1,6 @@
-10opal_noexecstack
+#10opal_noexecstack
 20fix_manpage_link
 30fix_manpage
 31fix_manpages_lintian
 50fix_kfreebsd_build
-99autoconf
+#99autoconf
