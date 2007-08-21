@@ -1,4 +1,4 @@
-openmpi (1.2.3-4~5) unstable; urgency=low
+openmpi (1.2.3-4) unstable; urgency=low
 
   [ Manuel Prinz ]
   * Fixed: openmpi-bin: FTBFS on kFreeBSD and maybe Hurd. Thanks to
@@ -9,7 +9,11 @@ openmpi (1.2.3-4~5) unstable; urgency=low
     because they are no longer needed. Thanks to Brian Barrett for
     clarification.
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 19 Aug 2007 03:25:57 +0200
+  [ Dirk Eddelbuettel ]
+  * debian/control: Add 'kfreebsd-i386 kfreebsd-amd64 hurd-i386' to list 
+    of build architecture (via Uwe's patch referenced above)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 20 Aug 2007 20:10:46 -0500
 
 openmpi (1.2.3-3) unstable; urgency=low
 
