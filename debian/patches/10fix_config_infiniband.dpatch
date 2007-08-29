@@ -1,0 +1,22 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 10fix_config_infiniband.dpatch by Manuel Prinz <debian@pinguinkiste.de>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Disables InfiniBand in the configuration to suppress warnings if it's
+## DP: not available.
+## DP: Fixes Bug #439730: Please shut up libibverbs
+
+@DPATCH@
+diff -urNad openmpi-1.2.3~/opal/etc/openmpi-mca-params.conf openmpi-1.2.3/opal/etc/openmpi-mca-params.conf
+--- openmpi-1.2.3~/opal/etc/openmpi-mca-params.conf	2007-02-16 19:20:43.000000000 +0100
++++ openmpi-1.2.3/opal/etc/openmpi-mca-params.conf	2007-08-29 10:56:00.000000000 +0200
+@@ -54,5 +54,9 @@
+ # Change component loading path
+ #   component_path = /usr/local/lib/openmpi:~/my_openmpi_components
+ 
++# Disable use of InfiniBand to get rid of warnings on systems not supporting
++# it. If you want to use InfiniBand, remove the next line.
++btl = ^openib
++
+ # See "ompi_info --param all all" for a full listing of Open MPI MCA
+ # parameters available and their default values.

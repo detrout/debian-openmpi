@@ -1,3 +1,10 @@
+openmpi (1.2.3-5~1) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * Patch added: Please shut up libibverbs (Closes: #439730)
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 29 Aug 2007 11:09:37 +0200
+
 openmpi (1.2.3-4) unstable; urgency=low
 
   [ Manuel Prinz ]
