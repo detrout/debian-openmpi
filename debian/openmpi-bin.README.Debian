@@ -4,11 +4,22 @@ OpenMPI for Debian
 InfiniBand support
 ------------------
 
-InfiniBand support is build into the package but disabled by default in
-/etc/openmpi/openmpi-mca-params.conf. This was done to suppress warnings on
-systems that don't have support for InfiniBand. To enable it, remove "openib"
-from the btl list, or remove the whole line as "openib" is the only listed
-component at present. See http://bugs.debian.org/439730 for the discussion.
+InfiniBand support is build into the package and enabled by default. On
+systems that don't have InfiniBand, a warning like this will be issued:
+
+  libibverbs: Fatal: couldn't read uverbs ABI version.
+  --------------------------------------------------------------------------
+  [0,1,2]: OpenIB on host xyz was unable to find any HCAs.
+  Another transport will be used instead, although this may result in 
+  lower performance.
+  --------------------------------------------------------------------------
+
+To get rid of the warning, you can either disable the use of the "openib" btl
+in /etc/openmpi/openmpi-mca-params.conf or pass "--mca btl ^openib" to mpirun
+or mpiexec. The configuration file contains a line to disable InfiniBand, you
+just have to comment it out.
+
+Please see http://bugs.debian.org/439730 for a discussion on that topic.
 
 
 Thread support
@@ -48,4 +59,4 @@ have to enable OpenMPI explicitly with
 
 This might change in future versions of the package.
 
- -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Wed, 29 Aug 2007 11:21:28 +0200
+ -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Thu, 30 Aug 2007 10:40:59 +0200
