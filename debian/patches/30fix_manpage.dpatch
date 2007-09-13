@@ -1,7 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
 ## 30_manpages_fix.diff.dpatch by Sylvestre Ledru <sylvestre.ledru@inria.fr>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Fixes problems with manpages
 
 @DPATCH@

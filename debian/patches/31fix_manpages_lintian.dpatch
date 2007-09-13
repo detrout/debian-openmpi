@@ -1,7 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
 ## 31_manpages_lintian.dpatch by Dirk Eddelbuettel <edd@debian.org>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Fixes lintian errors  with manpages
 
 @DPATCH@

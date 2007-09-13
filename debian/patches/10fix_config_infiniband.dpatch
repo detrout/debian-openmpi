@@ -1,7 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
 ## 10fix_config_infiniband.dpatch by Manuel Prinz <debian@pinguinkiste.de>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Adds a template to easily disable Infiniband support to get rid of
 ## DP: warnings. Fixes Bug #439730: Please shut up libibverbs
 

@@ -1,7 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
 ## 30fix_manpage_link.dpatch by Tilman Koschnick <til@subnetz.org>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Fix link between manpages.
 
 @DPATCH@

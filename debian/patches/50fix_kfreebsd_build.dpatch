@@ -1,7 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
 ## 50fix_kfreebsd_build.dpatch by Manuel Prinz <debian@pinguinkiste.de>
 ##
-## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Patch provided by Petr Salinger <Petr.Salinger@seznam.cz>
 ## DP: Fixes #433142: openmpi: FTBFS on GNU/kFreeBSD
 ## DP: Included in Upstream SVN commit #15592, so this patch can possibly
