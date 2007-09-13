@@ -1,9 +1,7 @@
 etc/*
 usr/bin/ompi_info
-usr/bin/opal_wrapper
 usr/bin/orted
 usr/bin/orterun
-usr/share/man/man1/*.openmpi.1
-usr/share/man/man1/opal*
-usr/share/man/man1/orte*
 usr/share/man/man1/ompi_info.1
+usr/share/man/man1/orted.1
+usr/share/man/man1/orterun.1

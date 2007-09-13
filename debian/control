@@ -50,8 +50,8 @@ Description: high performance message passing library -- header files
  MPI offers advantages for system and software vendors, application developers
  and computer science researchers.
  .
- This package contains the header files which are needed to compile programs
- against libopenmpi1.
+ This package contains the header files and compiler wrappers which are needed
+ to compile and link programs against libopenmpi1.
 
 Package: libopenmpi1
 Section: libs

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" != "upgrade" ]; then
+	update-alternatives --remove mpicc  /usr/bin/mpicc.openmpi
+fi
+
+#DEBHELPER#
+
+exit 0
