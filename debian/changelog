@@ -1,18 +1,15 @@
 openmpi (1.2.4-0) unstable; urgency=low
-	
-  [ Sylvestre Ledru ]
-  * New upstream release 1.2.4
-  * debian/patches: Removed 50fix_kfreebsd_build patch (Fixed upstream)
-	
- -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 26 Sep 2007 16:38:41 +0200
 
-openmpi (1.2.3-5~2) unstable; urgency=low
+  * New upstream release
+
+  [ Sylvestre Ledru ]
+  * debian/patches: Removed 50fix_kfreebsd_build patch (Fixed upstream)
 
   [ Manuel Prinz ]
   * Patch added: Please shut up libibverbs (Closes: #439730)
   * Moved compiler wrappers from package openmpi-bin to libopenmpi-dev.
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Thu, 13 Sep 2007 17:07:00 +0200
+ -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 26 Sep 2007 17:29:32 +0200
 
 openmpi (1.2.3-4) unstable; urgency=low
 
