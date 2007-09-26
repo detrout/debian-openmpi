@@ -1,3 +1,11 @@
+openmpi (1.2.4-0) unstable; urgency=low
+	
+  [ Sylvestre Ledru ]
+  * New upstream release 1.2.4
+  * debian/patches: Removed 50fix_kfreebsd_build patch (Fixed upstream)
+	
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Wed, 26 Sep 2007 16:38:41 +0200
+
 openmpi (1.2.3-5~2) unstable; urgency=low
 
   [ Manuel Prinz ]
