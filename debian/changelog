@@ -9,7 +9,10 @@ openmpi (1.2.4-0) unstable; urgency=low
   * Patch added: Please shut up libibverbs (Closes: #439730)
   * Moved compiler wrappers from package openmpi-bin to libopenmpi-dev.
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 26 Sep 2007 17:29:32 +0200
+  [ Dirk Eddelbuettel ]
+  * Debian build and upload
+  
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 26 Sep 2007 22:07:15 -0500
 
 openmpi (1.2.3-4) unstable; urgency=low
 
