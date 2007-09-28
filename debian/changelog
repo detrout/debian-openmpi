@@ -1,10 +1,13 @@
-openmpi (1.2.4-1~1) unstable; urgency=low
+openmpi (1.2.4-1) unstable; urgency=low
 
   [ Manuel Prinz ]
   * debian/control: Modified package relationships to prevent problems when
     upgrading from 1.2.3-4 (Closes: #444432)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Fri, 28 Sep 2007 19:03:59 +0200
+  [ Dirk Eddelbuettel ]
+  * Debian build and upload
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri, 28 Sep 2007 16:25:13 -0500
 
 openmpi (1.2.4-0) unstable; urgency=low
 
