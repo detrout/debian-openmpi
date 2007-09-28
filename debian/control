@@ -12,8 +12,6 @@ XS-Autobuild: yes
 Package: openmpi-bin
 Architecture: alpha amd64 i386 ia64 powerpc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
-Conflicts: openmpi-bin (<= 1.2.3)
-Replaces: openmpi-bin (<= 1.2.3)
 Suggests: gfortran
 Description: high performance message passing library -- binaries
  Open MPI is a project combining technologies and resources from several other
@@ -43,7 +41,7 @@ Section: libdevel
 Architecture: alpha amd64 i386 ia64 powerpc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: libopenmpi1 (= ${binary:Version})
 Conflicts: libopal-dev, pgapack, openmpi-dev
-Replaces: openmpi-dev, openmpi-bin (<= 1.2.3)
+Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
 Provides: openmpi-dev
 Description: high performance message passing library -- header files
  Open MPI is a project combining technologies and resources from several other
