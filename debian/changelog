@@ -1,9 +1,12 @@
-openmpi (1.2.4-2~1) unstable; urgency=low
+openmpi (1.2.4-2) unstable; urgency=low
 
   [ Manuel Prinz ]
   * debian/control: Added sparc to list of supported architectures
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 30 Sep 2007 14:11:51 +0200
+  [ Dirk Eddelbuettel ]
+  * Debian build and upload
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue, 02 Oct 2007 22:04:04 -0500
 
 openmpi (1.2.4-1) unstable; urgency=low
 
