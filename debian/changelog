@@ -1,3 +1,11 @@
+openmpi (1.2.4-3~1) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * debian/control: Added openmpi-common to libopenmpi-dev's Depends
+    (Closes: #445230)
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Fri, 05 Oct 2007 00:53:55 +0200
+
 openmpi (1.2.4-2) unstable; urgency=low
 
   [ Manuel Prinz ]
