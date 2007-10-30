@@ -1,3 +1,11 @@
+openmpi (1.2.4-4) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * debian/control: XS-Vcs-* fields renamed to Vcs-*
+  * debian/control: Homepage field added
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Tue, 30 Oct 2007 18:39:38 +0100
+
 openmpi (1.2.4-3) unstable; urgency=low
 
   [ Manuel Prinz ]
