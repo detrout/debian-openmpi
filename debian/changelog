@@ -5,10 +5,11 @@ openmpi (1.2.4-4) unstable; urgency=low
     - Renamed XS-Vcs-* fields to Vcs-*
     - Added Homepage field
     - Removed Build-Depends on libsysfs-dev (Closes: #449084)
+    - Removed Build-Depends on automake
     - Added myself to Uploaders field
   * debian/rules: Added cross-compilation support
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 11 Nov 2007 23:44:11 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 11 Nov 2007 23:50:11 +0100
 
 openmpi (1.2.4-3) unstable; urgency=low
 
