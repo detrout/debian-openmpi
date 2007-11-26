@@ -1,15 +1,19 @@
 openmpi (1.2.4-4) unstable; urgency=low
 
   [ Manuel Prinz ]
-  * debian/rules: Added cross-compilation support
+  * debian/rules: Several minor changes
+    - Added cross-compilation support
+    - Replaced (un)patch targets with dpatch's makefile snippet
   * debian/control: Several cosmetic changes to control fields
     - XS-Vcs-*: Renamed fields to Vcs-*
     - Homepage: Newly added
     - Build-Depends: Removed libsysfs-dev (Closes: #449084)
     - Build-Depends: Removed automake
     - Uploaders: Added myself
+  * Moved include files and libraries to /usr/lib/openmpi and use the "mpi"
+    alternative. Thanks to Nicholas Breen for assistance! (Closes: #452047)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Mon, 12 Nov 2007 00:30:26 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 21 Nov 2007 15:51:45 +0100
 
 openmpi (1.2.4-3) unstable; urgency=low
 

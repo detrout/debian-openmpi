@@ -3,7 +3,7 @@
 set -e
 
 if [ "$1" != "upgrade" ]; then
-	update-alternatives --remove mpicc  /usr/bin/mpicc.openmpi
+	update-alternatives --remove mpi /usr/lib/openmpi/include
 fi
 
 #DEBHELPER#

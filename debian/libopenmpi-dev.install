@@ -1,8 +1,8 @@
 usr/bin/opal_wrapper
-usr/include/*
-usr/lib/*.la
-usr/lib/openmpi/*.la
-usr/lib/*.so
+usr/lib/openmpi/include/*
+usr/lib/openmpi/lib/*.la
+usr/lib/openmpi/lib/openmpi/*.la
+usr/lib/openmpi/lib/*.so
 usr/share/man/man1/mpicc.openmpi.1
 usr/share/man/man1/mpic++.openmpi.1
 usr/share/man/man1/mpicxx.openmpi.1
