@@ -4,6 +4,7 @@ openmpi (1.2.4-4) unstable; urgency=low
   * debian/rules: Several minor changes
     - Added cross-compilation support
     - Replaced (un)patch targets with dpatch's makefile snippet
+  * debian/control: Changed Standards-Version to match latest policy
   * debian/control: Several cosmetic changes to control fields
     - XS-Vcs-*: Renamed fields to Vcs-*
     - Homepage: Newly added
@@ -13,7 +14,7 @@ openmpi (1.2.4-4) unstable; urgency=low
   * Moved include files and libraries to /usr/lib/openmpi and use the "mpi"
     alternative. Thanks to Nicholas Breen for assistance! (Closes: #452047)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 21 Nov 2007 15:51:45 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Mon, 03 Dec 2007 11:29:38 +0100
 
 openmpi (1.2.4-3) unstable; urgency=low
 
