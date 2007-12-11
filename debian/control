@@ -9,6 +9,7 @@ Standards-Version: 3.7.3
 Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 XS-Autobuild: yes
+XS-Dm-Upload-Allowed: yes
 
 Package: openmpi-bin
 Architecture: alpha amd64 i386 ia64 powerpc sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
