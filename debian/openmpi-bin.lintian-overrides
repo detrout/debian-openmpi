@@ -1,0 +1,3 @@
+openmpi-bin: binary-or-shlib-defines-rpath ./usr/bin/ompi_info /usr/lib/openmpi/lib
+openmpi-bin: binary-or-shlib-defines-rpath ./usr/bin/orted /usr/lib/openmpi/lib
+openmpi-bin: binary-or-shlib-defines-rpath ./usr/bin/orterun /usr/lib/openmpi/lib
