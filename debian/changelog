@@ -14,9 +14,11 @@ openmpi (1.2.4-4) unstable; urgency=low
     - Uploaders: Added myself
   * Moved include files and libraries to /usr/lib/openmpi and use the "mpi"
     alternative. Thanks to Nicholas Breen for assistance! (Closes: #452047)
-  * 
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Tue, 11 Dec 2007 15:02:32 +0100
+  [ Dirk Eddelbuettel ]
+  * Debian build and upload
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 12 Dec 2007 09:40:29 -0600
 
 openmpi (1.2.4-3) unstable; urgency=low
 
