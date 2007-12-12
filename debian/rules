@@ -83,7 +83,9 @@ install-arch:
 	dh_testdir
 	dh_testroot
 	dh_clean -k -s 
-	dh_installdirs -plibopenmpi1 -plibopenmpi-dev -popenmpi-bin -s /usr/share/lintian/overrides/
+	dh_installdirs -plibopenmpi1    -s /usr/share/lintian/overrides/
+	dh_installdirs -plibopenmpi-dev -s /usr/share/lintian/overrides/
+	dh_installdirs -popenmpi-bin    -s /usr/share/lintian/overrides/
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
