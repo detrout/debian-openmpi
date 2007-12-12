@@ -94,7 +94,9 @@ install-arch:
 	chmod 644 debian/openmpi/usr/lib/openmpi/lib/mpi.mod
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
-	install -m0644 debian/libopenmpi1.lintian-overrides $(CURDIR)/debian/libopenmpi1/usr/share/lintian/overrides/libopenmpi1
+	install -m0644 debian/libopenmpi1.lintian-overrides    $(CURDIR)/debian/libopenmpi1/usr/share/lintian/overrides/libopenmpi1
+	install -m0644 debian/libopenmpi-dev.lintian-overrides $(CURDIR)/debian/libopenmpi-dev/usr/share/lintian/overrides/libopenmpi-dev
+	install -m0644 debian/openmpi-bin.lintian-overrides    $(CURDIR)/debian/openmpi-bin/usr/share/lintian/overrides/openmpi-bin
 
 binary-indep: build-indep install-indep
 	dh_testdir -i
