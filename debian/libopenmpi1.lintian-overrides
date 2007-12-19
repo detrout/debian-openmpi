@@ -53,3 +53,5 @@ libopenmpi1: binary-or-shlib-defines-rpath ./usr/lib/openmpi/lib/openmpi/mca_sds
 libopenmpi1: binary-or-shlib-defines-rpath ./usr/lib/openmpi/lib/openmpi/mca_sds_singleton.so /usr/lib/openmpi/lib
 libopenmpi1: binary-or-shlib-defines-rpath ./usr/lib/openmpi/lib/openmpi/mca_sds_slurm.so /usr/lib/openmpi/lib
 libopenmpi1: binary-or-shlib-defines-rpath ./usr/lib/openmpi/lib/openmpi/mca_topo_unity.so /usr/lib/openmpi/lib
+libopenmpi1: postinst-has-useless-call-to-ldconfig
+libopenmpi1: postrm-has-useless-call-to-ldconfig
