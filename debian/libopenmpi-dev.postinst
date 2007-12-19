@@ -4,21 +4,7 @@ set -e
 
 update-alternatives \
 	--install /usr/include/mpi mpi /usr/lib/openmpi/include 5 \
-	--slave /usr/lib/libmca_common_sm.la libmca_common_sm.la /usr/lib/openmpi/lib/libmca_common_sm.la \
-	--slave /usr/lib/libmca_common_sm.so libmca_common_sm.so /usr/lib/openmpi/lib/libmca_common_sm.so \
-	--slave /usr/lib/libmpi.so libmpi.so /usr/lib/openmpi/lib/libmpi.so \
-	--slave /usr/lib/libmpi.la libmpi.la /usr/lib/openmpi/lib/libmpi.la \
-	--slave /usr/lib/libmpi_cxx.la libmpi_cxx.la /usr/lib/openmpi/lib/libmpi_cxx.la \
-	--slave /usr/lib/libmpi_cxx.so libmpi_cxx.so /usr/lib/openmpi/lib/libmpi_cxx.so \
-	--slave /usr/lib/libmpi_f77.la libmpi_f77.la /usr/lib/openmpi/lib/libmpi_f77.la \
-	--slave /usr/lib/libmpi_f77.so libmpi_f77.so /usr/lib/openmpi/lib/libmpi_f77.so \
-	--slave /usr/lib/libmpi_f90.la libmpi_f90.la /usr/lib/openmpi/lib/libmpi_f90.la \
-	--slave /usr/lib/libmpi_f90.so libmpi_f90.so /usr/lib/openmpi/lib/libmpi_f90.so \
-	--slave /usr/lib/libopen-pal.la libopen-pal.la /usr/lib/openmpi/lib/libopen-pal.la \
-	--slave /usr/lib/libopen-pal.so libopen-pal.so /usr/lib/openmpi/lib/libopen-pal.so \
-	--slave /usr/lib/libopen-rte.la libopen-rte.la /usr/lib/openmpi/lib/libopen-rte.la \
-	--slave /usr/lib/libopen-rte.so libopen-rte.so /usr/lib/openmpi/lib/libopen-rte.so \
-	--slave /usr/lib/mpi.mod mpi.mod /usr/lib/openmpi/lib/mpi.mod \
+	--slave /usr/lib/libmpi.so libmpi.so /usr/lib/openmpi/lib/libmpi.so.0 \
 	--slave /usr/bin/mpicc mpicc /usr/bin/mpicc.openmpi \
 	--slave /usr/bin/mpic++ mpic++ /usr/bin/mpic++.openmpi \
 	--slave /usr/bin/mpicxx mpicxx /usr/bin/mpic++.openmpi \

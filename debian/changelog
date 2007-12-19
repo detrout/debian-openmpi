@@ -1,3 +1,11 @@
+openmpi (1.2.4-5) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * Several changes in the libopenmpi-dev package to correct the library
+    soname links (Closes: #456721)
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 19 Dec 2007 01:14:36 +0100
+
 openmpi (1.2.4-4) unstable; urgency=low
 
   [ Manuel Prinz ]
