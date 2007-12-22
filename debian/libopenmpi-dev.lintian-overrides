@@ -1,1 +1,0 @@
-libopenmpi-dev: binary-or-shlib-defines-rpath ./usr/bin/opal_wrapper /usr/lib/openmpi/lib

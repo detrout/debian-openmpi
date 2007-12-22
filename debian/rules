@@ -87,6 +87,9 @@ install-arch:
 	dh_installdirs -plibopenmpi-dev -s /usr/share/lintian/overrides/
 	dh_installdirs -popenmpi-bin    -s /usr/share/lintian/overrides/
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
+	# Strip rpath info from all executables and libraries
+	find . -type f -perm -+x -exec chrpath -d '{}' \;
+	find . -type f -name '*\.so\.*' -exec chrpath -d '{}' \;
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
 	done
@@ -97,8 +100,6 @@ install-arch:
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
 	install -m0644 debian/libopenmpi1.lintian-overrides    $(CURDIR)/debian/libopenmpi1/usr/share/lintian/overrides/libopenmpi1
-	install -m0644 debian/libopenmpi-dev.lintian-overrides $(CURDIR)/debian/libopenmpi-dev/usr/share/lintian/overrides/libopenmpi-dev
-	install -m0644 debian/openmpi-bin.lintian-overrides    $(CURDIR)/debian/openmpi-bin/usr/share/lintian/overrides/openmpi-bin
 
 binary-indep: build-indep install-indep
 	dh_testdir -i
