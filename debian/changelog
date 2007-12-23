@@ -1,11 +1,17 @@
 openmpi (1.2.4-6) unstable; urgency=low
 
-  * libopenmpi-dev.links: Moved .so.0 links from /usr/lib/openmpi/lib to
-    /usr/lib.
-  * debian/rules: Stripping all rpath info with chrpath in install-arch.
-  * debian/control: Added chrpath to Build-Depends
+  [ Manuel Prinz ]
+  * debian/*.lintian-override: Deleted, all issues are fixed
+    - debian/libopenmpi{1,-dev}.links, debian/libopenmpi1.install:
+      Moved *.so.0 links from /usr/lib/openmpi/lib to /usr/lib. Created
+      *.so.0.0.0 symlinks in /usr/lib, pointing to /usr/lib/openmpi/lib.
+      This fixes postinst-has-useless-call-to-ldconfig, postrm-has-useless-
+      call-to-ldconfig and package-name-doesnt-match-sonames warnings.
+    - debian/rules, debian/control: Added chrpath to Build-Depends and
+      deleting all rpath info with chrpath in install-arch target. This
+      fixes all binary-or-shlib-defines-rpath warnings.
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sat, 22 Dec 2007 20:20:17 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 23 Dec 2007 17:28:39 +0100
 
 openmpi (1.2.4-5) unstable; urgency=low
 
