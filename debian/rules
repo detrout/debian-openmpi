@@ -84,8 +84,6 @@ install-arch:
 	dh_testroot
 	dh_clean -k -s 
 	dh_installdirs -plibopenmpi1    -s /usr/share/lintian/overrides/
-	dh_installdirs -plibopenmpi-dev -s /usr/share/lintian/overrides/
-	dh_installdirs -popenmpi-bin    -s /usr/share/lintian/overrides/
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
 	# Strip rpath info from all executables and libraries
 	find . -type f -perm -+x -exec chrpath -d '{}' \;
