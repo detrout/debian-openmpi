@@ -10,8 +10,8 @@ openmpi (1.2.4-6) unstable; urgency=low
     - debian/rules, debian/control: Added chrpath to Build-Depends and
       deleting all rpath info with chrpath in install-arch target. This
       fixes all binary-or-shlib-defines-rpath warnings.
-  * debian/rules: Adjusted target dependancies to something more sane.
-    Renamed "test" target to "check".
+  * debian/rules: Adjusted target dependancies to be more sane. Renamed
+    "test" target to "check".
 
  -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 23 Dec 2007 22:05:50 +0100
 
