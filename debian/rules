@@ -26,8 +26,7 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
 
-configure: patch configure-stamp
-configure-stamp: 
+config.status: patch-stamp
 	dh_testdir
 	CFLAGS="$(CFLAGS)" ./configure 				\
 			$(CROSS)				\
@@ -41,45 +40,38 @@ configure-stamp:
 # Thread support disabled because it's broken, see bug #435581
 #			--enable-mpi-threads 			\
 #			--enable-progress-threads
-	touch configure-stamp
 
-build: patch configure build-arch build-indep
+build: config.status
+	$(MAKE)
+	touch $@
 
-build-arch: build-arch-stamp
-build-arch-stamp: patch-stamp configure-stamp
-	$(MAKE) 
-	touch build-arch-stamp
+# Everything is built in the "build" target
+build-arch:  build
+build-indep: build
 
-build-indep: build-indep-stamp
-build-indep-stamp:  configure-stamp
-        #$(MAKE) doc
-	touch build-indep-stamp
-
-test: test-stamp
-test-stamp: build-arch-stamp build-indep-stamp
+check: build
 	-$(MAKE) check 
-	touch test-stamp
+	touch $@
 
 clean: clean-work unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
-	rm -rf build-arch-stamp build-indep-stamp configure-stamp test-stamp debian/openmpi 
+	rm -rf build check debian/openmpi
 	xargs rm -f < debian/clean_symlinks
 	[ ! -f Makefile ] || $(MAKE) distclean
         # some additional cleanups
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
 
-install: test install-arch install-indep 
-install-indep:
+install-indep: build-indep check
 	dh_testdir
 	dh_testroot
 	dh_clean -k -i 
 	dh_installdirs -i
 	dh_install -i --sourcedir=$(CURDIR)/debian/openmpi
 
-install-arch:
+install-arch: build-arch check
 	dh_testdir
 	dh_testroot
 	dh_clean -k -s 
@@ -97,7 +89,7 @@ install-arch:
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
 
-binary-indep: build-indep install-indep
+binary-indep: install-indep
 	dh_testdir -i
 	dh_testroot -i
 	dh_installchangelogs  -i
@@ -115,7 +107,7 @@ binary-indep: build-indep install-indep
 	dh_md5sums -i
 	dh_builddeb -i
 
-binary-arch: build-arch install-arch
+binary-arch: install-arch
 	dh_testdir -a
 	dh_testroot -a
 	dh_installchangelogs  -a
@@ -134,4 +126,5 @@ binary-arch: build-arch install-arch
 	dh_builddeb -a
 
 binary: binary-arch binary-indep
-.PHONY: build clean binary-indep binary-arch binary install install-indep install-arch patch configure 
+
+.PHONY: binary binary-arch binary-indep build-arch build-indep clean install-arch install-indep
