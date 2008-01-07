@@ -12,8 +12,11 @@ openmpi (1.2.4-6) unstable; urgency=low
       fixes all binary-or-shlib-defines-rpath warnings.
   * debian/rules: Adjusted target dependancies to be more sane. Renamed
     "test" target to "check".
+  * Applied a patch by Adam Powell IV that adds /usr/lib/libmpi++.so via
+    update-alternatives for compatibility with LAM/MPI and MPICH. Thanks to
+    Adam for the patch! (Closes #459642)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 23 Dec 2007 22:05:50 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Mon, 07 Jan 2008 22:09:46 +0100
 
 openmpi (1.2.4-5) unstable; urgency=low
 
