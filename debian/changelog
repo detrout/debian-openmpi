@@ -1,4 +1,12 @@
-openmpi (1.2.4-6) unstable; urgency=low
+openmpi (1.2.5-1) unstable; urgency=low
+
+  [ Dirk Eddelbuettel ]
+  
+  * New upstream version
+  * debian/patches/00list: Disabled man page patches 20*, 30* and 31* which have
+    been included upstream
+  * debian/patches/60_fix_manpage_name_section.dpatch: Applied small correction
+  * Debian build and upload
 
   [ Manuel Prinz ]
   * debian/*.lintian-override: Deleted, all issues are fixed
@@ -10,13 +18,13 @@ openmpi (1.2.4-6) unstable; urgency=low
     - debian/rules, debian/control: Added chrpath to Build-Depends and
       deleting all rpath info with chrpath in install-arch target. This
       fixes all binary-or-shlib-defines-rpath warnings.
-  * debian/rules: Adjusted target dependancies to be more sane. Renamed
+  * debian/rules: Adjusted target dependencies to be more sane. Renamed
     "test" target to "check".
   * Applied a patch by Adam Powell IV that adds /usr/lib/libmpi++.so via
     update-alternatives for compatibility with LAM/MPI and MPICH. Thanks to
-    Adam for the patch! (Closes #459642)
+    Adam for the patch! (Closes: #459642)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Mon, 07 Jan 2008 22:09:46 +0100
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 09 Jan 2008 16:30:33 -0600
 
 openmpi (1.2.4-5) unstable; urgency=low
 
