@@ -1,7 +1,6 @@
 openmpi (1.2.5-1) unstable; urgency=low
 
   [ Dirk Eddelbuettel ]
-  
   * New upstream version
   * debian/patches/00list: Disabled man page patches 20*, 30* and 31* which 
     have been included upstream

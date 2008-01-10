@@ -1,5 +1,6 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## 60fix_manpage_name_section.dpatch by Manuel Prinz <debian@pinguinkiste.de>
+## 60fix_manpage_name_section.dpatch by Manuel Prinz <debian@pinguinkiste.de> 
+##                                   and Dirk Eddelbuettel <edd@debian.org>
 ##
 ## DP: Fixes lintian warnings "manpage-has-bad-whatis-entry".
 
