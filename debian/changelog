@@ -3,7 +3,7 @@ openmpi (1.2.5-2) UNRELEASED; urgency=low
   [ Manuel Prinz ]
   * Added missing ${shlibs:Depends} to Depends: line of libopenmpi-dev
   * debian/shlibs.local: Added entry for libibverbs until the package provides
-    the neccessary information. (Closes: #464705)
+    the necessary information. (Closes: #464705)
   * debian/control: Added versioned dependency to libibverbs in Build-Depends
   * debian/libopenmpi-dev.postinst: Corrected dead symlinks. Thanks to Ondrej
     Certik for reporting the issue! (Closes: #464795)
