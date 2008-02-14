@@ -5,8 +5,10 @@ openmpi (1.2.5-2) UNRELEASED; urgency=low
   * debian/shlibs.local: Added entry for libibverbs until the package provides
     the neccessary information. (Closes: #464705)
   * debian/control: Added versioned dependency to libibverbs in Build-Depends
+  * debian/libopenmpi-dev.postinst: Corrected dead symlinks. Thanks to Ondrej
+    Certik for reporting the issue! (Closes: #464795)
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sun, 10 Feb 2008 18:35:52 +0100
+ -- Manuel Prinz <debian@pinguinkiste.de>  Thu, 14 Feb 2008 13:28:06 +0100
 
 openmpi (1.2.5-1) unstable; urgency=low
 
