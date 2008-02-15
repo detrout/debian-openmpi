@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -e
+
+for link in /etc/alternatives/libopenmpi.so /etc/alternatives/libmpi++.so
+do
+    echo -n "Looking at $link: "
+    if test -e $link 
+    then
+	echo -n "Yes "
+    else	
+        echo -n "No "
+    fi
+    if test -f $link 
+    then
+	echo -n "Yes "
+    else	
+        echo -n "No "
+    fi
+    if test -h $link 
+    then
+	echo -n "Yes "
+    else	
+        echo -n "No "
+    fi
+    echo ""
+done
+
+exit 0
