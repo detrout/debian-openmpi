@@ -1,3 +1,11 @@
+openmpi (1.2.5-3) unstable; urgency=low
+
+  [ Dirk Eddelbuettel ]
+  * debian/control: Version the Conflicts: of libopenmpi-dev with pgapack to
+    'pgapack (<= 1.0.0.1-4.2)' as newer pgapack do not exhibit a conflict.
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 10 Mar 2008 16:55:37 -0500
+
 openmpi (1.2.5-2) unstable; urgency=low
 
   [ Dirk Eddelbuettel ]

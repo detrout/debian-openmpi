@@ -42,7 +42,7 @@ Package: libopenmpi-dev
 Section: libdevel
 Architecture: alpha amd64 i386 ia64 powerpc sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, libopenmpi1 (= ${binary:Version}), openmpi-common (= ${source:Version})
-Conflicts: libopal-dev, pgapack, openmpi-dev
+Conflicts: libopal-dev, pgapack (<= 1.0.0.1-4.2), openmpi-dev
 Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
 Provides: openmpi-dev
 Description: high performance message passing library -- header files
