@@ -1,3 +1,12 @@
+openmpi (1.2.6-1) unstable; urgency=low
+
+  [ Dirk Eddelbuettel ]
+  * New upstream version
+  * debian/patches/00list: Disabled man page patches 60* which 
+    has been included upstream in version 1.2.6
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Tue, 08 Apr 2008 20:19:24 -0500
+
 openmpi (1.2.5-3) unstable; urgency=low
 
   [ Dirk Eddelbuettel ]
