@@ -1,3 +1,10 @@
+openmpi (1.2.6-2) unstable; urgency=low
+
+  [ Sylvestre Ledru ]
+  * Can be built under ppc64. Thanks to Andreas Jochens (Closes: #478427)
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Tue, 29 Apr 2008 10:03:05 +0200
+
 openmpi (1.2.6-1) unstable; urgency=low
 
   [ Dirk Eddelbuettel ]
