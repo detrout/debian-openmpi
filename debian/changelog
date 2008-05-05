@@ -3,7 +3,10 @@ openmpi (1.2.6-2) unstable; urgency=low
   [ Sylvestre Ledru ]
   * Can be built under ppc64. Thanks to Andreas Jochens (Closes: #478427)
 
- -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Tue, 29 Apr 2008 10:03:05 +0200
+  [ Dirk Eddelbuettel ]
+  * Built and uploaded. Thanks to Sylvestre for applying the patch.
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Mon, 05 May 2008 07:16:49 -0500
 
 openmpi (1.2.6-1) unstable; urgency=low
 
