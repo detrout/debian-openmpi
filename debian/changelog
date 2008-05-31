@@ -1,3 +1,15 @@
+openmpi (1.2.6-3) unstable; urgency=low
+
+  [ Manuel Prinz ]
+  * debian/patches/openfabrics.dpatch: Applied patch by Jeff Squyres that
+    deals with the warnings printed when OpenFabrics hardware is not present.
+    Thanks to Jeff for the patch!
+  * debian/patches/10fix_config_infiniband.dpatch: Removed, it's obsoleted
+    by the above mentioned OpenFabrics patch.
+  * Updated README.Debian with information about the OpenFabrics patch.
+
+ -- Manuel Prinz <debian@pinguinkiste.de>  Sat, 31 May 2008 22:15:35 +0200
+
 openmpi (1.2.6-2) unstable; urgency=low
 
   [ Sylvestre Ledru ]

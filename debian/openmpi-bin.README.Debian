@@ -4,6 +4,10 @@ OpenMPI for Debian
 InfiniBand support
 ------------------
 
+This section provides information about warning messages when OpenFabrics
+hardware isn't present. This is fixed since version 1.2.6-3. The information
+provided here is only for historical reasons.
+
 InfiniBand support is build into the package and enabled by default. On
 systems that don't have InfiniBand, a warning like this will be issued:
 
@@ -14,10 +18,12 @@ systems that don't have InfiniBand, a warning like this will be issued:
   lower performance.
   --------------------------------------------------------------------------
 
-To get rid of the warning, you can either disable the use of the "openib" btl
-in /etc/openmpi/openmpi-mca-params.conf or pass "--mca btl ^openib" to mpirun
-or mpiexec. The configuration file contains a line to disable InfiniBand, you
-just have to comment it out.
+To get rid of the warning, you can either disable the use of the "openib" BTL
+in /etc/openmpi/openmpi-mca-params.conf by adding a line that reads
+
+  btl = ^openib
+
+or pass "--mca btl ^openib" to mpirun or mpiexec.
 
 Please see http://bugs.debian.org/439730 for a discussion on that topic.
 
@@ -59,4 +65,4 @@ have to enable OpenMPI explicitly with
 
 This might change in future versions of the package.
 
- -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Thu, 30 Aug 2007 10:40:59 +0200
+ -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Sat, 31 May 2008 22:21:44 +0200

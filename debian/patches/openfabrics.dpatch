@@ -1,0 +1,69 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 01openfabrics.dpatch by Jeff Squyres <jsquyres@cisco.com>
+##
+## DP: This patch was send to us by upstream and fixes the issues with
+## DP: warnings if no OpenFabrics hardware is present.
+## DP: The fix is revision 18553 in upstream's SVN repository and will
+## DP: be included in the next releases. The patch can be removed when
+## DP: release 1.2.7 is packaged.
+
+@DPATCH@
+diff -urNad openmpi-1.2.6~/ompi/mca/btl/openib/btl_openib_component.c openmpi-1.2.6/ompi/mca/btl/openib/btl_openib_component.c
+--- openmpi-1.2.6~/ompi/mca/btl/openib/btl_openib_component.c	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mca/btl/openib/btl_openib_component.c	2008-05-31 22:48:41.000000000 +0200
+@@ -51,8 +51,11 @@
+ #include "ompi/datatype/convertor.h" 
+ #include "ompi/mca/mpool/mpool.h" 
+ #include <infiniband/verbs.h> 
++#include <infiniband/driver.h>
+ #include <errno.h> 
+ #include <string.h>   /* for strerror()*/ 
++#include <sys/types.h>
++#include <sys/stat.h>
+ 
+ #include "ompi/mca/pml/base/pml_base_module_exchange.h"
+ 
+@@ -160,6 +163,27 @@
+ }
+ 
+ 
++static bool check_basics(void)
++{
++    int rc;
++    char *file;
++    struct stat s;
++
++    /* Check to see if $sysfsdir/class/infiniband/ exists */
++    asprintf(&file, "%s/class/infiniband", ibv_get_sysfs_path());
++    if (NULL == file) {
++        return false;
++    }
++    rc = stat(file, &s);
++    free(file);
++    if (0 != rc || !S_ISDIR(s.st_mode)) {
++        return false;
++    }
++
++    /* It exists and is a directory -- good enough */
++    return true;
++}
++
+ /*
+  *  Register OPENIB  port information. The MCA framework
+  *  will make this available to all peers.
+@@ -616,6 +640,15 @@
+     *num_btl_modules = 0;
+     num_devs = 0; 
+ 
++    /* Per https://svn.open-mpi.org/trac/ompi/ticket/1305, check to
++       see if $sysfsdir/class/infiniband exists.  If it does not,
++       assume that the RDMA hardware drivers are not loaded, and
++       therefore we don't want OpenFabrics verbs support in this OMPI
++       job.  No need to print a warning. */
++    if (!check_basics()) {
++        return NULL;
++    }
++    
+     /* openib BTL does not currently support progress threads, so
+        disable the component if they were requested */
+     if (enable_progress_threads) {
