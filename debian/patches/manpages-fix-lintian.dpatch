@@ -1,0 +1,3015 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## manpages-fix-lintian.dpatch by Jeff Squyres <jsquyres@cisco.com>
+##
+## DP: This patch was sent to us by upstream and applied to their SVN
+## DP: repository in commit 18449. It will be included in future
+## DP: releases and can be deleted when packaging version 1.2.7.
+
+@DPATCH@
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI.3	2008-05-31 23:46:42.000000000 +0200
+@@ -146,4 +146,3 @@
+ MPI_ERR_SYSRESOURCE     -2      Out of resources
+ .fi
+ 
+-' @(#)MPI.3 1.40 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Abort.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Abort.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Abort.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Abort.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,4 +57,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler
+ may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Abort.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Accumulate.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Accumulate.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Accumulate.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Accumulate.3	2008-05-31 23:46:42.000000000 +0200
+@@ -121,4 +121,3 @@
+ MPI_Put 
+ .br
+ MPI_Reduce
+-' @(#)MPI_Accumulate.3 1.15 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_class.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_class.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_class.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_class.3	2008-05-31 23:46:42.000000000 +0200
+@@ -81,4 +81,3 @@
+ MPI_Error_class
+ MPI_Error_string
+ 
+-' @(#)MPI_Add_error_class.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_code.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_code.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_code.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_code.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,5 +73,4 @@
+ MPI_Add_error_class
+ MPI_Error_class
+ 
+-' @(#)MPI_Add_error_code.3 1.4 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_string.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_string.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Add_error_string.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Add_error_string.3	2008-05-31 23:46:42.000000000 +0200
+@@ -75,5 +75,4 @@
+ MPI_Error_class
+ MPI_Error_string
+ 
+-' @(#)MPI_Add_error_string.3 1.4 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Address.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Address.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Address.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Address.3	2008-05-31 23:46:42.000000000 +0200
+@@ -82,4 +82,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler
+ may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error. 
+ 
+-' @(#)MPI_Address.3 1.21 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allgather.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allgather.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allgather.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allgather.3	2008-05-31 23:46:42.000000000 +0200
+@@ -127,4 +127,3 @@
+ .br
+ MPI_Gather
+ 
+-' @(#)MPI_Allgather.3 1.23 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allgatherv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allgatherv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allgatherv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allgatherv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -115,4 +115,3 @@
+ MPI_Gatherv
+ .br
+ MPI_Allgather
+-' @(#)MPI_Allgatherv.3 1.24 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alloc_mem.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alloc_mem.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alloc_mem.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alloc_mem.3	2008-05-31 23:46:42.000000000 +0200
+@@ -92,4 +92,3 @@
+ .ft R
+ .sp
+ MPI_Free_mem
+-' @(#)MPI_Alloc_mem.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allreduce.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allreduce.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Allreduce.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Allreduce.3	2008-05-31 23:46:42.000000000 +0200
+@@ -141,4 +141,3 @@
+ may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error. 
+ 
+ 
+-' @(#)MPI_Allreduce.3 1.23 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoall.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoall.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoall.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoall.3	2008-05-31 23:46:42.000000000 +0200
+@@ -128,4 +128,3 @@
+ MPI_Alltoallv
+ MPI_Alltoallw
+ 
+-' @(#)MPI_Alltoall.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoallv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoallv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoallv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoallv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -158,4 +158,3 @@
+ MPI_Alltoall
+ MPI_Alltoallw
+ 
+-' @(#)MPI_Alltoallv.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoallw.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoallw.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Alltoallw.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Alltoallw.3	2008-05-31 23:46:42.000000000 +0200
+@@ -159,4 +159,3 @@
+ MPI_Alltoall
+ MPI_Alltoallv
+ 
+-' @(#)MPI_Alltoallw.3 1.7 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_delete.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_delete.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_delete.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_delete.3	2008-05-31 23:46:42.000000000 +0200
+@@ -50,4 +50,3 @@
+ may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Attr_delete.3 1.21 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -63,4 +63,3 @@
+ 
+ MPI_Comm_get_attr
+ .br
+-' @(#)MPI_Attr_get.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_put.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_put.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Attr_put.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Attr_put.3	2008-05-31 23:46:42.000000000 +0200
+@@ -65,4 +65,3 @@
+ .sp
+ MPI_Comm_set_attr
+ .br
+-' @(#)MPI_Attr_put.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Barrier.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Barrier.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Barrier.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Barrier.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ .SH SEE ALSO
+ .ft R
+ MPI_Bcast
+-' @(#)MPI_Barrier.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bcast.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bcast.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bcast.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bcast.3	2008-05-31 23:46:42.000000000 +0200
+@@ -82,4 +82,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error. 
+ 
+-' @(#)MPI_Bcast.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bsend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bsend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bsend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bsend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -102,4 +102,3 @@
+ MPI_Ibsend
+ MPI_Bsend_init
+ 
+-' @(#)MPI_Bsend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bsend_init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bsend_init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Bsend_init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Bsend_init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -80,4 +80,3 @@
+ MPI_Start
+ MPI_Startall
+ 
+-' @(#)MPI_Bsend_init.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Buffer_attach.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Buffer_attach.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Buffer_attach.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Buffer_attach.3	2008-05-31 23:46:42.000000000 +0200
+@@ -74,4 +74,3 @@
+ .sp
+ MPI_Buffer_detach
+ 
+-' @(#)MPI_Buffer_attach.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Buffer_detach.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Buffer_detach.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Buffer_detach.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Buffer_detach.3	2008-05-31 23:46:42.000000000 +0200
+@@ -91,4 +91,3 @@
+ .nf
+ MPI_Buffer_attach
+ MPI_Bsend
+-' @(#)MPI_Buffer_detach.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cancel.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cancel.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cancel.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cancel.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ MPI_Test_cancelled
+ MPI_Cart_coords
+ 
+-' @(#)MPI_Cancel.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_coords.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_coords.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_coords.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_coords.3	2008-05-31 23:46:42.000000000 +0200
+@@ -56,4 +56,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Cart_coords.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Cart_create.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ .nf
+ MPI_Cartdim_get
+ MPI_Cart_create
+-' @(#)MPI_Cart_get.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_map.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_map.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_map.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_map.3	2008-05-31 23:46:42.000000000 +0200
+@@ -67,4 +67,3 @@
+ .ft R
+ .sp
+ MPI_Graph_map
+-' @(#)MPI_Cart_map.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_rank.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_rank.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_rank.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_rank.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ .SH SEE ALSO
+ .sp
+ MPI_Cart_create
+-' @(#)MPI_Cart_rank.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_shift.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_shift.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_shift.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_shift.3	2008-05-31 23:46:42.000000000 +0200
+@@ -88,4 +88,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Cart_shift.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_sub.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_sub.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cart_sub.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cart_sub.3	2008-05-31 23:46:42.000000000 +0200
+@@ -67,4 +67,3 @@
+ MPI_Cart_create
+ MPI_Comm_split
+ 
+-' @(#)MPI_Cart_sub.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cartdim_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cartdim_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Cartdim_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Cartdim_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ MPI_Cart_get
+ MPI_Cart_create
+ 
+-' @(#)MPI_Cartdim_get.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_accept.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_accept.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_accept.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_accept.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ MPI_Open_port
+ .br
+ 
+-' @(#)MPI_Comm_accept.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Comm_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_call_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_call_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_call_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_call_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -71,4 +71,3 @@
+ MPI_Comm_create_errhandler
+ MPI_Comm_set_errhandler
+ 
+-' @(#)MPI_Comm_call_errhandler.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_compare.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_compare.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_compare.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_compare.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,5 +51,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_compare.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_connect.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_connect.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_connect.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_connect.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,4 +73,3 @@
+ MPI_Open_port
+ .br
+ 
+-' @(#)MPI_Comm_connect.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ .sp
+ MPI_Intercomm_create
+ 
+-' @(#)MPI_Comm_create.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -76,4 +76,3 @@
+ 
+ 
+ 
+-' @(#)MPI_Comm_create_errhandler.3 1.18 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_create_keyval.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_create_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -131,4 +131,3 @@
+ .sp
+ 
+ 
+-' @(#)MPI_Comm_create_keyval.3 1.19 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_delete_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_delete_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_delete_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_delete_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_delete_attr.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_disconnect.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_disconnect.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_disconnect.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_disconnect.3	2008-05-31 23:46:42.000000000 +0200
+@@ -61,4 +61,3 @@
+ .br
+ MPI_Comm_accept
+ .br
+-' @(#)MPI_Comm_disconnect.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_dup.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_dup.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_dup.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_dup.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,5 +57,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_dup.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_f2c.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -40,6 +40,3 @@
+ For example, if \fIcomm\fP is a valid Fortran handle to a communicator, then MPI_Comm_f2c returns a valid C handle to that same communicator; if \fIcomm\fP = MPI_COMM_NULL (Fortran value), then MPI_Comm_f2c returns a null C handle; if \fIcomm\fP is an invalid Fortran handle, then MPI_Comm_f2c returns an invalid C handle. 
+ .SH NOTE
+ This function does not return an error value. Consequently, the result of calling it before MPI_Init or after MPI_Finalize is undefined.
+-
+-
+-
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -44,4 +44,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_free.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_free_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_free_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_free_keyval.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_free_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_free_keyval.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_get_attr.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_get_name.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_parent.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_parent.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_get_parent.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_get_parent.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,4 +57,3 @@
+ MPI_Comm_spawn
+ MPI_Comm_spawn_multiple
+ 
+-' @(#)MPI_Comm_get_parent.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_group.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_group.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_group.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_group.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_group.3 1.23 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_join.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_join.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_join.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_join.3	2008-05-31 23:46:42.000000000 +0200
+@@ -94,4 +94,3 @@
+ MPI_Comm_create
+ MPI_Comm_group
+ 
+-' @(#)MPI_Comm_join.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_rank.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_rank.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_rank.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_rank.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ MPI_Comm_size
+ MPI_Comm_compare
+ 
+-' @(#)MPI_Comm_rank.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_remote_group.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_remote_group.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_remote_group.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_remote_group.3	2008-05-31 23:46:42.000000000 +0200
+@@ -59,4 +59,3 @@
+ MPI_Intercomm_create
+ MPI_Intercomm_merge
+ 
+-' @(#)MPI_Comm_remote_group.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_remote_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_remote_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_remote_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_remote_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -59,4 +59,3 @@
+ MPI_Intercomm_create
+ MPI_Intercomm_merge
+ 
+-' @(#)MPI_Comm_remote_size.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -78,4 +78,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_set_attr.3 1.19 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -49,4 +49,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Comm_set_errhandler.3 1.18 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_set_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_set_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -69,4 +69,3 @@
+ .sp
+ 
+ 
+-' @(#)MPI_Comm_set_name.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ MPI_Comm_rank
+ MPI_Comm_compare
+ 
+-' @(#)MPI_Comm_size.3 1.23 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn.3	2008-05-31 23:46:42.000000000 +0200
+@@ -133,5 +133,3 @@
+ MPI_Comm_get_parent(3)
+ mpirun(1)
+ 
+-' @(#)MPI_Comm_spawn.3 1.18 02/02/11   
+-' @(#)MPI_Comm_spawn.3 1.26 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,137 @@
++.\"Copyright 2006, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Comm_spawn 3OpenMPI "September 2006" "Open MPI 1.2" " "
++.SH NAME
++\fBMPI_Comm_spawn\fP \- Spawns a number of identical binaries. 
++
++.SH SYNTAX
++.ft R
++.SH C Syntax
++.nf
++#include <mpi.h>
++int MPI_Comm_spawn(char *\fIcommand\fP, char *\fIargv\fP[], int \fImaxprocs\fP, 
++	MPI_Info \fIinfo\fP, int \fIroot\fP, MPI_Comm \fIcomm\fP, 
++	MPI_Comm *\fIintercomm\fP, int \fIarray_of_errcodes\fP[])
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++MPI_COMM_SPAWN(\fICOMMAND, ARGV, MAXPROCS, INFO, ROOT, COMM, 
++	INTERCOMM, ARRAY_OF_ERRCODES, IERROR\fP)
++
++	CHARACTER*(*) \fICOMMAND, ARGV(*)\fP 
++	INTEGER	\fIINFO, MAXPROCS, ROOT, COMM, INTERCOMM, 
++	ARRAY_OF_ERRORCODES(*), IERROR\fP 
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++MPI::Intercomm MPI::Intracomm::Spawn(const char* \fIcommand\fP,
++	const char* \fIargv\fP[], int \fImaxprocs\fP, const MPI::Info& \fIinfo\fP,
++	int \fIroot\fP, int \fIarray_of_errcodes\fP[]) const
++
++MPI::Intercomm MPI::Intracomm::Spawn(const char* \fIcommand\fP,
++	const char* \fIargv\fP[], int \fImaxprocs\fP, const MPI::Info& \fIinfo\fP,
++	int \fIroot\fP) const
++
++.SH INPUT PARAMETERS
++.ft R
++.TP 1i
++command
++Name of program to be spawned (string, significant only at \fIroot\fP).
++.TP 1i
++argv
++Arguments to \fIcommand\fP (array of strings, significant only at \fIroot\fP).
++.TP 1i
++maxprocs
++Maximum number of processes to start (integer, significant only at \fIroot\fP).
++.TP 1i
++info
++A set of key-value pairs telling the runtime system where and how to start the processes (handle, significant only at \fIroot\fP). 
++.TP 1i
++root
++Rank of process in which previous arguments are examined (integer).
++.TP 1i
++comm
++Intracommunicator containing group of spawning processes (handle).
++
++.SH OUTPUT PARAMETER
++.ft R
++.TP 1i
++intercomm
++Intercommunicator between original group and the newly spawned group (handle).
++.TP 1i
++array_of_errcodes
++One code per process (array of integers).
++.TP 1i
++IERROR
++Fortran only: Error status (integer). 
++
++.SH DESCRIPTION
++.ft R
++MPI_Comm_spawn tries to start \fImaxprocs\fP identical copies of the MPI program specified by \fIcommand\fP, establishing communication with them and returning an intercommunicator. The spawned processes are referred to as children. The children have their own MPI_COMM_WORLD, which is separate from that of the parents. MPI_Comm_spawn is collective over \fIcomm\fP, and also may not return until MPI_Init has been called in the children. Similarly, MPI_Init in the children may not return until all parents have called MPI_Comm_spawn. In this sense, MPI_Comm_spawn in the parents and MPI_Init in the children form a collective operation over the union of parent and child processes. The intercommunicator returned by MPI_Comm_spawn contains the parent processes in the local group and the child processes in the remote group. The ordering of processes in the local and remote groups is the same as the as the ordering of the group of the \fIcomm\fP in the parents and of MPI_COMM_WORLD of the children, respectively. This intercommunicator can be obtained in the children through the function MPI_Comm_get_parent. 
++.sp
++The MPI standard allows an implementation to use the MPI_UNIVERSE_SIZE attribute of MPI_COMM_WORLD to specify the number of processes that will be active in a program.  Although this implementation of the MPI standard defines MPI_UNIVERSE_SIZE, it does not allow the user to set its value.  If you try to set the value of MPI_UNIVERSE_SIZE, you will get an error message.
++.sp
++The \fIcommand\fP Argument 
++.sp
++The \fIcommand\fP argument is a string containing the name of a program to be spawned. The string is null-terminated in C. In Fortran, leading and trailing spaces are stripped. MPI looks for the file first in the working directory of the spawning process. 
++.sp
++The \fIargv\fP Argument
++.sp
++\fIargv\fP is an array of strings containing arguments that are passed to the program. The first element of \fIargv\fP is the first argument passed to \fIcommand\fP, not, as is conventional in some contexts, the command itself. The argument list is terminated by NULL in C and C++ and an empty string in Fortran. In Fortran, leading and trailing spaces are always stripped, so that a string consisting of all spaces is considered an empty string. The constant MPI_ARGV_NULL may be used in C, C++ and Fortran to indicate an empty argument list. In C and C++, this constant is the same as NULL. 
++.sp
++In C, the MPI_Comm_spawn argument \fIargv\fP differs from the \fIargv\fP argument of \fImain\fP in two respects. First, it is shifted by one element. Specifically, \fIargv\fP[0] of \fImain\fP  contains the name of the program (given by \fIcommand\fP). \fIargv\fP[1] of \fImain\fP corresponds to \fIargv\fP[0] in MPI_Comm_spawn, \fIargv\fP[2] of \fImain\fP to \fIargv\fP[1] of MPI_Comm_spawn, and so on. Second, \fIargv\fP of MPI_Comm_spawn must be null-terminated, so that its length can be determined. Passing an \fIargv\fP of MPI_ARGV_NULL to MPI_Comm_spawn results in \fImain\fP receiving \fIargc\fP of 1 and an \fIargv\fP whose element 0 is the name of the program. 
++.sp
++The \fImaxprocs\fP Argument
++.sp
++Open MPI tries to spawn \fImaxprocs\fP processes. If it is unable to spawn \fImaxprocs\fP processes, it raises an error of class MPI_ERR_SPAWN. If MPI is able to spawn the specified number of processes, MPI_Comm_spawn returns successfully and the number of spawned processes, \fIm\fP, is given by the size of the remote group of \fIintercomm\fP.
++.sp
++A spawn call with the default behavior is called hard. A spawn call for which fewer than \fImaxprocs\fP processes may be returned is called soft. 
++.sp
++The \fIinfo\fP Argument 
++.sp
++The \fIinfo\fP argument is an opaque handle of type MPI_Info in C, MPI::Info in C++ and INTEGER in Fortran. It is a container for a number of user-speci ed (\fIkey,value\fP) pairs. \fIkey\fP and \fIvalue\fP are strings (null-terminated char* in C, character*(*) in Fortran). Routines to create and manipulate the \fIinfo\fP argument are described in Section 4.10 of the MPI-2 standard. 
++.sp
++For the SPAWN calls, \fIinfo\fP provides additional, implementation-dependent instructions to MPI and the runtime system on how to start processes. An application may pass MPI_INFO_NULL in C or Fortran. Portable programs not requiring detailed control over process locations should use MPI_INFO_NULL.
++.sp
++The following values for \fIinfo\fP are recognized in Open MPI. (The reserved values mentioned in Section 5.3.4 of the MPI-2 standard are not implemented.)
++.sp
++.nf
++Key value             Type      Description
++----------            ----      -----------
++
++host                  char *    Host on which the process should be spawned.
++wdir                  char *    Directory where the executable is located.
++.fi
++  
++.sp
++The \fIroot\fP Argument
++.sp
++All arguments before the \fIroot\fP argument are examined only on the process whose rank in \fIcomm\fP is equal to \fIroot\fP. The value of these arguments on other processes is ignored. 
++.sp
++The \fIarray_of_errcodes\fP Argument
++.sp
++The \fIarray_of_errcodes\fP is an array of length \fImaxprocs\fP in which MPI reports the status of the processes that MPI was requested to start. If all \fImaxprocs\fP processes were spawned, \fIarray_of_errcodes\fP is filled in with the value MPI_SUCCESS. If anyof the processes are \fInot\fP spawned, \fIarray_of_errcodes\fP is filled in with the value MPI_ERR_SPAWN. In C or Fortran, an application may pass MPI_ERRCODES_IGNORE if it is not interested in the error codes. In C++ this constant does not exist, and the \fIarray_of_errcodes\fP argument may be omitted from the argument list. 
++
++.SH NOTES
++.ft R
++Completion of MPI_Comm_spawn in the parent does not necessarily mean that MPI_Init has been called in the children (although the returned intercommunicator can be used immediately). 
++
++
++.SH ERRORS
++Almost all MPI routines return an error value; C routines as the value of the function and Fortran routines in the last argument. C++ functions do not return errors. If the default error handler is set to MPI::ERRORS_THROW_EXCEPTIONS, then on error the C++ exception mechanism will be used to throw an MPI:Exception object.
++.sp
++Before the error value is returned, the current MPI error handler is
++called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
++
++.SH SEE ALSO
++.ft R
++.sp
++.nf
++MPI_Comm_spawn_multiple(3)
++MPI_Comm_get_parent(3)
++mpirun(1)
++
++' @(#)MPI_Comm_spawn.3 1.18 02/02/11   
++' @(#)MPI_Comm_spawn.3 1.26 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3	2008-05-31 23:46:42.000000000 +0200
+@@ -138,5 +138,3 @@
+ MPI_Comm_get_parent(3)
+ mpirun(1)
+ 
+-' @(#)MPI_Comm_spawn_multiple.3 1.18 01/02/27   
+-' @(#)MPI_Comm_spawn_multiple.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_spawn_multiple.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,142 @@
++.\"Copyright 2006, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Comm_spawn_multiple 3OpenMPI "September 2006" "Open MPI 1.2" " "
++.SH NAME
++\fBMPI_Comm_spawn_multiple\fP \- Spawns multiple binaries, or the same binary with multiple sets of arguments. 
++
++.SH SYNTAX
++.ft R
++.SH C Syntax
++.nf
++#include <mpi.h>
++int MPI_Comm_spawn_multiple(int \fIcount\fP, char *\fIarray_of_commands\fP[], 
++	char **\fIarray_of_argv\fP[], int \fIarray_of_maxprocs\fP[], MPI_Info 
++	\fIarray_of_info\fP[], int \fIroot\fP, MPI_Comm \fIcomm\fP, MPI_Comm *\fIintercomm\fP, 
++	int \fIarray_of_errcodes\fP[])
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++MPI_COMM_SPAWN_MULTIPLE(\fICOUNT, ARRAY_OF_COMMANDS, ARRAY_OF_ARGV, 
++	ARRAY_OF_MAXPROCS, ARRAY_OF_INFO, ROOT, COMM, INTERCOMM, 
++	ARRAY_OF_ERRCODES, IERROR\fP)
++	INTEGER	\fICOUNT, ARRAY_OF_INFO(*), ARRAY_OF_MAXPROCS(*), ROOT, 
++		COMM, INTERCOMM, ARRAY_OF_ERRCODES(*), IERROR\fP 
++	CHARACTER*(*) \fIARRAY_OF_COMMANDS\fP(*), \fIARRAY_OF_ARGV\fP(\fICOUNT\fP, *)
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++MPI::Intercomm MPI::Intracomm::Spawn_multiple(int \fIcount\fP,
++	const char* \fIarray_of_commands\fP[], const char** \fIarray_of_argv\fP[],
++	const int \fIarray_of_maxprocs\fP[], const MPI::Info \fIarray_of_info\fP[],
++	int \fIroot\fP, int \fIarray_of_errcodes\fP[])
++
++MPI::Intercomm MPI::Intracomm::Spawn_multiple(int \fIcount\fP,
++	const char* \fIarray_of_commands\fP[], const char** \fIarray_of_argv\fP[],
++	const int \fIarray_of_maxprocs\fP[], const MPI::Info \fIarray_of_info\fP[],
++	int \fIroot\fP)
++
++.SH INPUT PARAMETERS
++.ft R
++.TP 1i
++count
++Number of commands (positive integer, significant to MPI only at \fIroot\fP -- see NOTES).
++.TP 1i
++array_of_commands
++Programs to be executed (array of strings, significant only at \fIroot\fP). 
++.TP 1i
++array_of_argv
++Arguments for \fIcommands\fP (array of array of strings,  significant only at \fIroot\fP). 
++.TP 1i
++array_of_maxprocs
++Maximum number of processes to start for each command (array of integers, significant only at \fIroot\fP). 
++.TP 1i
++array_of_info
++Info objects telling the runtime system where and how to start processes (array of handles, significant only at \fIroot\fP).
++.TP 1i
++root
++Rank of process in which previous arguments are examined (integer).
++.TP 1i
++comm
++Intracommunicator containing group of spawning processes (handle).
++
++.SH OUTPUT PARAMETERS
++.ft R
++.TP 1i
++intercomm
++Intercommunicator between original group and the newly spawned group (handle).
++.TP 1i
++array_of_errcodes
++One code per process (array of integers).
++.TP 1i
++IERROR
++Fortran only: Error status (integer). 
++
++.SH DESCRIPTION
++.ft R
++MPI_Comm_spawn_multiple is identical to MPI_Comm_spawn except that it can specify multiple executables. The first argument, \fIcount\fP, indicates the number of executables. The next three arguments are arrays of the corresponding arguments in MPI_Comm_spawn. The next argument, \fIarray_of_info\fP, is an array of \fIinfo\fP arguments; however, only the first argument in that array is used.  Any subsequent arguments in the array are ignored because an \fIinfo\fP argument applies to the entire job that is spawned, and cannot be different for each executable in the job.  See the INFO ARGUMENTS section for more information.
++.sp
++For the Fortran version of \fIarray_of_argv\fP, the element \fIarray_of_argv\fP(i,j) is the jth argument to command number i. 
++.sp
++In any language, an application may use the constant MPI_ARGVS_NULL (which is likely to be (char ***)0 in C) to specify that no arguments should be passed to any commands. The effect of setting individual elements of \fIarray_of_argv\fP to MPI_ARGV_NULL is not defined. To specify arguments for some commands but not others, the commands without arguments should have a corresponding \fIargv\fP whose first element is null ((char *)0 in C and empty string in Fortran). 
++.sp
++All of the spawned processes have the same MPI_COMM_WORLD. Their ranks in MPI_COMM_WORLD correspond directly to the order in which the commands are specified in MPI_Comm_spawn_multiple. Assume that m1 processes are generated by the first command, m2 by the second, etc. The processes corresponding to the first command have ranks 0, 1,..., m1-1. The processes in the second command have ranks m1, m1+1, ..., m1+m2-1. The processes in the third have ranks m1+m2, m1+m2+1, ..., m1+m2+m3-1, etc.
++.sp
++The \fIarray_of_errcodes\fP argument is 1-dimensional array of size 
++.sp
++.nf
++	 _ count
++	\\       n ,
++	/_ i=1   i 
++.fi
++.sp
++where i is the ith element of \fIarray_of_maxprocs\fP. Command number \fIi\fP corresponds to the i contiguous slots in this array from element 
++.sp
++.nf
++                      _              _
++	 _ \fIi\fP-1          |   _ \fIi\fP          |
++	\\       n ,  to |  \\      n      | -1
++	/_ \fIj\fP=1   i      |  /_ \fIj\fP=1  j     |
++                     |_              _| 
++.fi 
++.sp
++Error codes are treated as for MPI_Comm_spawn. 
++
++ 
++.SH INFO ARGUMENTS
++The following values for \fIinfo\fP are recognized in Open MPI 1.2. (The reserved values mentioned in Section 5.3.4 of the MPI-2 standard are not implemented.)
++.sp
++.sp
++.nf
++Key value             Type      Description
++----------            ----      -----------
++
++host                  char *    Host on which the process should be spawned.
++wdir                  char *    Directory where the executable is located.
++.fi
++ 
++.sp
++Note that in Open MPI 1.2, the first array location in \fIarray_of_info\fP is applied to all the commands in \fIarray_of_commands\fP. 
++
++.SH NOTES
++The argument \fIcount\fP is interpreted by MPI only at the root, as is \fIarray_of_argv\fP. Since the leading dimension of \fIarray_of_argv\fP is \fIcount\fP, a nonpositive value of \fIcount\fP at a nonroot node could theoretically cause a runtime bounds check error, even though \fIarray_of_argv\fP should be ignored by the subroutine. If this happens, you should explicitly supply a reasonable value of \fIcount\fP on the nonroot nodes. 
++.sp
++Calling MPI_Comm_spawn many times would create many sets of children with different MPI_COMM_WORLDs, whereas MPI_Comm_spawn_multiple creates children with a single MPI_COMM_WORLD, so the two methods are not completely equivalent. Also  if you need to spawn multiple executables, you may get better performance by using MPI_Comm_spawn_multiple instead of calling MPI_Comm_spawn several times.   
++
++.SH ERRORS
++Almost all MPI routines return an error value; C routines as the value of the function and Fortran routines in the last argument. C++ functions do not return errors. If the default error handler is set to MPI::ERRORS_THROW_EXCEPTIONS, then on error the C++ exception mechanism will be used to throw an MPI:Exception object.
++.sp
++Before the error value is returned, the current MPI error handler is
++called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
++
++.SH SEE ALSO
++.ft R
++.sp
++.nf
++MPI_Comm_spawn(3)
++MPI_Comm_get_parent(3)
++mpirun(1)
++
++' @(#)MPI_Comm_spawn_multiple.3 1.18 01/02/27   
++' @(#)MPI_Comm_spawn_multiple.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_split.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_split.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_split.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_split.3	2008-05-31 23:46:42.000000000 +0200
+@@ -89,4 +89,3 @@
+ MPI_Comm_free
+ 
+ 
+-' @(#)MPI_Comm_split.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_test_inter.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_test_inter.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Comm_test_inter.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Comm_test_inter.3	2008-05-31 23:46:42.000000000 +0200
+@@ -74,4 +74,3 @@
+ MPI_Intercomm_create
+ MPI_Intercomm_merge
+ 
+-' @(#)MPI_Comm_test_inter.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Dims_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Dims_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Dims_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Dims_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Dims_create.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,5 +72,4 @@
+ MPI_Comm_set_errhandler
+ 
+ 
+-' @(#)MPI_Errhandler_create.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -53,7 +53,6 @@
+ .br
+ MPI_Comm_set_errhandler
+ 
+-' @(#)MPI_Errhandler_free.3 1.20 06/03/09   
+ 
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ .br
+ MPI_Comm_set_errhandler
+ 
+-' @(#)MPI_Errhandler_get.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_set.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_set.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Errhandler_set.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Errhandler_set.3	2008-05-31 23:46:42.000000000 +0200
+@@ -56,5 +56,4 @@
+ .br
+ MPI_Comm_set_errhandler
+ 
+-' @(#)MPI_Errhandler_set.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Error_class.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Error_class.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Error_class.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Error_class.3	2008-05-31 23:46:42.000000000 +0200
+@@ -54,4 +54,3 @@
+ MPI_Error_string
+ 
+ 
+-' @(#)MPI_Error_class.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Error_string.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Error_string.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Error_string.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Error_string.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,5 +60,4 @@
+ .sp
+ MPI_Error_class
+ 
+-' @(#)MPI_Error_string.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Exscan.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Exscan.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Exscan.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Exscan.3	2008-05-31 23:46:42.000000000 +0200
+@@ -125,4 +125,3 @@
+ MPI_Reduce
+ MPI_Scan
+ 
+-' @(#)MPI_Exscan.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_File_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_call_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_call_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_call_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_call_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -67,4 +67,3 @@
+ MPI_File_create_errhandler
+ MPI_File_set_errhandler
+ 
+-' @(#)MPI_File_call_errhandler.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_close.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_close.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_close.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_close.3	2008-05-31 23:46:42.000000000 +0200
+@@ -49,5 +49,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_close.3 1.25 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_create_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_create_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_create_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_create_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -76,5 +76,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_create_errhandler.3 1.19 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_File_f2c.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_amode.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_amode.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_amode.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_amode.3	2008-05-31 23:46:42.000000000 +0200
+@@ -50,5 +50,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_amode.3 1.8 97/08/26
+-' @(#)MPI_File_get_amode.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_atomicity.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_atomicity.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_atomicity.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_atomicity.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,5 +55,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_atomicity.3 1.8 97/08/26
+-' @(#)MPI_File_get_atomicity.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_byte_offset.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_byte_offset.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_byte_offset.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_byte_offset.3	2008-05-31 23:46:42.000000000 +0200
+@@ -69,4 +69,3 @@
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_File_get_byte_offset.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -49,4 +49,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_errhandler.3 1.19 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_group.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_group.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_group.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_group.3	2008-05-31 23:46:42.000000000 +0200
+@@ -52,5 +52,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_group.3 1.8 97/08/26
+-' @(#)MPI_File_get_group.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_info.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_info.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_info.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_info.3	2008-05-31 23:46:42.000000000 +0200
+@@ -88,4 +88,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_info.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_position.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_position.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_position.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_position.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_position.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_position_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_position_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_position_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_position_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_position_shared.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ MPI_File_preallocate
+ .br
+ 
+-' @(#)MPI_File_get_size.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_type_extent.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_type_extent.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_type_extent.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_type_extent.3	2008-05-31 23:46:42.000000000 +0200
+@@ -71,4 +71,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_type_extent.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_view.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_view.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_get_view.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_get_view.3	2008-05-31 23:46:42.000000000 +0200
+@@ -84,5 +84,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_get_view.3 1.8 97/08/26
+-' @(#)MPI_File_get_view.3 1.33 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread.3	2008-05-31 23:46:42.000000000 +0200
+@@ -77,4 +77,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iread.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread_at.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread_at.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread_at.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread_at.3	2008-05-31 23:46:42.000000000 +0200
+@@ -103,4 +103,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iread_at.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iread_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iread_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -63,4 +63,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iread_shared.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite.3	2008-05-31 23:46:42.000000000 +0200
+@@ -81,4 +81,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iwrite.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite_at.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite_at.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite_at.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite_at.3	2008-05-31 23:46:42.000000000 +0200
+@@ -104,4 +104,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iwrite_at.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_iwrite_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_iwrite_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_iwrite_shared.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_open.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_open.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_open.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_open.3	2008-05-31 23:46:42.000000000 +0200
+@@ -169,5 +169,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_open.3 1.2 97/08/26
+-' @(#)MPI_File_open.3 1.30 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_preallocate.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_preallocate.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_preallocate.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_preallocate.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,4 +73,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_preallocate.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read.3	2008-05-31 23:46:42.000000000 +0200
+@@ -79,4 +79,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read.3 1.26 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all.3	2008-05-31 23:46:42.000000000 +0200
+@@ -79,6 +79,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_all.3 1.2 97/08/26
+ 
+-' @(#)MPI_File_read_all.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_all_begin.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_all_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_all_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_all_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at.3	2008-05-31 23:46:42.000000000 +0200
+@@ -105,4 +105,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_at.3 1.28 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all.3	2008-05-31 23:46:42.000000000 +0200
+@@ -101,5 +101,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_at_all.3 1.2 97/08/26
+-' @(#)MPI_File_read_at_all.3 1.27 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -95,4 +95,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_at_all_begin.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_at_all_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_at_all_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_at_all_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered.3	2008-05-31 23:46:42.000000000 +0200
+@@ -84,4 +84,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_ordered.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -79,4 +79,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_ordered_begin.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_ordered_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_ordered_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -65,4 +65,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_ordered_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_read_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_read_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_read_shared.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_seek.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_seek.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_seek.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_seek.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,5 +87,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_seek.3 1.2 97/08/26
+-' @(#)MPI_File_seek.3 1.27 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_seek_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_seek_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_seek_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_seek_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -97,5 +97,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_seek_shared.3 1.2 97/08/26
+-' @(#)MPI_File_seek_shared.3 1.27 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_atomicity.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_atomicity.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_atomicity.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_atomicity.3	2008-05-31 23:46:42.000000000 +0200
+@@ -62,5 +62,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_set_atomicity.3 1.8 97/08/26
+-' @(#)MPI_File_set_atomicity.3 1.31 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,5 +51,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_set_errhandler.3 1.19 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_info.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_info.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_info.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_info.3	2008-05-31 23:46:42.000000000 +0200
+@@ -88,4 +88,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_set_info.3 1.24 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_view.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_view.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_set_view.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_set_view.3	2008-05-31 23:46:42.000000000 +0200
+@@ -157,6 +157,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_set_view.3 1.9 97/08/26
+ 
+-' @(#)MPI_File_set_view.3 1.39 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write.3	2008-05-31 23:46:42.000000000 +0200
+@@ -85,4 +85,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write.3 1.26 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all.3	2008-05-31 23:46:42.000000000 +0200
+@@ -81,5 +81,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_all.3 1.2 97/08/26
+-' @(#)MPI_File_write_all.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -76,4 +76,3 @@
+ 
+ 
+ 
+-' @(#)MPI_File_write_all_begin.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_all_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_all_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ .sp
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+-' @(#)MPI_File_write_all_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at.3	2008-05-31 23:46:42.000000000 +0200
+@@ -113,4 +113,3 @@
+ MPI_File_write_at_all_end
+ .br
+ 
+-' @(#)MPI_File_write_at.3 1.28 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all.3	2008-05-31 23:46:42.000000000 +0200
+@@ -101,5 +101,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_at_all.3 1.2 97/08/26
+-' @(#)MPI_File_write_at_all.3 1.27 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -95,4 +95,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_at_all_begin.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_at_all_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_at_all_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_at_all_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered.3	2008-05-31 23:46:42.000000000 +0200
+@@ -89,5 +89,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_ordered.3 1.2 97/08/26
+-' @(#)MPI_File_write_ordered.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered_begin.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered_begin.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered_begin.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered_begin.3	2008-05-31 23:46:42.000000000 +0200
+@@ -85,4 +85,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_ordered_begin.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered_end.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered_end.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_ordered_end.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_ordered_end.3	2008-05-31 23:46:42.000000000 +0200
+@@ -67,4 +67,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_ordered_end.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_shared.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_shared.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_File_write_shared.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_File_write_shared.3	2008-05-31 23:46:42.000000000 +0200
+@@ -67,4 +67,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_File_write_shared.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Finalize.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Finalize.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Finalize.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Finalize.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,5 +48,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Finalize.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Free_mem.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Free_mem.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Free_mem.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Free_mem.3	2008-05-31 23:46:42.000000000 +0200
+@@ -49,4 +49,3 @@
+ .ft R
+ MPI_Alloc_mem
+ 
+-' @(#)MPI_Free_mem.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Gather.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Gather.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Gather.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Gather.3	2008-05-31 23:46:42.000000000 +0200
+@@ -167,4 +167,3 @@
+ MPI_Scatter
+ MPI_Scatterv
+ 
+-' @(#)MPI_Gather.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Gatherv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Gatherv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Gatherv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Gatherv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -328,4 +328,3 @@
+ MPI_Scatter
+ MPI_Scatterv
+ 
+-' @(#)MPI_Gatherv.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -93,4 +93,3 @@
+ .sp
+ MPI_Put
+ 
+-' @(#)MPI_Get.3 1.13 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_address.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_address.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_address.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_address.3	2008-05-31 23:46:42.000000000 +0200
+@@ -70,4 +70,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Get_address.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_count.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_count.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_count.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_count.3	2008-05-31 23:46:42.000000000 +0200
+@@ -77,4 +77,3 @@
+ MPI_Get_elements
+ 
+ 
+-' @(#)MPI_Get_count.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_elements.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_elements.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_elements.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_elements.3	2008-05-31 23:46:42.000000000 +0200
+@@ -78,4 +78,3 @@
+ .sp
+ MPI_Get_count
+ 
+-' @(#)MPI_Get_elements.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_processor_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_processor_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Get_processor_name.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Get_processor_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -54,6 +54,5 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Get_processor_name.3 1.20 06/03/09   
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -104,4 +104,3 @@
+ .br
+ MPI_Graphdims_get
+ 
+-' @(#)MPI_Graph_create.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -70,4 +70,3 @@
+ .br
+ MPI_Graphdims_get
+ 
+-' @(#)MPI_Graph_get.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_map.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_map.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_map.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_map.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ .sp
+ MPI_Cart_map
+ 
+-' @(#)MPI_Graph_map.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_neighbors.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_neighbors.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_neighbors.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_neighbors.3	2008-05-31 23:46:42.000000000 +0200
+@@ -92,4 +92,3 @@
+ .sp
+ MPI_Graph_neighbors_count
+ 
+-' @(#)MPI_Graph_neighbors.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_neighbors_count.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_neighbors_count.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graph_neighbors_count.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graph_neighbors_count.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,4 +57,3 @@
+ .sp
+ MPI_Graph_neighbors
+ 
+-' @(#)MPI_Graph_neighbors_count.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graphdims_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graphdims_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Graphdims_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Graphdims_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -61,4 +61,3 @@
+ .br
+ MPI_Graph_get
+ 
+-' @(#)MPI_Graphdims_get.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Group_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_compare.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_compare.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_compare.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_compare.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Group_compare.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_difference.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_difference.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_difference.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_difference.3	2008-05-31 23:46:42.000000000 +0200
+@@ -70,4 +70,3 @@
+ .SH SEE ALSO
+ MPI_Group_free
+ 
+-' @(#)MPI_Group_difference.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_excl.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_excl.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_excl.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_excl.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ .br
+ MPI_Group_free
+ 
+-' @(#)MPI_Group_excl.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Group_f2c.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -47,4 +47,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Group_free.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_incl.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_incl.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_incl.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_incl.3	2008-05-31 23:46:42.000000000 +0200
+@@ -69,4 +69,3 @@
+ .br
+ MPI_Group_free
+ 
+-' @(#)MPI_Group_incl.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_intersection.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_intersection.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_intersection.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_intersection.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ .br
+ 
+ 
+-' @(#)MPI_Group_intersection.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_range_excl.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_range_excl.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_range_excl.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_range_excl.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ MPI_Group_free
+ .br
+ 
+-' @(#)MPI_Group_range_excl.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_range_incl.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_range_incl.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_range_incl.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_range_incl.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,4 +87,3 @@
+ MPI_Group_free
+ 
+ 
+-' @(#)MPI_Group_range_incl.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_rank.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_rank.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_rank.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_rank.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Group_rank.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Group_size.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_translate_ranks.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_translate_ranks.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_translate_ranks.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_translate_ranks.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Group_translate_ranks.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_union.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_union.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Group_union.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Group_union.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ MPI_Group_free
+ .br
+ 
+-' @(#)MPI_Group_union.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ibsend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ibsend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ibsend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ibsend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -74,4 +74,3 @@
+ .br
+ 
+ 
+-' @(#)MPI_Ibsend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Info_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ MPI_Info_set
+ .br
+ 
+-' @(#)MPI_Info_create.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_dup.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_dup.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_dup.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_dup.3	2008-05-31 23:46:42.000000000 +0200
+@@ -61,4 +61,3 @@
+ MPI_Info_set
+ .br
+ 
+-' @(#)MPI_Info_dup.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Info_f2c.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,4 +57,3 @@
+ MPI_Info_set
+ .br
+ 
+-' @(#)MPI_Info_free.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get.3	2008-05-31 23:46:42.000000000 +0200
+@@ -84,4 +84,3 @@
+ MPI_Info_set
+ .br
+ 
+-' @(#)MPI_Info_get.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_nkeys.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_nkeys.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_nkeys.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_nkeys.3	2008-05-31 23:46:42.000000000 +0200
+@@ -57,4 +57,3 @@
+ MPI_Info_get_valueln
+ .br
+ 
+-' @(#)MPI_Info_get_nkeys.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_nthkey.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_nthkey.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_nthkey.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_nthkey.3	2008-05-31 23:46:42.000000000 +0200
+@@ -62,4 +62,3 @@
+ MPI_Info_get_valueln
+ .br
+ 
+-' @(#)MPI_Info_get_nthkey.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_valuelen.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_valuelen.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Info_get_valuelen.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Info_get_valuelen.3	2008-05-31 23:46:42.000000000 +0200
+@@ -71,4 +71,3 @@
+ MPI_Info_get_nthkey
+ .br
+ 
+-' @(#)MPI_Info_get_valuelen.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -97,4 +97,3 @@
+ MPI_Initialized
+ MPI_Finalize
+ 
+-' @(#)MPI_Init.3 1.24 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Init_thread.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Init_thread.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Init_thread.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Init_thread.3	2008-05-31 23:46:42.000000000 +0200
+@@ -127,4 +127,3 @@
+ MPI_Initialized
+ MPI_Finalize
+ 
+-' @(#)MPI_Init_thread.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Initialized.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Initialized.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Initialized.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Initialized.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ .sp
+ MPI_Init
+ 
+-' @(#)MPI_Initialized.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Intercomm_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Intercomm_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Intercomm_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Intercomm_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -98,5 +98,3 @@
+ MPI_Comm_remote_size
+ 
+ 
+-' @(#)MPI_Intercomm_create.3 1.17 00/02/02   
+-' @(#)MPI_Intercomm_create.3 1.23 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Intercomm_merge.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Intercomm_merge.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Intercomm_merge.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Intercomm_merge.3	2008-05-31 23:46:42.000000000 +0200
+@@ -58,7 +58,6 @@
+ .br
+ MPI_Comm_free
+ 
+-' @(#)MPI_Intercomm_merge.3 1.20 06/03/09   
+ 
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Iprobe.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Iprobe.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Iprobe.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Iprobe.3	2008-05-31 23:46:42.000000000 +0200
+@@ -83,4 +83,3 @@
+ .br
+ MPI_Cancel
+ 
+-' @(#)MPI_Iprobe.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Irecv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Irecv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Irecv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Irecv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -80,4 +80,3 @@
+ MPI_Waitany
+ .br
+ 
+-' @(#)MPI_Irecv.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Irsend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Irsend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Irsend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Irsend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -70,4 +70,3 @@
+ 
+ .SH SEE ALSO
+ MPI_Rsend
+-' @(#)MPI_Irsend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Is_thread_main.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Is_thread_main.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Is_thread_main.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Is_thread_main.3	2008-05-31 23:46:42.000000000 +0200
+@@ -62,4 +62,3 @@
+ MPI_Init
+ MPI_Init_thread
+ 
+-' @(#)MPI_Is_thread_main.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Isend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Isend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Isend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Isend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -78,4 +78,3 @@
+ MPI_Testany
+ .br
+ 
+-' @(#)MPI_Isend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Issend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Issend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Issend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Issend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,4 +73,3 @@
+ .SH SEE ALSO
+ MPI_Ssend
+ .br
+-' @(#)MPI_Issend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Keyval_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Keyval_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Keyval_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Keyval_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -112,4 +112,3 @@
+ .SH SEE ALSO
+ MPI_Keyval_free
+ .br
+-' @(#)MPI_Keyval_create.3 1.21 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Keyval_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Keyval_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Keyval_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Keyval_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -52,7 +52,6 @@
+ MPI_Keyval_create
+ .br
+ 
+-' @(#)MPI_Keyval_free.3 1.21 06/03/09   
+ 
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Lookup_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Lookup_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Lookup_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Lookup_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -79,5 +79,4 @@
+ MPI_Publish_name
+ MPI_Open_port
+ 
+-' @(#)MPI_Lookup_name.3 1.7 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Lookup_name.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Lookup_name.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Lookup_name.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Lookup_name.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,83 @@
++.\"Copyright 2007, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Lookup_name 3OpenMPI "March 2007" "Open MPI 1.2" " "
++
++.SH NAME
++.nf
++\fBMPI_Lookup_name\fP \- Finds port associated with a service name
++
++.SH SYNTAX
++.ft R
++
++.SH C Syntax
++.nf
++#include <mpi.h>
++int MPI_Lookup_name(char *\fIservice_name\fP, MPI_Info \fIinfo\fP,
++	char *\fIport_name\fP)
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++MPI_LOOKUP_NAME(\fISERVICE_NAME, INFO, PORT_NAME, IERROR\fP)
++	CHARACTER*(*)	\fISERVICE_NAME, PORT_NAME\fP
++	INTEGER		\fIINFO, IERROR\fP
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++void MPI::Lookup_name(const char *\fIservice_name\fP, const MPI::Info& \fIinfo\fP,
++	char* \fIport_name\fP)
++
++.SH INPUT PARAMETERS
++.ft R
++.TP 1.4i
++service_name
++A service name (string).
++.TP 1.4i
++info
++Options to the name service functions (handle). No options currently supported.
++
++.SH OUTPUT PARAMETERS
++.ft R
++.TP 1.4i
++port_name
++a port name (string).
++.TP 1.4i
++IERROR
++Fortran only: Error status (integer). 
++
++.SH DESCRIPTION
++.ft R
++This function retrieves a \fIport_name\fP published under
++\fIservice_name\fP by a previous invocation of MPI_Publish_name. The
++application must supply a \fIport_name\fP buffer large enough to hold
++the largest possible port name (i.e., MPI_MAX_PORT_NAME bytes).
++.sp
++The \fIinfo\fP parameter should be MPI_INFO_NULL, as this routine does
++not parse any MPI Info arguments.
++
++.SH ERRORS
++.ft R
++Almost all MPI routines return an error value; C routines as
++the value of the function and Fortran routines in the last argument. C++
++functions do not return errors. If the default error handler is set to
++MPI::ERRORS_THROW_EXCEPTIONS, then on error the C++ exception mechanism
++will be used to throw an MPI:Exception object.
++.sp
++Before the error value is returned, the current MPI error handler is
++called. By default, this error handler aborts the MPI job, except for
++I/O function errors. The error handler may be changed with
++MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
++may be used to cause error values to be returned. Note that MPI does not
++guarantee that an MPI program can continue past an error. 
++.sp
++See the MPI man page for a full list of MPI error codes.
++
++.SH SEE ALSO
++.ft R
++.nf
++MPI_Publish_name
++MPI_Open_port
++
++' @(#)MPI_Lookup_name.3 1.7 06/03/09
++
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Op_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_create.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_create.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_create.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_create.3	2008-05-31 23:46:42.000000000 +0200
+@@ -176,4 +176,3 @@
+ MPI_Scan
+ MPI_Op_free
+ 
+-' @(#)MPI_Op_create.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Op_f2c.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Op_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Op_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ .br
+ MPI_Scan
+ 
+-' @(#)MPI_Op_free.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Open_port.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Open_port.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Open_port.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Open_port.3	2008-05-31 23:46:42.000000000 +0200
+@@ -58,4 +58,3 @@
+ MPI_Comm_connect
+ .br
+ 
+-' @(#)MPI_Open_port.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack.3	2008-05-31 23:46:42.000000000 +0200
+@@ -101,4 +101,3 @@
+ .br
+ MPI_Pack_size
+ 
+-' @(#)MPI_Pack.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_external.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_external.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_external.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_external.3	2008-05-31 23:46:42.000000000 +0200
+@@ -190,4 +190,3 @@
+ MPI_Unpack_external
+ sscanf(3C)
+ 
+-' @(#)MPI_Pack_external.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_external_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_external_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_external_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_external_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -94,4 +94,3 @@
+ MPI_Pack_external
+ MPI_Unpack_external
+ 
+-' @(#)MPI_Pack_external_size.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pack_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pack_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ MPI_Unpack
+ 
+ 
+-' @(#)MPI_Pack_size.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pcontrol.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pcontrol.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Pcontrol.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Pcontrol.3	2008-05-31 23:46:42.000000000 +0200
+@@ -61,4 +61,3 @@
+ .sp
+ This function does not return an error value. Consequently, the result of calling it before MPI_Init or after MPI_Finalize is undefined.
+ 
+-' @(#)MPI_Pcontrol.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Probe.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Probe.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Probe.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Probe.3	2008-05-31 23:46:42.000000000 +0200
+@@ -117,4 +117,3 @@
+ .br
+ MPI_Cancel
+ 
+-' @(#)MPI_Probe.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Publish_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Publish_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Publish_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Publish_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -80,5 +80,4 @@
+ MPI_Lookup_name
+ MPI_Open_port
+ 
+-' @(#)MPI_Publish_name.3 1.8 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Publish_name.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Publish_name.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Publish_name.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Publish_name.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,84 @@
++.\"Copyright 2007, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Publish_name 3OpenMPI "March 2007" "Open MPI 1.2" " "
++
++.SH NAME
++.nf
++\fBMPI_Publish_name\fP \- Publishes a service name associated with a port
++
++.SH SYNTAX
++.ft R
++
++.SH C Syntax
++.nf
++#include <mpi.h>
++int MPI_Publish_name(char *\fIservice_name\fP, MPI_Info \fIinfo\fP,
++	char *\fIport_name\fP)
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++MPI_PUBLISH_NAME(\fISERVICE_NAME, INFO, PORT_NAME, IERROR\fP)
++	CHARACTER*(*)	\fISERVICE_NAME, PORT_NAME\fP
++	INTEGER		\fIINFO, IERROR\fP
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++void MPI::Publish_name(const char* \fIservice_name\fP, const MPI::Info& \fIinfo\fP,
++	const char* \fIport_name\fP)
++
++.SH INPUT PARAMETERS
++.ft R
++.TP 1.4i
++service_name
++A service name (string).
++.TP 1.4i
++info
++Options to the name service functions (handle). No options currently supported.
++.ft R
++.TP 1.4i
++port_name
++A port name (string).
++
++.SH OUTPUT PARAMETER
++.TP 1.4i
++IERROR
++Fortran only: Error status (integer).
++
++.SH DESCRIPTION
++.ft R
++This routine publishes the pair (\fIservice_name, port_name\fP) so that
++an application may retrieve \fIport_name\fP by calling MPI_Lookup_name
++with \fIservice_name\fP as an argument. It is an error to publish the same
++\fIservice_name\fP twice, or to use a \fIport_name\fP argument that was
++not previously opened by the calling process via a call to MPI_Open_port.
++.sp
++The \fIinfo\fP parameter should be MPI_INFO_NULL, as this routine does
++not parse any MPI Info arguments.
++
++.SH ERRORS
++.ft R
++Almost all MPI routines return an error value; C routines as
++the value of the function and Fortran routines in the last argument. C++
++functions do not return errors. If the default error handler is set to
++MPI::ERRORS_THROW_EXCEPTIONS, then on error the C++ exception mechanism
++will be used to throw an MPI:Exception object.
++.sp
++Before the error value is returned, the current MPI error handler is
++called. By default, this error handler aborts the MPI job, except for
++I/O function errors. The error handler may be changed with
++MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
++may be used to cause error values to be returned. Note that MPI does not
++guarantee that an MPI program can continue past an error. 
++.sp
++See the MPI man page for a full list of MPI error codes.
++
++.SH SEE ALSO
++.ft R
++.nf
++MPI_Lookup_name
++MPI_Open_port
++
++' @(#)MPI_Publish_name.3 1.8 06/03/09
++
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Put.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Put.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Put.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Put.3	2008-05-31 23:46:42.000000000 +0200
+@@ -107,4 +107,3 @@
+ .br
+ MPI_Accumulate
+ 
+-' @(#)MPI_Put.3 1.13 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Query_thread.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Query_thread.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Query_thread.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Query_thread.3	2008-05-31 23:46:42.000000000 +0200
+@@ -86,4 +86,3 @@
+ MPI_Init
+ MPI_Init_thread
+ 
+-' @(#)MPI_Query_thread.3 1.18 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Recv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Recv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Recv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Recv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -102,6 +102,5 @@
+ MPI_Irecv
+ MPI_Probe 
+ 
+-' @(#)MPI_Recv.3 1.20 06/03/09   
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Recv_init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Recv_init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Recv_init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Recv_init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -90,4 +90,3 @@
+ .br
+ MPI_Request_free
+ 
+-' @(#)MPI_Recv_init.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Reduce.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Reduce.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Reduce.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Reduce.3	2008-05-31 23:46:42.000000000 +0200
+@@ -430,4 +430,3 @@
+ 
+ 
+ 
+-' @(#)MPI_Reduce.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Reduce_scatter.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Reduce_scatter.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Reduce_scatter.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Reduce_scatter.3	2008-05-31 23:46:42.000000000 +0200
+@@ -97,4 +97,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Reduce_scatter.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Register_datarep.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Register_datarep.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Register_datarep.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Register_datarep.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,4 +87,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. For MPI I/O function errors, the default error handler is set to MPI_ERRORS_RETURN. The error handler may be changed with MPI_File_set_errhandler; the predefined error handler MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Register_datarep.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Request_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Request_f2c.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_free.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -127,4 +127,3 @@
+ 
+ 
+     
+-' @(#)MPI_Request_free.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_get_status.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_get_status.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Request_get_status.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Request_get_status.3	2008-05-31 23:46:42.000000000 +0200
+@@ -53,4 +53,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Request_get_status.3 1.18 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Rsend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Rsend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Rsend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Rsend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Rsend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Rsend_init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Rsend_init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Rsend_init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Rsend_init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -86,4 +86,3 @@
+ .br
+ MPI_Request_free
+ 
+-' @(#)MPI_Rsend_init.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scan.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scan.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scan.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scan.3	2008-05-31 23:46:42.000000000 +0200
+@@ -199,4 +199,3 @@
+ MPI_Op_create
+ MPI_Reduce
+ 
+-' @(#)MPI_Scan.3 1.23 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scatter.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scatter.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scatter.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scatter.3	2008-05-31 23:46:42.000000000 +0200
+@@ -148,4 +148,3 @@
+ MPI_Gather
+ MPI_Gatherv
+ 
+-' @(#)MPI_Scatter.3 1.22 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scatterv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scatterv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Scatterv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Scatterv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -192,5 +192,4 @@
+ MPI_Scatter
+ 
+ 
+-' @(#)MPI_Scatterv.3 1.22 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Send.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Send.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Send.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Send.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,4 +73,3 @@
+ MPI_Bsend
+ MPI_Recv
+ 
+-' @(#)MPI_Send.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Send_init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Send_init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Send_init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Send_init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -88,4 +88,3 @@
+ MPI_Request_free
+ 
+ 
+-' @(#)MPI_Send_init.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sendrecv.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sendrecv.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sendrecv.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sendrecv.3	2008-05-31 23:46:42.000000000 +0200
+@@ -106,4 +106,3 @@
+ MPI_Sendrecv_replace
+ 
+ 
+-' @(#)MPI_Sendrecv.3 1.24 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sendrecv_replace.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sendrecv_replace.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sendrecv_replace.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sendrecv_replace.3	2008-05-31 23:46:42.000000000 +0200
+@@ -94,6 +94,5 @@
+ .sp
+ MPI_Sendrecv
+ 
+-' @(#)MPI_Sendrecv_replace.3 1.20 06/03/09   
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sizeof.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sizeof.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Sizeof.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Sizeof.3	2008-05-31 23:46:42.000000000 +0200
+@@ -59,4 +59,3 @@
+ .sp
+ See the MPI man page for a full list of MPI error codes.
+ 
+-' @(#)MPI_Sizeof.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ssend.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ssend.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ssend.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ssend.3	2008-05-31 23:46:42.000000000 +0200
+@@ -62,4 +62,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Ssend.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ssend_init.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ssend_init.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Ssend_init.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Ssend_init.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,4 +87,3 @@
+ MPI_Ssend
+ 
+ 
+-' @(#)MPI_Ssend_init.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Start.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Start.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Start.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Start.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ MPI_Startall
+ 
+ 
+-' @(#)MPI_Start.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Startall.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Startall.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Startall.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Startall.3	2008-05-31 23:46:42.000000000 +0200
+@@ -82,4 +82,3 @@
+ MPI_Request_free
+ 
+ 
+-' @(#)MPI_Startall.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_c2f.3	2007-12-06 21:20:57.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Status_f2c.3
+-' @(#)MPI_Status_c2f.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_f2c.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -24,4 +24,3 @@
+ .sp
+ 
+ 
+-' @(#)MPI_Status_f2c.3 1.15 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_set_cancelled.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_set_cancelled.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_set_cancelled.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_set_cancelled.3	2008-05-31 23:46:42.000000000 +0200
+@@ -55,4 +55,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Status_set_cancelled.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_set_elements.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_set_elements.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Status_set_elements.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Status_set_elements.3	2008-05-31 23:46:42.000000000 +0200
+@@ -59,4 +59,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Status_set_elements.3 1.17 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Test.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Test.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Test.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Test.3	2008-05-31 23:46:42.000000000 +0200
+@@ -105,4 +105,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Test.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Test_cancelled.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Test_cancelled.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Test_cancelled.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Test_cancelled.3	2008-05-31 23:46:42.000000000 +0200
+@@ -53,6 +53,5 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Test_cancelled.3 1.20 06/03/09   
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testall.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testall.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testall.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testall.3	2008-05-31 23:46:42.000000000 +0200
+@@ -115,4 +115,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Testall.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testany.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testany.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testany.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testany.3	2008-05-31 23:46:42.000000000 +0200
+@@ -110,4 +110,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Testany.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testsome.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testsome.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Testsome.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Testsome.3	2008-05-31 23:46:42.000000000 +0200
+@@ -121,4 +121,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Testsome.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Topo_test.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Topo_test.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Topo_test.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Topo_test.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ .br
+ MPI_Cart_create
+ 
+-' @(#)MPI_Topo_test.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Type_c2f.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_commit.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_commit.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_commit.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_commit.3	2008-05-31 23:46:42.000000000 +0200
+@@ -56,4 +56,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Type_commit.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_contiguous.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_contiguous.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_contiguous.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_contiguous.3	2008-05-31 23:46:42.000000000 +0200
+@@ -80,4 +80,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Type_contiguous.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_darray.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_darray.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_darray.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_darray.3	2008-05-31 23:46:42.000000000 +0200
+@@ -134,4 +134,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Type_create_darray.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_complex.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_complex.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_complex.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_complex.3	2008-05-31 23:46:42.000000000 +0200
+@@ -129,4 +129,3 @@
+ MPI_Unpack_external
+ SELECTED_REAL_KIND
+ 
+-' @(#)MPI_Type_create_f90_complex.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_integer.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_integer.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_integer.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_integer.3	2008-05-31 23:46:42.000000000 +0200
+@@ -122,4 +122,3 @@
+ MPI_Unpack_external
+ SELECTED_INT_KIND
+ 
+-' @(#)MPI_Type_create_f90_integer.3 1.5 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_real.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_real.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_f90_real.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_f90_real.3	2008-05-31 23:46:42.000000000 +0200
+@@ -128,4 +128,3 @@
+ MPI_Unpack_external
+ SELECTED_REAL_KIND
+ 
+-' @(#)MPI_Type_create_f90_real.3 1.5 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_hindexed.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_hindexed.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_hindexed.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_hindexed.3	2008-05-31 23:46:42.000000000 +0200
+@@ -106,4 +106,3 @@
+ MPI_Type_hindexed
+ .br
+ 
+-' @(#)MPI_Type_create_hindexed.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_hvector.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_hvector.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_hvector.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_hvector.3	2008-05-31 23:46:42.000000000 +0200
+@@ -81,4 +81,3 @@
+ .br
+ MPI_Type_vector
+ .br
+-' @(#)MPI_Type_create_hvector.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_indexed_block.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_indexed_block.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_indexed_block.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_indexed_block.3	2008-05-31 23:46:42.000000000 +0200
+@@ -65,4 +65,3 @@
+ MPI_Type_indexed
+ .br
+ 
+-' @(#)MPI_Type_create_indexed_block.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_keyval.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -127,4 +127,3 @@
+ .sp
+ MPI_Type_free_keyval
+ 
+-' @(#)MPI_Type_create_keyval.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_resized.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_resized.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_resized.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_resized.3	2008-05-31 23:46:42.000000000 +0200
+@@ -79,4 +79,3 @@
+ 
+ MPI_Type_get_extent
+ 
+-' @(#)MPI_Type_create_resized.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_struct.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_struct.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_struct.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_struct.3	2008-05-31 23:46:42.000000000 +0200
+@@ -85,4 +85,3 @@
+ .br
+ MPI_Type_create_hindexed
+ 
+-' @(#)MPI_Type_create_struct.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_subarray.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_subarray.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_create_subarray.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_create_subarray.3	2008-05-31 23:46:42.000000000 +0200
+@@ -122,4 +122,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Type_create_subarray.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_delete_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_delete_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_delete_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_delete_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -50,4 +50,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Type_delete_attr.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_dup.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_dup.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_dup.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_dup.3	2008-05-31 23:46:42.000000000 +0200
+@@ -53,4 +53,3 @@
+ MPI_Type_create_keyval
+ .br
+ 
+-' @(#)MPI_Type_dup.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_extent.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_extent.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_extent.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_extent.3	2008-05-31 23:46:42.000000000 +0200
+@@ -86,4 +86,3 @@
+ MPI_Type_get_extent
+ .br
+ 
+-' @(#)MPI_Type_extent.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Type_f2c.3 1.11 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -46,6 +46,5 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Type_free.3 1.20 06/03/09   
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_free_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_free_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_free_keyval.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_free_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -49,4 +49,3 @@
+ MPI_Type_create_keyval
+ .br
+ 
+-' @(#)MPI_Type_free_keyval.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ .sp
+ MPI_Type_set_attr
+ .br
+-' @(#)MPI_Type_get_attr.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_extent.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_extent.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_extent.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_extent.3	2008-05-31 23:46:42.000000000 +0200
+@@ -74,4 +74,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Type_get_extent.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_get_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_get_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -59,4 +59,3 @@
+ MPI_Type_set_name
+ .br
+ 
+-' @(#)MPI_Type_get_name.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_hindexed.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_hindexed.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_hindexed.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_hindexed.3	2008-05-31 23:46:42.000000000 +0200
+@@ -91,4 +91,3 @@
+ MPI_Type_indexed
+ .br
+ 
+-' @(#)MPI_Type_hindexed.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_hvector.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_hvector.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_hvector.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_hvector.3	2008-05-31 23:46:42.000000000 +0200
+@@ -90,4 +90,3 @@
+ MPI_Type_vector
+ .br
+ 
+-' @(#)MPI_Type_hvector.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_indexed.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_indexed.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_indexed.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_indexed.3	2008-05-31 23:46:42.000000000 +0200
+@@ -119,4 +119,3 @@
+ MPI_Type_hindexed
+ .br
+ 
+-' @(#)MPI_Type_indexed.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_lb.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_lb.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_lb.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_lb.3	2008-05-31 23:46:42.000000000 +0200
+@@ -85,4 +85,3 @@
+ MPI_Type_get_extent
+ .br
+ 
+-' @(#)MPI_Type_lb.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_match_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_match_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_match_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_match_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,4 +87,3 @@
+ MPI_Sizeof
+ MPI_Type_get_extent
+ 
+-' @(#)MPI_Type_match_size.3 1.5 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_set_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_set_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_set_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_set_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -73,4 +73,3 @@
+ MPI_Type_get_attr
+ .br
+ 
+-' @(#)MPI_Type_set_attr.3 1.19 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_set_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_set_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_set_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_set_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -58,4 +58,3 @@
+ MPI_Type_get_name
+ .br
+ 
+-' @(#)MPI_Type_set_name.3 1.17 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_size.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_size.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_size.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_size.3	2008-05-31 23:46:42.000000000 +0200
+@@ -50,5 +50,4 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Type_size.3 1.20 06/03/09   
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_struct.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_struct.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_struct.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_struct.3	2008-05-31 23:46:42.000000000 +0200
+@@ -111,4 +111,3 @@
+ MPI_Type_create_hindexed
+ .br
+ 
+-' @(#)MPI_Type_struct.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_ub.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_ub.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_ub.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_ub.3	2008-05-31 23:46:42.000000000 +0200
+@@ -87,4 +87,3 @@
+ MPI_Type_get_extent
+ .br
+ 
+-' @(#)MPI_Type_ub.3 1.21 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_vector.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_vector.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Type_vector.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Type_vector.3	2008-05-31 23:46:42.000000000 +0200
+@@ -113,4 +113,3 @@
+ MPI_Type_hvector
+ .br
+ 
+-' @(#)MPI_Type_vector.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpack.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpack.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpack.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpack.3	2008-05-31 23:46:42.000000000 +0200
+@@ -94,4 +94,3 @@
+ .br
+ MPI_Pack_size
+ 
+-' @(#)MPI_Unpack.3 1.20 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpack_external.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpack_external.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpack_external.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpack_external.3	2008-05-31 23:46:42.000000000 +0200
+@@ -168,4 +168,3 @@
+ MPI_Recv
+ sscanf(3C)
+ 
+-' @(#)MPI_Unpack_external.3 1.6 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpublish_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpublish_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpublish_name.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpublish_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -82,5 +82,4 @@
+ MPI_Lookup_name
+ MPI_Open_port
+ 
+-' @(#)MPI_Unpublish_name.3 1.8 06/03/09
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpublish_name.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpublish_name.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Unpublish_name.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Unpublish_name.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,86 @@
++.\"Copyright 2007, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Unpublish_name 3OpenMPI "March 2007" "Open MPI 1.2" " "
++
++.SH NAME
++.nf
++\fBMPI_Unpublish_name\fP \- Unpublishes a service name
++
++.SH SYNTAX
++.ft R
++
++.SH C Syntax
++.nf
++#include <mpi.h>
++int MPI_Unpublish_name(char *\fIservice_name\fP, MPI_Info \fIinfo\fP,
++	char *\fIport_name\fP)
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++MPI_UNPUBLISH_NAME(\fISERVICE_NAME, INFO, PORT_NAME, IERROR\fP)
++	CHARACTER*(*)	\fISERVICE_NAME, PORT_NAME\fP
++	INTEGER		\fIINFO, IERROR\fP
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++void MPI::Unpublish_name(const char* \fIservice_name\fP, const MPI::Info& \fIinfo\fP,
++	char* \fIport_name\fP)
++
++.SH INPUT PARAMETERS
++.ft R
++.TP 1.4i
++service_name
++A service name (string).
++.TP 1.4i
++info
++Options to the name service functions (handle). No options currently supported.
++.ft R
++.TP 1.4i
++port_name
++A port name (string).
++
++.SH OUTPUT PARAMETER
++.TP 1.4i
++IERROR
++Fortran only: Error status (integer).
++
++.SH DESCRIPTION
++.ft R
++This routine removes the pair (\fIservice_name, port_name\fP) so that
++applications may no longer retrieve \fIport_name\fP by calling
++MPI_Lookup_name. It is an error to unpublish a \fIservice_name\fP
++that was not published via MPI_Publish_name. Both the \fIservice_name\fP
++and \fIport_name\fP arguments to MPI_Unpublish_name must be identical
++to the arguments to the previous call to MPI_Publish_name.
++.sp
++The \fIinfo\fP parameter should be MPI_INFO_NULL, as this routine does
++not parse any MPI Info arguments.
++
++.SH ERRORS
++.ft R
++Almost all MPI routines return an error value; C routines as
++the value of the function and Fortran routines in the last argument. C++
++functions do not return errors. If the default error handler is set to
++MPI::ERRORS_THROW_EXCEPTIONS, then on error the C++ exception mechanism
++will be used to throw an MPI:Exception object.
++.sp
++Before the error value is returned, the current MPI error handler is
++called. By default, this error handler aborts the MPI job, except for
++I/O function errors. The error handler may be changed with
++MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
++may be used to cause error values to be returned. Note that MPI does not
++guarantee that an MPI program can continue past an error. 
++.sp
++See the MPI man page for a full list of MPI error codes.
++
++.SH SEE ALSO
++.ft R
++.nf
++MPI_Publish_name
++MPI_Lookup_name
++MPI_Open_port
++
++' @(#)MPI_Unpublish_name.3 1.8 06/03/09
++
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wait.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wait.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wait.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wait.3	2008-05-31 23:46:42.000000000 +0200
+@@ -112,4 +112,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Wait.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitall.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitall.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitall.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitall.3	2008-05-31 23:46:42.000000000 +0200
+@@ -105,4 +105,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Waitall.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitany.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitany.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitany.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitany.3	2008-05-31 23:46:42.000000000 +0200
+@@ -131,4 +131,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Waitany.3 1.22 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitsome.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitsome.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Waitsome.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Waitsome.3	2008-05-31 23:46:42.000000000 +0200
+@@ -147,4 +147,3 @@
+ MPI_Win_set_errhandler
+ .br
+ 
+-' @(#)MPI_Waitsome.3 1.20 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_c2f.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_c2f.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_c2f.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_c2f.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Win_c2f.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_call_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_call_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_call_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_call_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -71,4 +71,3 @@
+ MPI_Win_create_errhandler
+ MPI_Win_set_errhandler
+ 
+-' @(#)MPI_Win_call_errhandler.3 1.5 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_complete.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_complete.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_complete.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_complete.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ MPI_Win_start
+ .br
+ 
+-' @(#)MPI_Win_complete.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_create_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_create_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_create_errhandler.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_create_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -69,4 +69,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_create_errhandler.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_create_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_create_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_create_keyval.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_create_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -125,4 +125,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_create_keyval.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_delete_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_delete_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_delete_attr.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_delete_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -46,4 +46,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_delete_attr.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_f2c.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_f2c.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_f2c.3	2006-11-09 19:53:42.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_f2c.3	2008-05-31 23:46:42.000000000 +0200
+@@ -1,2 +1 @@
+ .so man3/MPI_Comm_f2c.3
+-' @(#)MPI_Win_f2c.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_fence.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_fence.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_fence.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_fence.3	2008-05-31 23:46:42.000000000 +0200
+@@ -64,4 +64,3 @@
+ MPI_Win_wait
+ .br
+ 
+-' @(#)MPI_Win_fence.3 1.15 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_free.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_free.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_free.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_free.3	2008-05-31 23:46:42.000000000 +0200
+@@ -50,4 +50,3 @@
+ MPI_Win_unlock
+ .br
+ 
+-' @(#)MPI_Win_free.3 1.13 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_free_keyval.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_free_keyval.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_free_keyval.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_free_keyval.3	2008-05-31 23:46:42.000000000 +0200
+@@ -40,4 +40,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_free_keyval.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_attr.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -68,4 +68,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_get_attr.3 1.15 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -48,4 +48,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Win_get_errhandler.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_group.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_group.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_group.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_group.3	2008-05-31 23:46:42.000000000 +0200
+@@ -47,4 +47,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_get_group.3 1.14 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_get_name.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_get_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Win_get_name.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_lock.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_lock.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_lock.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_lock.3	2008-05-31 23:46:42.000000000 +0200
+@@ -72,4 +72,3 @@
+ MPI_Win_unlock
+ .br
+ 
+-' @(#)MPI_Win_lock.3 1.15 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_post.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_post.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_post.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_post.3	2008-05-31 23:46:42.000000000 +0200
+@@ -56,6 +56,5 @@
+ MPI_Win_wait
+ .br
+ 
+-' @(#)MPI_Win_post.3 1.7 06/03/09
+ 
+ 
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_attr.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_attr.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_attr.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_attr.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ Before the error value is returned, the current MPI error handler is
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+-' @(#)MPI_Win_set_attr.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_errhandler.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_errhandler.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_errhandler.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_errhandler.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Win_set_errhandler.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_name.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_name.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_set_name.3	2008-03-05 22:48:25.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_set_name.3	2008-05-31 23:46:42.000000000 +0200
+@@ -51,4 +51,3 @@
+ called. By default, this error handler aborts the MPI job, except for I/O function errors. The error handler may be changed with MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN may be used to cause error values to be returned. Note that MPI does not guarantee that an MPI program can continue past an error.  
+ 
+ 
+-' @(#)MPI_Win_set_name.3 1.12 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_start.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_start.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_start.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_start.3	2008-05-31 23:46:42.000000000 +0200
+@@ -66,4 +66,3 @@
+ MPI_Win_complete
+ .br
+ 
+-' @(#)MPI_Win_start.3 1.4 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_test.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_test.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_test.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_test.3	2008-05-31 23:46:42.000000000 +0200
+@@ -60,4 +60,3 @@
+ MPI_Win_wait
+ .br
+ 
+-' @(#)MPI_Win_test.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_unlock.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_unlock.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_unlock.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_unlock.3	2008-05-31 23:46:42.000000000 +0200
+@@ -54,4 +54,3 @@
+ .br
+ 
+ 
+-' @(#)MPI_Win_unlock.3 1.14 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_wait.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_wait.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Win_wait.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Win_wait.3	2008-05-31 23:46:42.000000000 +0200
+@@ -54,4 +54,3 @@
+ MPI_Win_post
+ .br
+ 
+-' @(#)MPI_Win_wait.3 1.7 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtick.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtick.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtick.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtick.3	2008-05-31 23:46:42.000000000 +0200
+@@ -39,4 +39,3 @@
+ MPI_Wtime
+ 
+ 
+-' @(#)MPI_Wtick.3 1.21 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtick.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtick.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtick.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtick.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,42 @@
++.\"Copyright 2006, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Wtick 3OpenMPI "September 2006" "Open MPI 1.2" " "
++.SH NAME
++\fBMPI_Wtick\fP \- Returns the resolution of MPI_Wtime.
++
++.SH SYNTAX
++.ft R
++.SH C Syntax
++.nf
++#include <mpi.h>
++double MPI_Wtick()
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++DOUBLE PRECISION MPI_WTICK()
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++double Wtick()
++
++.SH RETURN VALUE
++.ft R
++Time in seconds of resolution of MPI_Wtime.
++
++.SH DESCRIPTION
++.ft R
++MPI_Wtick returns the resolution of MPI_Wtime in seconds. That is, it returns, as a double-precision value, the number of seconds between successive clock ticks. For example, if the clock is implemented by the hardware as a counter that is incremented every millisecond, the value returned by MPI_Wtick should be 10^-3.
++.PP
++.SH NOTE
++This function does not return an error value. Consequently, the result of calling it before MPI_Init or after MPI_Finalize is undefined.
++
++
++.SH SEE ALSO 
++.ft R
++.sp
++MPI_Wtime
++
++
++' @(#)MPI_Wtick.3 1.21 06/03/09   
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtime.3 openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtime.3
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtime.3	2007-02-16 19:20:45.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtime.3	2008-05-31 23:46:42.000000000 +0200
+@@ -56,4 +56,3 @@
+ MPI_Wtick
+ .br
+ 
+-' @(#)MPI_Wtime.3 1.25 06/03/09
+diff -urNad openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtime.3.orig openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtime.3.orig
+--- openmpi-1.2.6~/ompi/mpi/man/man3/MPI_Wtime.3.orig	1970-01-01 01:00:00.000000000 +0100
++++ openmpi-1.2.6/ompi/mpi/man/man3/MPI_Wtime.3.orig	2007-02-16 19:20:45.000000000 +0100
+@@ -0,0 +1,59 @@
++.\"Copyright 2006, Sun Microsystems, Inc.
++.\" Copyright (c) 1996 Thinking Machines Corporation
++.TH MPI_Wtime 3OpenMPI "September 2006" "Open MPI 1.2" " "
++.SH NAME
++\fBMPI_Wtime\fP \- Returns an elapsed time on the calling processor.
++
++.SH SYNTAX
++.ft R
++.SH C Syntax
++.nf
++#include <mpi.h>
++double MPI_Wtime()
++
++.SH Fortran Syntax
++.nf
++INCLUDE 'mpif.h'
++DOUBLE PRECISION MPI_WTIME()
++
++.SH C++ Syntax
++.nf
++#include <mpi.h>
++double Wtime()
++
++.SH RETURN VALUE
++.ft R
++Time in seconds since an arbitrary time in the past.
++
++.SH DESCRIPTION
++.ft R
++MPI_Wtime returns a floating-point number of seconds, representing elapsed wall-clock time since some time in the past. 
++.PP
++The "time in the past" is guaranteed not to change during the life of the process. The user is responsible for converting large numbers of seconds to other units if they are preferred. 
++.PP
++This function is portable (it returns seconds, not "ticks"), it allows high resolution, and carries no unnecessary baggage. One would use it like this: 
++.sp
++.nf
++    { 
++       double starttime, endtime; 
++       starttime = MPI_Wtime(); 
++        \&....  stuff to be timed  \&... 
++       endtime   = MPI_Wtime(); 
++       printf("That took %f seconds\\n",endtime-starttime); 
++    } 
++.fi
++.PP
++The times returned are local to the node that called them. There is no requirement that different nodes return the "same" time. 
++.SH NOTES 
++The boolean variable MPI_WTIME_IS_GLOBAL, a predefined attribute key that indicates whether clocks are synchronized, does not have a valid value in Open MPI, as the clocks are not guaranteed to be synchronized.
++
++.PP
++This is intended to be a high-resolution, elapsed (or wall) clock. See MPI_Wtick to determine the resolution of MPI_Wtime. 
++.PP
++This function does not return an error value. Consequently, the result of calling it before MPI_Init or after MPI_Finalize is undefined.
++
++.SH SEE ALSO
++MPI_Wtick
++.br
++
++' @(#)MPI_Wtime.3 1.25 06/03/09

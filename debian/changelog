@@ -7,8 +7,11 @@ openmpi (1.2.6-3) unstable; urgency=low
   * debian/patches/10fix_config_infiniband.dpatch: Removed, it's obsoleted
     by the above mentioned OpenFabrics patch.
   * Updated README.Debian with information about the OpenFabrics patch.
+  * debian/patches/manpages-lintian-fix.dpatch: Applied patch another patch
+    by Jeff Squyres that fixes Lintian manpage-has-errors-from-man issues.
+    Thanks again to Jeff for the patch!
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Sat, 31 May 2008 22:15:35 +0200
+ -- Manuel Prinz <debian@pinguinkiste.de>  Sat, 31 May 2008 23:49:13 +0200
 
 openmpi (1.2.6-2) unstable; urgency=low
 
