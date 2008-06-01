@@ -1,13 +1,13 @@
 openmpi (1.2.6-3) unstable; urgency=low
 
   [ Manuel Prinz ]
-  * debian/patches/openfabrics.dpatch: Applied patch by Jeff Squyres that
+  * debian/patches/01openfabrics.dpatch: Applied patch by Jeff Squyres that
     deals with the warnings printed when OpenFabrics hardware is not present.
     Thanks to Jeff for the patch!
   * debian/patches/10fix_config_infiniband.dpatch: Removed, it's obsoleted
     by the above mentioned OpenFabrics patch.
   * Updated README.Debian with information about the OpenFabrics patch.
-  * debian/patches/manpages-lintian-fix.dpatch: Applied patch another patch
+  * debian/patches/02manpages-lintian-fix.dpatch: Applied patch another patch
     by Jeff Squyres that fixes Lintian manpage-has-errors-from-man issues.
     Thanks again to Jeff for the patch!
 
