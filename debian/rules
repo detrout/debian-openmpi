@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-include /usr/share/dpatch/dpatch.make
+#include /usr/share/dpatch/dpatch.make
 
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
@@ -26,7 +26,7 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
 
-config.status: patch-stamp
+config.status: #patch-stamp
 	dh_testdir
 	CFLAGS="$(CFLAGS)" ./configure 				\
 			$(CROSS)				\
@@ -53,7 +53,7 @@ check: build
 	-$(MAKE) check 
 	touch $@
 
-clean: clean-work unpatch
+clean: clean-work #unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
