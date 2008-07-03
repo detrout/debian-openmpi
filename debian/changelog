@@ -1,9 +1,16 @@
-openmpi (1.2.7~rc2-1) UNRELEASED; urgency=low
+openmpi (1.2.7~rc2-1) unstable; urgency=low
 
+  [ Dirk Eddelbuettel ]
+  * New upstream pre-release version 
+  * Thanks to Manuel for the work on this release, and on 1.2.6-3 which 
+    we never uploaded, and to the Open MPI team for the integrating the patch
+    from 1.2.6-3 into what will be 1.2.7
+
+  [ Manuel Prinz ]
   * debian/control: Changed Standards-Version to 3.8.0
   * Deleted all patches, removed Build-Depends of dpatch
 
- -- Manuel Prinz <debian@pinguinkiste.de>  Wed, 02 Jul 2008 23:45:20 +0200
+ -- Dirk Eddelbuettel <edd@debian.org>  Wed, 02 Jul 2008 19:08:07 -0500
 
 openmpi (1.2.6-3) unstable; urgency=low
 
