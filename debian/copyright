@@ -64,6 +64,66 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
+ROMIO (Files under ./ompi/mca/io/romio/romio/)
+=====
+
+                               COPYRIGHT
+
+The following is a notice of limited availability of the code and
+disclaimer, which must be included in the prologue of the code and in
+all source listings of the code.
+
+Copyright (C) 1997 University of Chicago
+
+Permission is hereby granted to use, reproduce, prepare derivative
+works, and to redistribute to others. 
+
+The University of Chicago makes no representations as to the suitability, 
+operability, accuracy, or correctness of this software for any purpose. 
+It is provided "as is" without express or implied warranty. 
+
+This software was authored by:
+Rajeev Thakur: (630) 252-1682; thakur@mcs.anl.gov
+Mathematics and Computer Science Division
+Argonne National Laboratory, Argonne IL 60439, USA
+
+
+                           GOVERNMENT LICENSE
+
+Portions of this material resulted from work developed under a U.S.
+Government Contract and are subject to the following license: the
+Government is granted for itself and others acting on its behalf a
+paid-up, nonexclusive, irrevocable worldwide license in this computer
+software to reproduce, prepare derivative works, and perform publicly
+and display publicly. 
+
+
+ptmalloc2 (Files under ./opal/mca/memory/ptmalloc2/)
+=========
+
+Copyright (C) 2001 Free Software Foundation, Inc.
+This file is part of the GNU C Library.
+Contributed by Wolfram Gloger <wg@malloc.de>, 2001.
+
+The GNU C Library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+The GNU C Library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with the GNU C Library; if not, write to the Free
+Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+02111-1307 USA.
+
+On Debian systems, the complete text of the GNU Library General Public License
+can be found in /usr/share/common-licenses/LGPL-2.
+
+
 GNU Libltdl
 ===========
 
