@@ -1,3 +1,10 @@
+openmpi (1.2.7-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * New upstream version.
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Fri, 19 Sep 2008 15:34:24 +0200
+
 openmpi (1.2.7~rc2-2) unstable; urgency=low
 
   * Updated README.Debian of libopenmpi-dev. It contained references to closed
