@@ -1,8 +1,8 @@
-openmpi (1.2.7-0.1) unstable; urgency=low
+openmpi (1.2.7-1) unstable; urgency=low
 
-  * Non-maintainer upload.
   * New upstream version.
-
+  * Add myself as uploader.
+	
  -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Fri, 19 Sep 2008 15:34:24 +0200
 
 openmpi (1.2.7~rc2-2) unstable; urgency=low
