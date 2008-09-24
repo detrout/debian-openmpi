@@ -1,9 +1,14 @@
 openmpi (1.2.7-1) unstable; urgency=low
 
   * New upstream version.
-  * Add myself as uploader.
+
+  [ Sylvestre Ledru ]
+  * debian/control: Added myself to Uploaders field
 	
- -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Fri, 19 Sep 2008 15:34:24 +0200
+  [ Manuel Prinz ]
+  * debian/control: Changed my email address in Uploaders field
+
+ -- Manuel Prinz <manuel@debian.org>  Wed, 24 Sep 2008 21:22:35 +0200
 
 openmpi (1.2.7~rc2-2) unstable; urgency=low
 
