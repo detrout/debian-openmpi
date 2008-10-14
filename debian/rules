@@ -36,6 +36,7 @@ config.status: #patch-stamp
 			--sysconfdir=/etc/openmpi 		\
 			--libdir=\$${prefix}/lib/openmpi/lib	\
 			--includedir=\$${prefix}/lib/openmpi/include	\
+			--enable-static \
 			--with-devel-headers
 # Thread support disabled because it's broken, see bug #435581
 #			--enable-mpi-threads 			\
@@ -77,7 +78,7 @@ install-arch: build-arch check
 	dh_clean -k -s 
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
 	# Strip rpath info from all executables and libraries
-	find debian/openmpi/ -type f -perm -+x -exec chrpath -d '{}' \;
+	find debian/openmpi/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
 	find debian/openmpi/ -type f -name '*\.so\.*' -exec chrpath -d '{}' \;
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \

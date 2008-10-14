@@ -1,3 +1,10 @@
+openmpi (1.2.8-1) unstable; urgency=low
+
+  * New upstream version.
+  * libopenmpi-dev ships static libraries (Closes: #502232)
+
+ -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Tue, 14 Oct 2008 23:49:37 +0200
+
 openmpi (1.2.7-1) unstable; urgency=low
 
   * New upstream version.
