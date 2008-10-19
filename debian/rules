@@ -35,20 +35,22 @@ COMMON_CONFIG_PARAMS = \
 			--libdir=\$${prefix}/lib/openmpi/lib	\
 			--includedir=\$${prefix}/lib/openmpi/include	\
 			--with-devel-headers
+
 # Thread support disabled because it's broken, see bug #435581
 #                       --enable-mpi-threads                    \
 #                       --enable-progress-threads
 
 # Flags for the static build: see bug #502232
 STATIC_CONFIG_PARAMS = --enable-static
-configure: patch-stamp configure-stamp
-configure-stamp: patch-stamp
+
+configure: configure-stamp
+configure-stamp:
 	dh_testdir
 	(mkdir -p build/basic; cd build/basic; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
 	(mkdir -p build/static; cd build/static; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
 	touch $@
 
-build: patch-stamp configure-stamp build-basic build-static
+build: configure-stamp build-basic build-static
 
 build-basic:
 	dh_testdir
@@ -79,35 +81,21 @@ clean-work:
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
 
-install: build install-static install-basic
-	dh_testdir
-	dh_testroot
-
-install-static: build
-	dh_testdir
-	dh_testroot
-	dh_clean -plibopenmpi-dev -k
-	dh_installdirs -plibopenmpi-dev
-	$(MAKE) -C build/static install DESTDIR=$(CURDIR)/debian/libopenmpi-dev
-	# Remove everything but the lib
-	rm -rf $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/include/ $(CURDIR)/debian/libopenmpi-dev/etc/ $(CURDIR)/debian/libopenmpi-dev/usr/share/ $(CURDIR)/debian/libopenmpi-dev/usr/bin/
-
-install-basic: build
-	dh_testdir
-	dh_testroot
-	$(MAKE) -C build/basic install DESTDIR=$(CURDIR)/debian/tmp/
-
-install-indep: build-indep check install
+install-indep: build-indep check
 	dh_testdir
 	dh_testroot
 	dh_clean -k -i 
 	dh_installdirs -i
 	dh_install -i --sourcedir=$(CURDIR)/debian/openmpi
 
-install-arch: build-arch check install
+install-arch: build-arch check
 	dh_testdir
 	dh_testroot
 	dh_clean -k -s 
+	$(MAKE) -C build/static install DESTDIR=$(CURDIR)/debian/libopenmpi-dev/
+	$(MAKE) -C build/basic install DESTDIR=$(CURDIR)/debian/openmpi/
+	rm -rf $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/include/ $(CURDIR)/debian/libopenmpi-dev/etc/ $(CURDIR)/debian/libopenmpi-dev/usr/share/ $(CURDIR)/debian/libopenmpi-dev/usr/bin/
+
 
 	# Strip rpath info from all executables and libraries
 	find debian/openmpi/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
