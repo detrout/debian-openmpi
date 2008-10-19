@@ -26,9 +26,7 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
 
-config.status: #patch-stamp
-	dh_testdir
-	CFLAGS="$(CFLAGS)" ./configure 				\
+COMMON_CONFIG_PARAMS = \
 			$(CROSS)				\
 			--prefix=/usr 				\
 			--mandir=\$${prefix}/share/man 		\
@@ -36,14 +34,30 @@ config.status: #patch-stamp
 			--sysconfdir=/etc/openmpi 		\
 			--libdir=\$${prefix}/lib/openmpi/lib	\
 			--includedir=\$${prefix}/lib/openmpi/include	\
-			--enable-static \
 			--with-devel-headers
 # Thread support disabled because it's broken, see bug #435581
-#			--enable-mpi-threads 			\
-#			--enable-progress-threads
+#                       --enable-mpi-threads                    \
+#                       --enable-progress-threads
 
-build: config.status
-	$(MAKE)
+# Flags for the static build: see bug #502232
+STATIC_CONFIG_PARAMS = --enable-static
+configure: patch-stamp configure-stamp
+configure-stamp: patch-stamp
+	dh_testdir
+	(mkdir -p build/basic; cd build/basic; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
+	(mkdir -p build/static; cd build/static; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
+	touch $@
+
+build: patch-stamp configure-stamp build-basic build-static
+
+build-basic:
+	dh_testdir
+	$(MAKE) -C build/basic
+	touch $@
+
+build-static:
+	dh_testdir
+	$(MAKE) -C build/static
 	touch $@
 
 # Everything is built in the "build" target
@@ -58,25 +72,43 @@ clean: clean-work #unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
-	rm -rf build check debian/openmpi
+	rm -rf build-basic build-static check debian/openmpi
 	xargs rm -f < debian/clean_symlinks
 	[ ! -f Makefile ] || $(MAKE) distclean
         # some additional cleanups
 	rm -rf opal/libltdl/.libs 
 	dh_clean 
 
-install-indep: build-indep check
+install: build install-static install-basic
+	dh_testdir
+	dh_testroot
+
+install-static: build
+	dh_testdir
+	dh_testroot
+	dh_clean -plibopenmpi-dev -k
+	dh_installdirs -plibopenmpi-dev
+	$(MAKE) -C build/static install DESTDIR=$(CURDIR)/debian/libopenmpi-dev
+	# Remove everything but the lib
+	rm -rf $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/include/ $(CURDIR)/debian/libopenmpi-dev/etc/ $(CURDIR)/debian/libopenmpi-dev/usr/share/ $(CURDIR)/debian/libopenmpi-dev/usr/bin/
+
+install-basic: build
+	dh_testdir
+	dh_testroot
+	$(MAKE) -C build/basic install DESTDIR=$(CURDIR)/debian/tmp/
+
+install-indep: build-indep check install
 	dh_testdir
 	dh_testroot
 	dh_clean -k -i 
 	dh_installdirs -i
 	dh_install -i --sourcedir=$(CURDIR)/debian/openmpi
 
-install-arch: build-arch check
+install-arch: build-arch check install
 	dh_testdir
 	dh_testroot
 	dh_clean -k -s 
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/openmpi
+
 	# Strip rpath info from all executables and libraries
 	find debian/openmpi/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
 	find debian/openmpi/ -type f -name '*\.so\.*' -exec chrpath -d '{}' \;
@@ -86,6 +118,7 @@ install-arch: build-arch check
 	for f in ompi_info opal_wrapper orted; do \
 		cp debian/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.1 ; \
 	done
+
 	chmod 644 debian/openmpi/usr/lib/openmpi/lib/mpi.mod
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
