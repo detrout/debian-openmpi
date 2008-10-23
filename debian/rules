@@ -99,7 +99,7 @@ install-arch: build-arch check
 
 	# Strip rpath info from all executables and libraries
 	find debian/openmpi/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
-	find debian/openmpi/ -type f -name '*\.so\.*' -exec chrpath -d '{}' \;
+	find debian/libopenmpi-dev/ -type f -name '*\.so*' -exec chrpath -d '{}' \;
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
 	done
