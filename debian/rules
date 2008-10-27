@@ -95,7 +95,7 @@ install-arch: build-arch check
 	$(MAKE) -C build/static install DESTDIR=$(CURDIR)/debian/libopenmpi-dev/
 	$(MAKE) -C build/basic install DESTDIR=$(CURDIR)/debian/openmpi/
 	rm -rf $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/include/ $(CURDIR)/debian/libopenmpi-dev/etc/ $(CURDIR)/debian/libopenmpi-dev/usr/share/ $(CURDIR)/debian/libopenmpi-dev/usr/bin/
-
+	chmod -x $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/lib/mpi.mod
 
 	# Strip rpath info from all executables and libraries
 	find debian/openmpi/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
