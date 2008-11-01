@@ -1,3 +1,10 @@
+openmpi (1.2.8-2) unstable; urgency=low
+
+  * Reverted back to revision r137 corresponding to Debian release 1.2.7-1
+  								(Closes: #504161)
+  
+ -- Dirk Eddelbuettel <edd@debian.org>  Sat, 01 Nov 2008 17:37:07 -0500
+
 openmpi (1.2.8-1) unstable; urgency=low
 
   * New upstream version.
@@ -5,7 +12,7 @@ openmpi (1.2.8-1) unstable; urgency=low
   * Remaining lintian warnings removed
 	
  -- Sylvestre Ledru <sylvestre.ledru@inria.fr>  Tue, 28 Oct 2008 23:49:37 +0200
-
+  
 openmpi (1.2.7-1) unstable; urgency=low
 
   * New upstream version.
