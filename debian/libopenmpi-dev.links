@@ -15,3 +15,5 @@ usr/lib/libopen-rte.so.0        usr/lib/libopen-rte.so
 usr/lib/libmpi_cxx.so.0         usr/lib/libmpi_cxx.so
 usr/lib/libmpi_f77.so.0         usr/lib/libmpi_f77.so
 usr/lib/libmpi_f90.so.0         usr/lib/libmpi_f90.so
+# Convenience link for header files, see bug #493875
+usr/lib/openmpi/include/	usr/include/openmpi
