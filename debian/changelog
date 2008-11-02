@@ -1,3 +1,10 @@
+openmpi (1.2.8-3) unstable; urgency=low
+
+  * Building static libraries (again) (Closes: #502232)
+  * Removed *.so files from libopenmpi-dev package (Closes: #504161)
+
+ -- Manuel Prinz <manuel@debian.org>  Sun, 02 Nov 2008 15:53:19 +0100
+
 openmpi (1.2.8-2) unstable; urgency=low
 
   * Reverted back to revision r137 corresponding to Debian release 1.2.7-1
