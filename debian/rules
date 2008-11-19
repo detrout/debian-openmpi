@@ -43,22 +43,19 @@ COMMON_CONFIG_PARAMS = \
 # Flags for the static build: see bug #502232
 STATIC_CONFIG_PARAMS = --enable-static
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	(mkdir -p build/basic; cd build/basic; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
-	(mkdir -p build/static; cd build/static; CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
-	touch $@
+build: build-shared build-static
 
-build: configure-stamp build-basic build-static
-
-build-basic:
+build-shared:
 	dh_testdir
-	$(MAKE) -C build/basic
+	mkdir -p build/shared
+	(cd build/shared && CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
+	$(MAKE) -C build/shared
 	touch $@
 
 build-static:
 	dh_testdir
+	mkdir -p build/static
+	(cd build/static && CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
 	$(MAKE) -C build/static
 	touch $@
 
@@ -74,7 +71,8 @@ clean: clean-work #unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
-	rm -rf build-basic build-static check debian/openmpi
+	rm -rf configure-stamp build/ build-shared build-static
+	rm -rf check debian/openmpi
 	xargs rm -f < debian/clean_symlinks
 	[ ! -f Makefile ] || $(MAKE) distclean
         # some additional cleanups
@@ -93,7 +91,7 @@ install-arch: build-arch check
 	dh_testroot
 	dh_clean -k -s 
 	$(MAKE) -C build/static install DESTDIR=$(CURDIR)/debian/libopenmpi-dev/
-	$(MAKE) -C build/basic install DESTDIR=$(CURDIR)/debian/openmpi/
+	$(MAKE) -C build/shared install DESTDIR=$(CURDIR)/debian/openmpi/
 	rm -rf $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/include/ $(CURDIR)/debian/libopenmpi-dev/etc/ $(CURDIR)/debian/libopenmpi-dev/usr/share/ $(CURDIR)/debian/libopenmpi-dev/usr/bin/
 	rm $(CURDIR)/debian/libopenmpi-dev/usr/lib/openmpi/lib/mpi.mod
 	find  $(CURDIR)/debian/libopenmpi-dev/ -name '*\.so*' -exec rm '{}' \;
