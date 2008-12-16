@@ -1,3 +1,10 @@
+openmpi (1.2.8-5) UNRELEASED; urgency=low
+
+  * debian/rules: Pass empty LDFLAGS to configure call to prevent seg.fault. 
+    on load due to overly hungry link command on Ubuntu
+
+ --
+
 openmpi (1.2.8-4) unstable; urgency=low
 
   * Header files are now available under /usr/include/openmpi via symlink

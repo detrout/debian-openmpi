@@ -48,14 +48,14 @@ build: build-shared build-static
 build-shared:
 	dh_testdir
 	mkdir -p build/shared
-	(cd build/shared && CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
+	(cd build/shared && LDFLAGS="" CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
 	$(MAKE) -C build/shared
 	touch $@
 
 build-static:
 	dh_testdir
 	mkdir -p build/static
-	(cd build/static && CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
+	(cd build/static && LDFLAGS="" CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
 	$(MAKE) -C build/static
 	touch $@
 
