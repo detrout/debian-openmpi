@@ -1,2 +1,2 @@
 version=3
-http://www.open-mpi.org/software/ompi/v1.2/downloads/ openmpi-([\d+\.]+)\.tar\.gz
+http://www.open-mpi.org/software/ompi/v1.3/downloads/ openmpi-([\d+\.]+)\.tar\.gz
