@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 #include /usr/share/dpatch/dpatch.make
+include /usr/share/quilt/quilt.make
 
 # These are used for cross-compiling and for saving the configure script
 # from having to guess our platform (since we know it already)
@@ -45,16 +46,18 @@ STATIC_CONFIG_PARAMS = --enable-static
 
 build: build-shared build-static
 
-build-shared:
+build-shared: patch
 	dh_testdir
 	mkdir -p build/shared
+	autoreconf
 	(cd build/shared && LDFLAGS="" CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS))
 	$(MAKE) -C build/shared
 	touch $@
 
-build-static:
+build-static: patch
 	dh_testdir
 	mkdir -p build/static
+	autoreconf
 	(cd build/static && LDFLAGS="" CFLAGS="$(CFLAGS)" ../../configure $(COMMON_CONFIG_PARAMS) $(STATIC_CONFIG_PARAMS))
 	$(MAKE) -C build/static
 	touch $@
@@ -67,7 +70,7 @@ check: build
 	-$(MAKE) check 
 	touch $@
 
-clean: clean-work #unpatch
+clean: clean-work unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
