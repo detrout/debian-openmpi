@@ -2,3 +2,7 @@
 vampirtrace
 # Updated patch by Thiemo Seufer. Hopefully this will resolve #489173.
 mips-support
+# This patch contains config/ompi_get_version.sh from upstream's SVN trunk,
+# revision 20375. It's needed so autoreconf runs without warnings. It can be
+# dropped as soon as the above patches are included upstream.
+autoreconf
