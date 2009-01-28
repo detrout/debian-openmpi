@@ -3,7 +3,7 @@ vampirtrace
 # Updated patch by Thiemo Seufer. Hopefully this will resolve #489173.
 # If this works, it may be included upstream.
 mips-support
-# This patch contains config/ompi_get_version.sh from upstream's SVN trunk,
-# revision 20375. It's needed so autoreconf runs without warnings. It can be
-# dropped as soon as the above patches are included upstream.
-autoreconf
+# This huge patch is needed to update all autotools-related files.
+# This is required because libtool 2.2 is needed which is not yet in
+# unstable. (But in experimental.)
+autogen
