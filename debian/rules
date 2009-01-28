@@ -113,9 +113,6 @@ install-arch: build-arch check
 	chmod 644 debian/openmpi/usr/lib/openmpi/lib/mpi.mod
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 
-        # DE 20 Jan 2009:  OpenMPI 1.3 installs an empty MPI_Comm_accept
-	rm -vf debian/openmpi/usr/share/man/man3/MPI_Comm_accept.3
-
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
 
 binary-indep: install-indep

@@ -7,3 +7,6 @@ mips-support
 # This is required because libtool 2.2 is needed which is not yet in
 # unstable. (But in experimental.)
 autogen
+# This patch fixes the manpage issues. It's a backport from upstream SVN,
+# changeset 20307 and will be in 1.3.1.
+manpages
