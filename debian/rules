@@ -47,7 +47,7 @@ STATIC_CONFIG_PARAMS = --enable-static
 .PHONY: build
 build: build-shared build-static
 
-build-shared: build-shared-stamp patch
+build-shared: patch build-shared-stamp
 build-shared-stamp:
 	dh_testdir
 	mkdir -p build/shared
@@ -55,7 +55,7 @@ build-shared-stamp:
 	$(MAKE) -C build/shared
 	touch $@
 
-build-static: build-static-stamp patch
+build-static: patch build-static-stamp
 build-static-stamp:
 	dh_testdir
 	mkdir -p build/static
