@@ -1,0 +1,11 @@
+--- a/ompi/contrib/vt/vt/vtlib/vt_pform_linux.c
++++ b/ompi/contrib/vt/vt/vtlib/vt_pform_linux.c
+@@ -172,6 +172,8 @@
+     clock_value = __getReg(_IA64_REG_AR_ITC);
+ # elif defined(__alpha__)
+     asm volatile ("rpcc %0" : "=r" (clock_value));
++# elif defined(__sparc__)
++    asm ("rd %%tick, %0" : "=r" (clock_value));
+ # else
+     /* ... TSC */
+     {
