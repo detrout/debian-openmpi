@@ -13,7 +13,3 @@ sparc_build
 # If this works, it may be included upstream. (Unfortunately, it does not.
 # We should wait for libtool 2.2 to get into unstable before trying again.)
 #mips-support
-
-# This patch fixes the manpage issues. It's a backport from upstream SVN,
-# changeset 20307 and will be in 1.3.1.
-manpages
