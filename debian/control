@@ -40,7 +40,7 @@ Description: high performance message passing library -- binaries
 Package: libopenmpi-dev
 Section: libdevel
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, libopenmpi1 (= ${binary:Version}), openmpi-common (= ${source:Version})
+Depends: ${shlibs:Depends}, libopenmpi1.3 (= ${binary:Version}), openmpi-common (= ${source:Version})
 Conflicts: libopal-dev, pgapack (<= 1.0.0.1-4.2), openmpi-dev
 Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
 Provides: openmpi-dev
@@ -52,9 +52,9 @@ Description: high performance message passing library -- header files
  and computer science researchers.
  .
  This package contains the header files and compiler wrappers which are needed
- to compile and link programs against libopenmpi1.
+ to compile and link programs against libopenmpi.
 
-Package: libopenmpi1
+Package: libopenmpi1.3
 Section: libs
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -100,7 +100,7 @@ Description: high performance message passing library -- man pages
 Package: libopenmpi-dbg
 Section: devel
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: openmpi-bin (= ${binary:Version}), libopenmpi1 (= ${binary:Version})
+Depends: openmpi-bin (= ${binary:Version}), libopenmpi1.3 (= ${binary:Version})
 Conflicts: openmpi-dbg
 Replaces: openmpi-dbg
 Provides: openmpi-dbg

@@ -144,10 +144,10 @@ binary-arch: install-arch
 	dh_strip -a --dbg-package=libopenmpi-dbg
 	dh_compress  -a
 	dh_fixperms -a
-	dh_makeshlibs -plibopenmpi1 
+	dh_makeshlibs -plibopenmpi1.3
 	dh_makeshlibs -n -plibopenmpi-dev
 	dh_installdeb -a
-	dh_shlibdeps -a -l$(CURDIR)/debian/openmpi/usr/lib/openmpi/lib -Llibopenmpi1
+	dh_shlibdeps -a -l$(CURDIR)/debian/openmpi/usr/lib/openmpi/lib -Llibopenmpi1.3
 	dh_gencontrol -a
 	dh_md5sums -a
 	dh_builddeb -a
