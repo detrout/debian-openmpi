@@ -4,11 +4,6 @@ alpha_build
 # Fixes build issues on Sparc.
 sparc_build
 
-# Backport of SVN changesets 20317 and 20318. Will be in 1.3.1.
-# We do not seem to need it currently, as the changes on Alpha do not need
-# to re-run autotools. So we can drop this, and remove the "autogen" patch.
-#vampirtrace
-
 # Updated patch by Thiemo Seufer. Hopefully this will resolve #489173.
 # If this works, it may be included upstream. (Unfortunately, it does not.
 # We should wait for libtool 2.2 to get into unstable before trying again.)
