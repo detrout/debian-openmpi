@@ -6,8 +6,9 @@ openmpi (1.3.1-1) UNRELEASED; urgency=low
   * Fixed build issues on Sparc. (Closes: #519725)
   * Faked SONAME change by renaming library package. (Closes: #512616)
   * Made libopenmpi-dev depend on libibverbs-dev.
+  * Backported bugfix for SSH failures when running on localhost.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 31 Mar 2009 23:34:58 +0200
+ -- Manuel Prinz <manuel@debian.org>  Wed, 01 Apr 2009 21:14:50 +0200
 
 openmpi (1.3-2) unstable; urgency=low
 
