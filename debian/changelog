@@ -9,7 +9,12 @@ openmpi (1.3.1-1) UNRELEASED; urgency=low
   * Made libopenmpi-dev depend on libibverbs-dev. (Closes: #522153)
   * Backported bugfix for SSH failures when running on localhost.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 01 Apr 2009 23:27:34 +0200
+  * Dirk Eddelbuettel removed himself from Uploaders. The team thanks Dirk
+    for his long-term contribution and effort to get Open MPI back to life.
+    I personally thank Dirk for encouraging me to become a Debian Developer
+    and his support and mentoring on that way and beyond.
+
+ -- Manuel Prinz <manuel@debian.org>  Wed, 01 Apr 2009 23:31:47 +0200
 
 openmpi (1.3-2) unstable; urgency=low
 
