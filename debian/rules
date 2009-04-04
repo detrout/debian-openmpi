@@ -69,7 +69,9 @@ build-indep: build
 
 check: check-stamp build
 check-stamp:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	-$(MAKE) check 
+endif
 	touch $@
 
 clean: clean-work unpatch

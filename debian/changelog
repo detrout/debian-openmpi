@@ -8,6 +8,7 @@ openmpi (1.3.1-1) UNRELEASED; urgency=low
   * Faked SONAME change by renaming library package. (Closes: #512616)
   * Made libopenmpi-dev depend on libibverbs-dev. (Closes: #522153)
   * Backported bugfix for SSH failures when running on localhost.
+  * Support for "nocheck" build option in debian/rules.
   * Updated debian/copyright.
 
   * Dirk Eddelbuettel removed himself from Uploaders. The team thanks Dirk
@@ -15,7 +16,7 @@ openmpi (1.3.1-1) UNRELEASED; urgency=low
     I personally thank Dirk for encouraging me to become a Debian Developer
     and his support and mentoring on that way and beyond.
 
- -- Manuel Prinz <manuel@debian.org>  Sat, 04 Apr 2009 19:08:58 +0200
+ -- Manuel Prinz <manuel@debian.org>  Sat, 04 Apr 2009 19:45:12 +0200
 
 openmpi (1.3-2) unstable; urgency=low
 
