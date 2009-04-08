@@ -98,7 +98,7 @@ Description: high performance message passing library -- man pages
  standard.
 
 Package: libopenmpi-dbg
-Section: devel
+Section: debug
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: openmpi-bin (= ${binary:Version}), libopenmpi1.3 (= ${binary:Version})
 Conflicts: openmpi-dbg
