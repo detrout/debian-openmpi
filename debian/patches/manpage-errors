@@ -1,0 +1,20 @@
+--- a/orte/tools/orterun/orterun.1in
++++ b/orte/tools/orterun/orterun.1in
+@@ -308,7 +308,7 @@
+ .
+ .
+ .TP
+-.B -rf \f |--rankfile <arg0>\fP.
++.B -rf\fR,\fP --rankfile <arg0>
+ Provide a rankfile file.
+ .
+ .
+@@ -709,7 +709,7 @@
+  #Connection        From node   To node:weight   To node:weight
+  #declaration       (declared   (declared        (declared
+  #(Reserve word)    above)      above)           above)
+- #========================================================================
++ #=============================================================
+  BRANCH             mem0        socket0:0
+  BRANCH             mem3        socket3:0
+  #

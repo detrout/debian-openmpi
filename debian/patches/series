@@ -9,7 +9,5 @@ sparc_build
 # We should wait for libtool 2.2 to get into unstable before trying again.)
 #mips-support
 
-# Backported bugfix that causes Open MPI to fail when running on localhost.
-# This is changeset r20856 in upstream's SVN repo and will be included in
-# the 1.3.2 release.
-ssh-bugfix
+# Fixes some minor manpage formatting issues.
+manpage-errors
