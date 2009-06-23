@@ -34,7 +34,7 @@ Thread support
 Thread support was enabled until package version 1.2.3-3. It is known to be
 broken in upstream and led to segfaults on several architectures.
 
-We disabled threading for this reason in 1.2.3-4 and will reenable it as soon
+We disabled threading for this reason in 1.2.3-4 and will re-enable it as soon
 as it is known to be working, probably in the 1.3 branch of OpenMPI. Please
 see http://bugs.debian.org/435581 for a discussion of this issue.
 
