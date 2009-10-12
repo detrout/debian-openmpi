@@ -4,8 +4,9 @@ openmpi (1.3.3-2) unstable; urgency=low
   * Build with BLCR support on supported architectures. The openmpi-checkpoint
     package includes the binaries for checkpointing and documentation. Many
     thanks to Alan Woodland for the implementation!
+  * Added a README.source file.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 12 Oct 2009 23:46:04 +0200
+ -- Manuel Prinz <manuel@debian.org>  Tue, 13 Oct 2009 00:52:10 +0200
 
 openmpi (1.3.3-1) unstable; urgency=low
 
