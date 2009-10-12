@@ -108,9 +108,6 @@ install-arch: build-arch check
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 ; do \
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
 	done
-	for f in ompi_info opal_wrapper orted; do \
-		cp debian/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.1 ; \
-	done
 
 	chmod 644 debian/openmpi/usr/lib/openmpi/lib/mpi.mod
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
