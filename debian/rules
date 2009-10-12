@@ -27,8 +27,16 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
 
+
+# BLCR checkpointing support
+BLCR_ARCH = "amd64 armel i386 powerpc"
+ifneq (,$(findstring $(DEB_HOST_ARCH),$(BLCR_ARCH)))
+        CHKPT = --with-ft=cr --with-blcr=/usr --with-blcr-libdir=/usr/lib
+endif
+
 COMMON_CONFIG_PARAMS = \
 			$(CROSS)				\
+			$(CHKPT)				\
 			--prefix=/usr 				\
 			--mandir=\$${prefix}/share/man 		\
 			--infodir=\$${prefix}/share/info 	\
@@ -113,6 +121,8 @@ install-arch: build-arch check
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 
 	dh_install -s --sourcedir=$(CURDIR)/debian/openmpi --list-missing
+	# This gets installed by the wildcard, but we want to remove it really, so it's only used for checkpointing
+	-rm -f debian/libopenmpi*/usr/lib/openmpi/lib/openmpi/mca_crs_blcr.so
 
 binary-indep: install-indep
 	dh_testdir -i

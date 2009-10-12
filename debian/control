@@ -4,7 +4,7 @@ Priority: extra
 Homepage: http://www.open-mpi.org/
 Maintainer: Debian OpenMPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
 Uploaders: Manuel Prinz <manuel@debian.org>, Sylvestre Ledru <sylvestre@debian.org>
-Build-Depends: debhelper (>= 5.0.0), libibverbs-dev (>= 1.1.1) [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], gfortran, gcc (>= 4:4.1.2), chrpath, quilt
+Build-Depends: debhelper (>= 5.0.0), libibverbs-dev (>= 1.1.1) [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], gfortran, gcc (>= 4:4.1.2), chrpath, quilt, libcr-dev [amd64 armel i386 powerpc]
 Standards-Version: 3.8.3
 Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
@@ -12,6 +12,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 Package: openmpi-bin
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
+Recommends: openmpi-checkpoint
 Suggests: gfortran
 Description: high performance message passing library -- binaries
  Open MPI is a project combining technologies and resources from several other
@@ -111,3 +112,15 @@ Description: high performance message passing library -- debug library
  and computer science researchers.
  .
  This package contains debugging symbols for Open MPI.
+
+Package: openmpi-checkpoint
+Architecture: amd64 armel i386 powerpc
+Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-bin (= ${binary:Version})
+Description: high performance message passing library -- checkpoint support
+ Open MPI is a project combining technologies and resources from several other
+ projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
+ MPI library available. A completely new MPI-2 compliant implementation, Open
+ MPI offers advantages for system and software vendors, application developers
+ and computer science researchers.
+ .
+ This package contains binaries needed for checkpointing Open MPI applications.
