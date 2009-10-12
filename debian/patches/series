@@ -1,9 +1,6 @@
 # Fixes build issues on Alpha.
 alpha_build
 
-# Fix 531522.
-disable-memory-allocator
-
 # Fixes build issues on Sparc.
 sparc_build
 
