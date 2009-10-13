@@ -117,6 +117,10 @@ install-arch: build-arch check
 		cp debian/openmpi/usr/share/man/man1/$${f}.1 debian/openmpi/usr/share/man/man1/$${f}.openmpi.1 ; \
 	done
 
+	# Empty dependency_libs in all .la files. This is part of the "Remove
+	# .la files" release goal for Squeeze.
+	find debian/openmpi/ -type f -name '*.la' -exec sed -i "s,^dependency_libs=.*,dependency_libs=''," '{}' \;
+
 	chmod 644 debian/openmpi/usr/lib/openmpi/lib/mpi.mod
 	sed -i 's/3OpenMPI/3/' debian/openmpi/usr/share/man/man3/*.3
 
