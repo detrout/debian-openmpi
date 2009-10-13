@@ -1,14 +1,4 @@
-# Fixes build issues on Alpha.
 alpha_build
-
-# Fixes build issues on Sparc.
 sparc_build
-
-# Updated patch by Thiemo Seufer. Hopefully this will resolve #489173.
-# If this works, it may be included upstream. (Unfortunately, it does not.
-# We should wait for libtool 2.2 to get into unstable before trying again.)
-#mips-support
-
-# Fixes some minor manpage formatting issues.
 manpage-errors
 manpage-errors-checkpoint

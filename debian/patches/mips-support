@@ -1,3 +1,13 @@
+Description: Fix build issues on MIPS
+ This patch should add build support for MIPS. Unfortunately,
+ there where build issues related to libtool. With libtool 2.2
+ being available, those issues should be gone. The patch needs
+ to be updated and tested, so it's currently not applied.
+Forwarded: no
+Debian-Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=489173
+Author: Thiemo Seufer
+Last-Update: 2009-10-13
+
 --- a/opal/asm/asm-data.txt
 +++ b/opal/asm/asm-data.txt
 @@ -127,3 +127,7 @@
