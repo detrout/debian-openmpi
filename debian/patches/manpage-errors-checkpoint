@@ -1,0 +1,44 @@
+--- a/opal/tools/opal-checkpoint/opal-checkpoint.1in
++++ b/opal/tools/opal-checkpoint/opal-checkpoint.1in
+@@ -27,7 +27,7 @@
+ .SH SYNOPSIS
+ .
+ .B opal-checkpoint
+-.R [ options ]
++.B [ options ]
+ .B <PID>
+ .
+ .\" **************************
+--- a/opal/tools/opal-restart/opal-restart.1in
++++ b/opal/tools/opal-restart/opal-restart.1in
+@@ -27,7 +27,7 @@
+ .SH SYNOPSIS
+ .
+ .B opal-restart
+-.R [ options ]
++.B [ options ]
+ .B <SNAPSHOT HANDLE>
+ .
+ .\" **************************
+--- a/orte/tools/orte-checkpoint/orte-checkpoint.1in
++++ b/orte/tools/orte-checkpoint/orte-checkpoint.1in
+@@ -28,7 +28,7 @@
+ .SH SYNOPSIS
+ .
+ .B ompi-checkpoint
+-.R [ options ]
++.B [ options ]
+ .B <PID_OF_MPIRUN>
+ .
+ .\" **************************
+--- a/orte/tools/orte-restart/orte-restart.1in
++++ b/orte/tools/orte-restart/orte-restart.1in
+@@ -28,7 +28,7 @@
+ .SH SYNOPSIS
+ .
+ .B ompi-restart
+-.R [ options ]
++.B [ options ]
+ .B <GLOBAL SNAPSHOT HANDLE>
+ .
+ .\" **************************

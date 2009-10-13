@@ -11,3 +11,4 @@ sparc_build
 
 # Fixes some minor manpage formatting issues.
 manpage-errors
+manpage-errors-checkpoint
