@@ -1,0 +1,31 @@
+Description: Fix security issue in libtool copy
+ This patch fixes a security issue in libtool's dlopen(). This is CVE-2009-3736
+ (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3736).
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=559836
+Author: Manuel Prinz <manuel@debian.org>
+Last-Update: 2009-12-08
+---
+ opal/libltdl/ltdl.c |    5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+--- a/opal/libltdl/ltdl.c
++++ b/opal/libltdl/ltdl.c
+@@ -529,7 +529,8 @@
+   /* Try to open the old library first; if it was dlpreopened,
+      we want the preopened version of it, even if a dlopenable
+      module is available.  */
+-  if (old_name && tryall_dlopen (handle, old_name, advise, 0) == 0)
++  if (old_name && tryall_dlopen (handle, old_name,
++			  advise, lt_dlloader_find ("lt_preopen") ) == 0)
+     {
+       return 0;
+     }
+@@ -1345,7 +1346,7 @@
+ 	    }
+ #endif
+ 	}
+-      if (!file)
++      else
+ 	{
+ 	  file = fopen (attempt, LT_READTEXT_MODE);
+ 	}
