@@ -1,5 +1,5 @@
-OpenMPI for Debian
-------------------
+Open MPI for Debian
+-------------------
 
 InfiniBand support
 ------------------
@@ -35,15 +35,15 @@ Thread support was enabled until package version 1.2.3-3. It is known to be
 broken in upstream and led to segfaults on several architectures.
 
 We disabled threading for this reason in 1.2.3-4 and will re-enable it as soon
-as it is known to be working, probably in the 1.3 branch of OpenMPI. Please
+as it is known to be working, probably in the 1.3 branch of Open MPI. Please
 see http://bugs.debian.org/435581 for a discussion of this issue.
 
 
 MPI Alternatives
 ----------------
 
-The current OpenMPI version of Debian uses the Debian Alternatives system.
-Although OpenMPI might replace most of the existing MPI implementations in the
+The current Open MPI version of Debian uses the Debian Alternatives system.
+Although Open MPI might replace most of the existing MPI implementations in the
 future (see http://www.open-mpi.org/faq/?category=general#why), we decided to
 not affect any other MPI implementation already installed on your system. You
 can check which version of MPI you use with 
@@ -56,13 +56,13 @@ and list all installed implementations with
   "update-alternatives --display mpirun" and
   "update-alternatives --display mpiexec".
 
-OpenMPI is only listed as default implementation if no other MPI implentation
+Open MPI is only listed as default implementation if no other MPI implentation
 is present on the system. If you have several implementations installed, you
-have to enable OpenMPI explicitly with
+have to enable Open MPI explicitly with
 
   "update-alternatives --set mpirun /usr/bin/mpirun.openmpi" and
   "update-alternatives --set mpiexec /usr/bin/mpiexec.openmpi".
 
 This might change in future versions of the package.
 
- -- Debian OpenMPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Sat, 31 May 2008 22:21:44 +0200
+ -- Debian Open MPI Team <pkg-openmpi-maintainers@lists.alioth.debian.org>, Sat, 31 May 2008 22:21:44 +0200
