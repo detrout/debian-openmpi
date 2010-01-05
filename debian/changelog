@@ -9,8 +9,9 @@ openmpi (1.4-1) UNRELEASED; urgency=low
   * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
     Closes: #552397.
   * Added hppa (back) to the list of architectures. Closes: #389306.
+  * Removed conflict with libopal-dev in libopenmpi-dev. Closes: #559161.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 05 Jan 2010 15:07:53 +0100
+ -- Manuel Prinz <manuel@debian.org>  Tue, 05 Jan 2010 15:13:51 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
