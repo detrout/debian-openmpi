@@ -6,8 +6,10 @@ openmpi (1.4-1) UNRELEASED; urgency=low
 
   [ Manuel Prinz ]
   * Updated section on alternatives in README.Debian.
+  * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
+    Closes: #552397.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 05 Jan 2010 14:18:25 +0100
+ -- Manuel Prinz <manuel@debian.org>  Tue, 05 Jan 2010 15:06:22 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
