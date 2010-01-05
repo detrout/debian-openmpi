@@ -10,7 +10,7 @@ Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 
 Package: openmpi-bin
-Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
+Architecture: alpha amd64 hppa i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
 Recommends: openmpi-checkpoint
 Suggests: gfortran
@@ -39,7 +39,7 @@ Description: high performance message passing library -- binaries
 
 Package: libopenmpi-dev
 Section: libdevel
-Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
+Architecture: alpha amd64 hppa i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, libopenmpi1.3 (= ${binary:Version}), openmpi-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
 Conflicts: libopal-dev, pgapack (<= 1.0.0.1-4.2), openmpi-dev
 Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
@@ -56,7 +56,7 @@ Description: high performance message passing library -- header files
 
 Package: libopenmpi1.3
 Section: libs
-Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
+Architecture: alpha amd64 hppa i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: openmpi-libs0, libopenmpi1
 Replaces: openmpi-libs0, libopenmpi1
@@ -99,7 +99,7 @@ Description: high performance message passing library -- man pages
 
 Package: libopenmpi-dbg
 Section: debug
-Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
+Architecture: alpha amd64 hppa i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: openmpi-bin (= ${binary:Version}), libopenmpi1.3 (= ${binary:Version})
 Conflicts: openmpi-dbg
 Replaces: openmpi-dbg
