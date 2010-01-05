@@ -1,9 +1,13 @@
 openmpi (1.4-1) UNRELEASED; urgency=low
 
-  * New upstream release (same as 1.3.3-4). patches/libtool removed
+  [ Sylvestre Ledru ]
+  * New upstream release (same as 1.3.3-4). libtool patch removed.
   * Watch file updated
 
- -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 18 Dec 2009 18:01:34 +0100
+  [ Manuel Prinz ]
+  * Updated section on alternatives in README.Debian.
+
+ -- Manuel Prinz <manuel@debian.org>  Tue, 05 Jan 2010 14:18:25 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
