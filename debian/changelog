@@ -12,12 +12,12 @@ openmpi (1.4-1) UNRELEASED; urgency=low
   * Removed conflict with libopal-dev in libopenmpi-dev. Closes: #559161.
   * Removed conflict with ancient pgapack in libopenmpi-dev.
   * Fixed several spelling-error-in-manpage lintian warnings.
-  * Deleted debian/ompi_info.1, included upstream.
+  * Deleted man pages provided by Debian, all included upstream.
   * Changed .install files to match soname bumps. The soname bumps were
     introduced by upstream to follow the libtool versioning guidelines.
     The ABI did not change and recompilations of rdepends are not needed.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 11 Jan 2010 19:24:16 +0100
+ -- Manuel Prinz <manuel@debian.org>  Mon, 11 Jan 2010 19:28:51 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
