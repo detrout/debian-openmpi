@@ -9,7 +9,7 @@ usr/bin/opal_wrapper    usr/bin/opalcc
 usr/bin/opal_wrapper    usr/bin/ortec++
 usr/bin/opal_wrapper    usr/bin/ortecc
 usr/share/man/man1/mpic++.openmpi.1     usr/share/man/man1/mpiCC.openmpi.1
-usr/lib/libmca_common_sm.so.0   usr/lib/libmca_common_sm.so
+usr/lib/libmca_common_sm.so.1   usr/lib/libmca_common_sm.so
 usr/lib/libopen-pal.so.0        usr/lib/libopen-pal.so
 usr/lib/libopen-rte.so.0        usr/lib/libopen-rte.so
 usr/lib/libmpi_cxx.so.0         usr/lib/libmpi_cxx.so
