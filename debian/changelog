@@ -1,4 +1,4 @@
-openmpi (1.4-1) UNRELEASED; urgency=low
+openmpi (1.4.1-1) UNRELEASED; urgency=low
 
   [ Sylvestre Ledru ]
   * New upstream release. Libtool patch removed, included upstream.
@@ -17,7 +17,7 @@ openmpi (1.4-1) UNRELEASED; urgency=low
     introduced by upstream to follow the libtool versioning guidelines.
     The ABI did not change and recompilations of rdepends are not needed.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 11 Jan 2010 19:28:51 +0100
+ -- Manuel Prinz <manuel@debian.org>  Fri, 15 Jan 2010 09:17:11 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
