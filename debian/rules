@@ -43,7 +43,8 @@ COMMON_CONFIG_PARAMS = \
 			--sysconfdir=/etc/openmpi 		\
 			--libdir=\$${prefix}/lib/openmpi/lib	\
 			--includedir=\$${prefix}/lib/openmpi/include	\
-			--with-devel-headers
+			--with-devel-headers \
+			--enable-heterogeneous
 
 # Thread support disabled because it's broken, see bug #435581
 #                       --enable-mpi-threads                    \
