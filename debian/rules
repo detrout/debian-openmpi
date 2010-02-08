@@ -34,9 +34,16 @@ ifneq (,$(findstring $(DEB_HOST_ARCH),$(BLCR_ARCH)))
         CHKPT = --with-ft=cr --with-blcr=/usr --with-blcr-libdir=/usr/lib
 endif
 
+# Memory affinity support
+NUMA_ARCH = "amd64 i386 ia64 mips mipsel powerpc"
+ifneq (,$(findstring $(DEB_HOST_ARCH),$(NUMA_ARCH)))
+        NUMA = --with-libnuma=/usr --with-libnuma-libdir=/usr/lib
+endif
+
 COMMON_CONFIG_PARAMS = \
 			$(CROSS)				\
 			$(CHKPT)				\
+			$(NUMA)					\
 			--prefix=/usr 				\
 			--mandir=\$${prefix}/share/man 		\
 			--infodir=\$${prefix}/share/info 	\
