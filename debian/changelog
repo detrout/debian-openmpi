@@ -5,6 +5,7 @@ openmpi (1.4.1-1) UNRELEASED; urgency=low
   * Watch file updated.
 
   [ Manuel Prinz ]
+  * Bumped Standards-Version to 3.8.4. No changes needed.
   * Updated section on alternatives in README.Debian.
   * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
     Closes: #552397.
@@ -20,7 +21,7 @@ openmpi (1.4.1-1) UNRELEASED; urgency=low
   * Provide symlinks for orte-{checkpoint,restart} for smoother transition.
     The tools were merged with ompi-{checkpoint,restart}.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 08 Feb 2010 19:04:19 +0100
+ -- Manuel Prinz <manuel@debian.org>  Mon, 08 Feb 2010 19:06:32 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
