@@ -40,7 +40,7 @@ Description: high performance message passing library -- binaries
 Package: libopenmpi-dev
 Section: libdevel
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, libopenmpi1.3 (= ${binary:Version}), openmpi-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.3 (= ${binary:Version}), openmpi-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
 Conflicts: openmpi-dev
 Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
 Provides: openmpi-dev
@@ -72,6 +72,7 @@ Description: high performance message passing library -- shared library
 
 Package: openmpi-common
 Architecture: all
+Depends: ${misc:Depends}
 Description: high performance message passing library -- common files
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -84,6 +85,7 @@ Description: high performance message passing library -- common files
 Package: openmpi-doc
 Section: doc
 Architecture: all
+Depends: ${misc:Depends}
 Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc
 Replaces: openmpi-mpidoc
 Provides: openmpi-mpidoc
@@ -100,7 +102,7 @@ Description: high performance message passing library -- man pages
 Package: libopenmpi-dbg
 Section: debug
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: openmpi-bin (= ${binary:Version}), libopenmpi1.3 (= ${binary:Version})
+Depends: ${misc:Depends}, openmpi-bin (= ${binary:Version}), libopenmpi1.3 (= ${binary:Version})
 Conflicts: openmpi-dbg
 Replaces: openmpi-dbg
 Provides: openmpi-dbg
