@@ -1,4 +1,4 @@
-openmpi (1.4.1-1) UNRELEASED; urgency=low
+openmpi (1.4.1-1) unstable; urgency=low
 
   [ Sylvestre Ledru ]
   * New upstream release. Libtool patch removed, included upstream.
@@ -19,7 +19,7 @@ openmpi (1.4.1-1) UNRELEASED; urgency=low
     The tools were merged with ompi-{checkpoint,restart}.
   * Added ${misc:Depends} everywhere so lintian is happy.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 16 Feb 2010 17:21:08 +0100
+ -- Manuel Prinz <manuel@debian.org>  Tue, 16 Feb 2010 17:59:12 +0100
 
 openmpi (1.3.3-4) unstable; urgency=medium
 
