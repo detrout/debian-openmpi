@@ -7,8 +7,6 @@ openmpi (1.4.1-1) UNRELEASED; urgency=low
   [ Manuel Prinz ]
   * Bumped Standards-Version to 3.8.4. No changes needed.
   * Updated section on alternatives in README.Debian.
-  * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
-    Closes: #552397.
   * Added hppa (back) to the list of architectures. Closes: #389306.
   * Removed conflict with libopal-dev in libopenmpi-dev. Closes: #559161.
   * Removed conflict with ancient pgapack in libopenmpi-dev.
