@@ -1,3 +1,14 @@
+openmpi (1.4.1-2) UNRELEASED; urgency=low
+
+  * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
+    Closes: #552397.
+  * Recreate autotools stuff during build. Added autoconf, automake,
+    libtool and libltdl-dev to Build-Depends.
+  * openmpi-checkpoint now depends on blcr-util. Closes: #572229.
+  * Fixed symlink issues with ompi-{checkpoint,restart}. Closes: #572021.
+
+ -- Manuel Prinz <manuel@debian.org>  Wed, 10 Mar 2010 16:39:35 +0100
+
 openmpi (1.4.1-1) unstable; urgency=low
 
   [ Sylvestre Ledru ]

@@ -60,10 +60,18 @@ COMMON_CONFIG_PARAMS = \
 # Flags for the static build: see bug #502232
 STATIC_CONFIG_PARAMS = --enable-static
 
+.PHONY: autoreconf
+autoreconf: patch autoreconf-stamp
+autoreconf-stamp:
+	dh_testdir
+	./autogen.sh
+	autoreconf
+	touch $@
+
 .PHONY: build
 build: build-shared build-static
 
-build-shared: patch build-shared-stamp
+build-shared: autoreconf build-shared-stamp
 build-shared-stamp:
 	dh_testdir
 	mkdir -p build/shared
@@ -71,7 +79,7 @@ build-shared-stamp:
 	$(MAKE) -C build/shared
 	touch $@
 
-build-static: patch build-static-stamp
+build-static: autoreconf build-static-stamp
 build-static-stamp:
 	dh_testdir
 	mkdir -p build/static
@@ -94,7 +102,7 @@ clean: clean-work unpatch
 clean-work:
 	dh_testdir
 	dh_testroot
-	rm -rf configure-stamp build/ build-shared-stamp build-static-stamp check-stamp
+	rm -rf configure-stamp build/ build-shared-stamp build-static-stamp check-stamp autoreconf-stamp
 	rm -rf check debian/openmpi
 	xargs rm -f < debian/clean_symlinks
 	[ ! -f Makefile ] || $(MAKE) distclean
