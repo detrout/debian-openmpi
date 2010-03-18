@@ -1,4 +1,4 @@
-openmpi (1.4.1-2) UNRELEASED; urgency=low
+openmpi (1.4.1-2) unstable; urgency=low
 
   * Fixed build issues on HURD. Thanks to Pino Toscano for the patch!
     Closes: #552397.
@@ -8,7 +8,7 @@ openmpi (1.4.1-2) UNRELEASED; urgency=low
   * Fixed symlink issues with ompi-{checkpoint,restart}. Closes: #572021.
   * Retroactively adding LP entries to close bugs in Ubuntu's Launchpad.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 10 Mar 2010 17:15:50 +0100
+ -- Manuel Prinz <manuel@debian.org>  Thu, 18 Mar 2010 17:57:30 +0100
 
 openmpi (1.4.1-1) unstable; urgency=low
 
