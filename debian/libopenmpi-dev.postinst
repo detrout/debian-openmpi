@@ -6,6 +6,8 @@ update-alternatives \
 	--install /usr/include/mpi mpi /usr/lib/openmpi/include 40 \
 	--slave /usr/lib/libmpi.so libmpi.so /usr/lib/openmpi/lib/libmpi.so \
 	--slave /usr/lib/libmpi++.so libmpi++.so /usr/lib/openmpi/lib/libmpi_cxx.so \
+	--slave /usr/lib/libmpif77.so libmpif77.so /usr/lib/openmpi/lib/libmpi_f77.so \
+	--slave /usr/lib/libmpif90.so libmpif90.so /usr/lib/openmpi/lib/libmpi_f90.so \
 	--slave /usr/bin/mpicc mpicc /usr/bin/mpicc.openmpi \
 	--slave /usr/bin/mpic++ mpic++ /usr/bin/mpic++.openmpi \
 	--slave /usr/bin/mpicxx mpicxx /usr/bin/mpic++.openmpi \
