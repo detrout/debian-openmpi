@@ -12,7 +12,7 @@ Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 Package: openmpi-bin
 Architecture: alpha amd64 i386 ia64 powerpc ppc64 sparc kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
-Recommends: openmpi-checkpoint
+Recommends: openmpi-checkpoint [ amd64 armel i386 powerpc ]
 Suggests: gfortran
 Description: high performance message passing library -- binaries
  Open MPI is a project combining technologies and resources from several other
