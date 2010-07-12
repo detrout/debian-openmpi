@@ -158,7 +158,7 @@ Last-Update: 2010-01-05
  #else
 --- a/orte/mca/odls/base/odls_base_default_fns.c
 +++ b/orte/mca/odls/base/odls_base_default_fns.c
-@@ -849,8 +849,13 @@
+@@ -851,8 +851,13 @@
      orte_odls_job_t *jobdat;
      orte_pmap_t *pmap;
      char *pathenv = NULL, *mpiexec_pathenv = NULL;
@@ -172,7 +172,7 @@ Last-Update: 2010-01-05
      char **argvptr;
      char *full_search;
      char **argvsav=NULL;
-@@ -863,7 +868,11 @@
+@@ -865,7 +870,11 @@
       * bouncing around as we execute various apps, but we will always return
       * to this place as our default directory
       */
@@ -184,7 +184,7 @@ Last-Update: 2010-01-05
      
      /* find the jobdat for this job */
      jobdat = NULL;
-@@ -1014,7 +1023,11 @@
+@@ -1016,7 +1025,11 @@
           * again not match getcwd! This is beyond our control - we are only
           * ensuring they start out matching.
           */
@@ -196,7 +196,7 @@ Last-Update: 2010-01-05
          opal_setenv("PWD", dir, true, &app->env);
          
          /* Search for the OMPI_exec_path and PATH settings in the environment. */
-@@ -1363,6 +1376,10 @@
+@@ -1365,6 +1378,10 @@
  
      opal_condition_signal(&orte_odls_globals.cond);
      OPAL_THREAD_UNLOCK(&orte_odls_globals.mutex);
@@ -209,7 +209,7 @@ Last-Update: 2010-01-05
  
 --- a/orte/orted/orted_main.c
 +++ b/orte/orted/orted_main.c
-@@ -197,7 +197,7 @@
+@@ -199,7 +199,7 @@
      int ret = 0;
      int fd;
      opal_cmd_line_t *cmd_line = NULL;
@@ -218,7 +218,7 @@ Last-Update: 2010-01-05
      char *jobidstring;
      char *rml_uri;
      int i;
-@@ -439,6 +439,7 @@
+@@ -445,6 +445,7 @@
          }
  
          /* define a log file name in the session directory */
@@ -226,7 +226,7 @@ Last-Update: 2010-01-05
          sprintf(log_file, "output-orted-%s-%s.log",
                  jobidstring, orte_process_info.nodename);
          log_path = opal_os_path(false,
-@@ -446,6 +447,7 @@
+@@ -452,6 +453,7 @@
                                  orte_process_info.top_session_dir,
                                  log_file,
                                  NULL);

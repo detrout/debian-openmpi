@@ -2,8 +2,9 @@ openmpi (1.4.2-1) unstable; urgency=low
 
   * New upstream release. Closes: #585800.
   * Bumped SONAME. No changes in ABI.
+  * Updated patches.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 12 Jul 2010 18:34:07 +0200
+ -- Manuel Prinz <manuel@debian.org>  Mon, 12 Jul 2010 21:36:31 +0200
 
 openmpi (1.4.1-3) unstable; urgency=low
 
