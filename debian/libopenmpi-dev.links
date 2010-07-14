@@ -1,6 +1,6 @@
+usr/bin/opal_wrapper    usr/bin/mpic++.openmpi
 usr/bin/opal_wrapper    usr/bin/mpicc.openmpi
 usr/bin/opal_wrapper    usr/bin/mpiCC.openmpi
-usr/bin/opal_wrapper    usr/bin/mpic++.openmpi
 usr/bin/opal_wrapper    usr/bin/mpicxx.openmpi
 usr/bin/opal_wrapper    usr/bin/mpif77.openmpi
 usr/bin/opal_wrapper    usr/bin/mpif90.openmpi

@@ -4,8 +4,9 @@ openmpi (1.4.2-1) unstable; urgency=low
   * Bumped SONAME. No changes in ABI.
   * Updated patches.
   * Updated Standards-Version. No changes needed.
+  * Install previously uninstalled files. Closes: #589043.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 14 Jul 2010 14:23:19 +0200
+ -- Manuel Prinz <manuel@debian.org>  Wed, 14 Jul 2010 17:20:27 +0200
 
 openmpi (1.4.1-3) unstable; urgency=low
 
