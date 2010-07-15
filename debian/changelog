@@ -5,8 +5,9 @@ openmpi (1.4.2-1) unstable; urgency=low
   * Updated patches.
   * Updated Standards-Version. No changes needed.
   * Install previously uninstalled files. Closes: #589043.
+  * Fixed several errors in man pages.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 14 Jul 2010 17:20:27 +0200
+ -- Manuel Prinz <manuel@debian.org>  Thu, 15 Jul 2010 17:19:23 +0200
 
 openmpi (1.4.1-3) unstable; urgency=low
 
