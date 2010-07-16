@@ -2,12 +2,11 @@ openmpi (1.4.2-2) unstable; urgency=low
 
   * Fixed broken broken library symlinks. Closes: #589319.
 
- -- Manuel Prinz <manuel@debian.org>  Fri, 16 Jul 2010 19:43:39 +0200
+ -- Manuel Prinz <manuel@debian.org>  Fri, 16 Jul 2010 20:49:24 +0200
 
 openmpi (1.4.2-1) unstable; urgency=low
 
   * New upstream release. Closes: #585800.
-  * Bumped SONAME. No changes in ABI.
   * Updated patches.
   * Updated Standards-Version. No changes needed.
   * Install previously uninstalled files. Closes: #589043.
