@@ -1,0 +1,22 @@
+--- a/orte/tools/orte-iof/orte-iof.1in
++++ b/orte/tools/orte-iof/orte-iof.1in
+@@ -27,7 +27,7 @@
+ .SH SYNOPSIS
+ .
+ .B ompi-iof
+-.R [ options ]
++.B [ options ]
+ .
+ .\" **************************
+ .\"    Options Section
+--- a/orte/tools/orte-ps/orte-ps.1in
++++ b/orte/tools/orte-ps/orte-ps.1in
+@@ -28,7 +28,7 @@
+ .SH SYNOPSIS
+ .
+ .B ompi-ps
+-.R [ options ]
++.B [ options ]
+ .
+ .\" **************************
+ .\"    Options Section
