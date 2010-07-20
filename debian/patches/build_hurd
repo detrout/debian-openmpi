@@ -1,7 +1,8 @@
 Description: Fix build problems on hurd-i386
  This patch allows Open MPI to build on Debian GNU/HURD.
 Author: Pino Toscano <pino@kde.org>
-Last-Update: 2010-01-05
+Forwarded: yes
+Last-Update: 2010-07-20
 
 --- a/ompi/runtime/ompi_mpi_abort.c
 +++ b/ompi/runtime/ompi_mpi_abort.c

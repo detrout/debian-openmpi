@@ -1,3 +1,10 @@
+Description: Fix format problems in manpages
+ This patch fixes minor format problems in several manpages.
+Author: Manuel Prinz <manuel@debian.org>
+Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2496
+Applied-Upstream: https://svn.open-mpi.org/trac/ompi/changeset/23445
+Last-Update: 2010-07-20
+
 --- a/orte/tools/orte-iof/orte-iof.1in
 +++ b/orte/tools/orte-iof/orte-iof.1in
 @@ -27,7 +27,7 @@

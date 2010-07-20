@@ -3,10 +3,10 @@ Description: Fix build issues on MIPS
  there where build issues related to libtool. With libtool 2.2
  being available, those issues should be gone. The patch needs
  to be updated and tested, so it's currently not applied.
-Forwarded: no
+Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2494
 Debian-Bug: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=489173
 Author: Thiemo Seufer
-Last-Update: 2009-10-13
+Last-Update: 2010-07-20
 
 --- a/opal/asm/asm-data.txt
 +++ b/opal/asm/asm-data.txt

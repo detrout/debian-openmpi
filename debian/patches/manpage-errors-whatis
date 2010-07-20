@@ -1,3 +1,10 @@
+Description: Fix format errors in manpages
+ This patch fixes minor format errors in several manpages.
+Author: Manuel Prinz <manuel@debian.org>
+Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2496
+Applied-Upstream: https://svn.open-mpi.org/trac/ompi/changeset/23445
+Last-Update: 2010-07-30
+
 --- a/ompi/mca/crcp/ompi_crcp.7in
 +++ b/ompi/mca/crcp/ompi_crcp.7in
 @@ -8,8 +8,8 @@

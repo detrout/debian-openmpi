@@ -1,8 +1,9 @@
 openmpi (1.4.2-3) unstable; urgency=low
 
   * Fixed build issue on kFreeBSD. Closes: #589467.
+  * Added and updated patch meta-information.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 20 Jul 2010 17:08:18 +0200
+ -- Manuel Prinz <manuel@debian.org>  Tue, 20 Jul 2010 17:31:52 +0200
 
 openmpi (1.4.2-2) unstable; urgency=low
 

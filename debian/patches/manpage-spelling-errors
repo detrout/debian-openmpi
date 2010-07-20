@@ -1,7 +1,9 @@
 Description: Fix spelling errors in manpages
  This patch fixes minor spelling errors in several manpages.
 Author: Manuel Prinz <manuel@debian.org>
-Last-Update: 2010-01-05
+Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2497
+Applied-Upstream: https://svn.open-mpi.org/trac/ompi/changeset/23445
+Last-Update: 2010-07-30
 
 --- a/orte/tools/orterun/orterun.1in
 +++ b/orte/tools/orterun/orterun.1in

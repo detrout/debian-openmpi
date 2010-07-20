@@ -2,7 +2,9 @@ Description: Fix format problems in manpages
  This patch fixes minor format problems in manpages that lintian
  complains about.
 Author: Manuel Prinz <manuel@debian.org>
-Last-Update: 2009-10-13
+Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2496
+Applied-Upstream: https://svn.open-mpi.org/trac/ompi/changeset/23445
+Last-Update: 2010-07-20
 
 --- a/opal/tools/opal-checkpoint/opal-checkpoint.1in
 +++ b/opal/tools/opal-checkpoint/opal-checkpoint.1in
