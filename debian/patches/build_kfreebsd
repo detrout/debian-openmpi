@@ -1,0 +1,10 @@
+--- a/opal/mca/memory/ptmalloc2/opal_ptmalloc2_munmap.c
++++ b/opal/mca/memory/ptmalloc2/opal_ptmalloc2_munmap.c
+@@ -92,7 +92,6 @@
+         
+             tmp.munmap_p = dlsym(RTLD_NEXT, "munmap");
+             realmunmap = tmp.munmap_fp;
+-            ++count;
+         }
+ 
+         return realmunmap(start, length);
