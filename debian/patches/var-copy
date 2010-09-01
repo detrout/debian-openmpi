@@ -7,30 +7,8 @@ Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=592892
 Forwarded: https://svn.open-mpi.org/trac/ompi/ticket/2559
 Last-Update: 2010-09-01
 
-Index: config/f90_get_precision.m4
-===================================================================
---- config/f90_get_precision.m4	(revision 23679)
-+++ config/f90_get_precision.m4	(working copy)
-@@ -10,6 +10,7 @@
- dnl                         University of Stuttgart.  All rights reserved.
- dnl Copyright (c) 2004-2005 The Regents of the University of California.
- dnl                         All rights reserved.
-+dnl Copyright (c) 2010      Cisco Systems, Inc.  All rights reserved.
- dnl $COPYRIGHT$
- dnl 
- dnl Additional copyrights may follow
-@@ -55,6 +56,6 @@
-         unset happy
-         rm -rf conftest*])
- 
--    $2=AS_VAR_GET([type_var])
-+    AS_VAR_COPY([$2], [type_var])
-     AS_VAR_POPDEF([type_var])dnl
- ])
-Index: config/f90_get_sizeof.m4
-===================================================================
---- config/f90_get_sizeof.m4	(revision 23679)
-+++ config/f90_get_sizeof.m4	(working copy)
+--- a/config/f90_get_sizeof.m4
++++ b/config/f90_get_sizeof.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -47,10 +25,8 @@ Index: config/f90_get_sizeof.m4
 +    AS_VAR_COPY([$2], [type_var])
      AS_VAR_POPDEF([type_var])dnl
  ])dnl
-Index: config/f77_get_sizeof.m4
-===================================================================
---- config/f77_get_sizeof.m4	(revision 23679)
-+++ config/f77_get_sizeof.m4	(working copy)
+--- a/config/f77_get_sizeof.m4
++++ b/config/f77_get_sizeof.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -67,10 +43,8 @@ Index: config/f77_get_sizeof.m4
 +    AS_VAR_COPY([$2], [type_var])
      AS_VAR_POPDEF([type_var])dnl
  ])dnl
-Index: config/ompi_check_func_lib.m4
-===================================================================
---- config/ompi_check_func_lib.m4	(revision 23679)
-+++ config/ompi_check_func_lib.m4	(working copy)
+--- a/config/ompi_check_func_lib.m4
++++ b/config/ompi_check_func_lib.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -90,10 +64,8 @@ Index: config/ompi_check_func_lib.m4
  
      # see if we actually have $1.  Use AC_CHECK_FUNCS so that it
      # does the glibc "not implemented" check.  Will use the current LIBS,
-Index: config/ompi_find_type.m4
-===================================================================
---- config/ompi_find_type.m4	(revision 23679)
-+++ config/ompi_find_type.m4	(working copy)
+--- a/config/ompi_find_type.m4
++++ b/config/ompi_find_type.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -121,10 +93,8 @@ Index: config/ompi_find_type.m4
  
      unset oft_real_type oft_target_size
  
-Index: config/f90_check_type.m4
-===================================================================
---- config/f90_check_type.m4	(revision 23679)
-+++ config/f90_check_type.m4	(working copy)
+--- a/config/f90_check_type.m4
++++ b/config/f90_check_type.m4
 @@ -34,6 +34,6 @@
               [AS_VAR_SET(type_var, "no")])
           AC_LANG_POP([Fortran])])
@@ -133,10 +103,8 @@ Index: config/f90_check_type.m4
 +    AS_VAR_IF(type_var, [yes], [$2], [$3])
      AS_VAR_POPDEF([type_var])dnl
  ])dnl
-Index: config/f77_check_type.m4
-===================================================================
---- config/f77_check_type.m4	(revision 23679)
-+++ config/f77_check_type.m4	(working copy)
+--- a/config/f77_check_type.m4
++++ b/config/f77_check_type.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -154,30 +122,8 @@ Index: config/f77_check_type.m4
      AS_VAR_POPDEF([type_var])dnl
  ])dnl
  
-Index: config/f90_get_range.m4
-===================================================================
---- config/f90_get_range.m4	(revision 23679)
-+++ config/f90_get_range.m4	(working copy)
-@@ -10,6 +10,7 @@
- dnl                         University of Stuttgart.  All rights reserved.
- dnl Copyright (c) 2004-2005 The Regents of the University of California.
- dnl                         All rights reserved.
-+dnl Copyright (c) 2010      Cisco Systems, Inc.  All rights reserved.
- dnl $COPYRIGHT$
- dnl 
- dnl Additional copyrights may follow
-@@ -55,6 +56,6 @@
-         unset happy
-         rm -rf conftest*])
- 
--    $2=AS_VAR_GET([type_var])
-+    AS_VAR_COPY([$2], [type_var])
-     AS_VAR_POPDEF([type_var])dnl
- ])
-Index: config/f90_get_int_kind.m4
-===================================================================
---- config/f90_get_int_kind.m4	(revision 23679)
-+++ config/f90_get_int_kind.m4	(working copy)
+--- a/config/f90_get_int_kind.m4
++++ b/config/f90_get_int_kind.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -195,10 +141,8 @@ Index: config/f90_get_int_kind.m4
      else
          $3=0
      fi
-Index: config/f77_check_real16_c_equiv.m4
-===================================================================
---- config/f77_check_real16_c_equiv.m4	(revision 23679)
-+++ config/f77_check_real16_c_equiv.m4	(working copy)
+--- a/config/f77_check_real16_c_equiv.m4
++++ b/config/f77_check_real16_c_equiv.m4
 @@ -93,7 +93,7 @@
          ])
      ])
@@ -208,10 +152,8 @@ Index: config/f77_check_real16_c_equiv.m4
      AS_VAR_POPDEF([real16_matches_c_var])
  
      AS_IF([test "$ompi_real16_matches_c" = "yes"],
-Index: config/f77_get_alignment.m4
-===================================================================
---- config/f77_get_alignment.m4	(revision 23679)
-+++ config/f77_get_alignment.m4	(working copy)
+--- a/config/f77_get_alignment.m4
++++ b/config/f77_get_alignment.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
@@ -229,10 +171,8 @@ Index: config/f77_get_alignment.m4
      AS_VAR_POPDEF([type_var])dnl
      OMPI_VAR_SCOPE_POP
  ])
-Index: config/ompi_lang_link_with_c.m4
-===================================================================
---- config/ompi_lang_link_with_c.m4	(revision 23679)
-+++ config/ompi_lang_link_with_c.m4	(working copy)
+--- a/config/ompi_lang_link_with_c.m4
++++ b/config/ompi_lang_link_with_c.m4
 @@ -2,6 +2,7 @@
  dnl
  dnl Copyright (c) 2006      Los Alamos National Security, LLC.  All rights
@@ -249,10 +189,8 @@ Index: config/ompi_lang_link_with_c.m4
 +  AS_VAR_IF(lang_var, [yes], [$2], [$3])
    AS_VAR_POPDEF([lang_var])dnl
  ])
-Index: config/ompi_check_compiler_works.m4
-===================================================================
---- config/ompi_check_compiler_works.m4	(revision 23679)
-+++ config/ompi_check_compiler_works.m4	(working copy)
+--- a/config/ompi_check_compiler_works.m4
++++ b/config/ompi_check_compiler_works.m4
 @@ -5,6 +5,7 @@
  dnl                         Corporation.  All rights reserved.
  dnl Copyright (c) 2006      Los Alamos National Security, LLC.  All rights
@@ -270,10 +208,8 @@ Index: config/ompi_check_compiler_works.m4
            [cat <<EOF >&2
  **********************************************************************
  * It appears that your $1 compiler is unable to produce working
-Index: config/f90_find_module_include_flag.m4
-===================================================================
---- config/f90_find_module_include_flag.m4	(revision 23679)
-+++ config/f90_find_module_include_flag.m4	(working copy)
+--- a/config/f90_find_module_include_flag.m4
++++ b/config/f90_find_module_include_flag.m4
 @@ -10,6 +10,7 @@
  dnl                         University of Stuttgart.  All rights reserved.
  dnl Copyright (c) 2004-2005 The Regents of the University of California.
