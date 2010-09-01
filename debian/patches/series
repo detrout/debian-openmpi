@@ -4,3 +4,4 @@ manpage-errors-macro
 build_hurd
 manpage-spelling-errors
 build_kfreebsd
+var-copy
