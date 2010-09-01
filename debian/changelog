@@ -1,8 +1,10 @@
 openmpi (1.4.2-4) unstable; urgency=low
 
   * Added patch to remove use of AS_VAR_GET. Closes: #592892.
+  * debian/control: Added powerpcspe to architecture list. Thanks to
+    Sebastian Andrzej Siewior for the patch! Closes: #593481.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 01 Sep 2010 15:22:42 +0200
+ -- Manuel Prinz <manuel@debian.org>  Wed, 01 Sep 2010 15:23:51 +0200
 
 openmpi (1.4.2-3) unstable; urgency=low
 
