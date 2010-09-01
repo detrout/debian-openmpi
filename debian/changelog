@@ -3,9 +3,10 @@ openmpi (1.4.2-4) unstable; urgency=low
   * Added patch to remove use of AS_VAR_GET. Closes: #592892.
   * debian/control: Added powerpcspe to architecture list. Thanks to
     Sebastian Andrzej Siewior for the patch! Closes: #593481.
+  * Build with support for Torque (except on HURD). Closes: #592887.
   * Updated Standards-Version to 3.9.1. No changes needed.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 01 Sep 2010 16:02:50 +0200
+ -- Manuel Prinz <manuel@debian.org>  Wed, 01 Sep 2010 17:53:44 +0200
 
 openmpi (1.4.2-3) unstable; urgency=low
 
