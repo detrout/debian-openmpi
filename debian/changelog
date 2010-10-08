@@ -8,10 +8,11 @@ openmpi (1.4.3-1) UNRELEASED; urgency=low
     - manpage-errors-whatis
     - manpage-spelling-errors
     - var-copy
+  * Added a patch that fixes man page issues.
   * Added sparc64 to Architecture list. Thanks to Aurelien Jarno for
     the patch! Closes: #596134.
 
- -- Manuel Prinz <manuel@debian.org>  Fri, 08 Oct 2010 21:55:46 +0200
+ -- Manuel Prinz <manuel@debian.org>  Sat, 09 Oct 2010 01:33:23 +0200
 
 openmpi (1.4.2-4) unstable; urgency=low
 
