@@ -1,3 +1,9 @@
+openmpi (1.4.3-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Manuel Prinz <manuel@debian.org>  Fri, 08 Oct 2010 21:27:23 +0200
+
 openmpi (1.4.2-4) unstable; urgency=low
 
   * Added patch to remove use of AS_VAR_GET. Closes: #592892.
