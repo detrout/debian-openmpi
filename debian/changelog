@@ -1,10 +1,17 @@
 openmpi (1.4.3-1) UNRELEASED; urgency=low
 
   * New upstream release.
-  * Add sparc64 to Architecture list. Thanks to Aurelien Jarno for
+  * Removed the following patches, all applied upstream:
+    - build_kfreebsd
+    - manpage-errors-checkpoint
+    - manpage-errors-macro
+    - manpage-errors-whatis
+    - manpage-spelling-errors
+    - var-copy
+  * Added sparc64 to Architecture list. Thanks to Aurelien Jarno for
     the patch! Closes: #596134.
 
- -- Manuel Prinz <manuel@debian.org>  Fri, 08 Oct 2010 21:28:40 +0200
+ -- Manuel Prinz <manuel@debian.org>  Fri, 08 Oct 2010 21:55:46 +0200
 
 openmpi (1.4.2-4) unstable; urgency=low
 
