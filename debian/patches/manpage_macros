@@ -1,3 +1,10 @@
+Description: Fix problems in manpages
+ In some man page headers, a macro (-*-) is used which makes lintian
+  choke and probably should not be there anyway.
+Author: Manuel Prinz <manuel@debian.org>
+Forwarded: yes
+Last-Update: 2010-10-09
+
 --- a/orte/tools/orterun/orterun.1in
 +++ b/orte/tools/orterun/orterun.1in
 @@ -1,4 +1,3 @@
