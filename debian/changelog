@@ -1,4 +1,4 @@
-openmpi (1.4.3-1) UNRELEASED; urgency=low
+openmpi (1.4.3-1) unstable; urgency=low
 
   * New upstream release.
   * Removed the following patches, all applied upstream:
@@ -12,7 +12,7 @@ openmpi (1.4.3-1) UNRELEASED; urgency=low
   * Added sparc64 to Architecture list. Thanks to Aurelien Jarno for
     the patch! Closes: #596134.
 
- -- Manuel Prinz <manuel@debian.org>  Sat, 09 Oct 2010 01:33:23 +0200
+ -- Manuel Prinz <manuel@debian.org>  Wed, 15 Dec 2010 18:50:16 +0100
 
 openmpi (1.4.2-4) unstable; urgency=low
 
