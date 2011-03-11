@@ -1,3 +1,11 @@
+openmpi (1.4.3-2) unstable; urgency=low
+
+  * Fixed symlinks for shared libraries. Thanks to Matthias Klose
+    for the patch! Closes: #608717, #609830.
+  * Fixed symlink loop in openmpi-checkpoint. Closes: #611454.
+
+ -- Manuel Prinz <manuel@debian.org>  Fri, 11 Mar 2011 14:45:20 +0100
+
 openmpi (1.4.3-1) unstable; urgency=low
 
   * New upstream release.
