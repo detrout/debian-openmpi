@@ -1,3 +1,21 @@
+openmpi (1.4.3-3) UNRELEASED; urgency=low
+
+  * ACK the NMU
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Standards-Version updated to version 3.9.2
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 17 May 2011 16:07:48 +0200
+
+openmpi (1.4.3-2.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Add openmpi link fix, closes: #621978
+    - Thanks to Daniel Schepler <dschepler@gmail.com>
+  * Add arm support from ubuntu, closes: #617779
+    - Thanks to Jani Monoses <jani@ubuntu.com>
+
+ -- Riku Voipio <riku.voipio@iki.fi>  Wed, 20 Apr 2011 19:53:03 +0300
+
 openmpi (1.4.3-2) unstable; urgency=low
 
   * Fixed symlinks for shared libraries. Thanks to Matthias Klose
