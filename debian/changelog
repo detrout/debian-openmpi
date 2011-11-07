@@ -1,10 +1,22 @@
-openmpi (1.4.3-3) UNRELEASED; urgency=low
+openmpi (1.5.4-1) UNRELEASED; urgency=low
 
-  * ACK the NMU
-  * Switch to dpkg-source 3.0 (quilt) format
-  * Standards-Version updated to version 3.9.2
+  * New upstream release. Closes: 619998.
+    - ABI changes, bumped SONAME.
+  * Changes in packaging:
+    - Using "3.0 (quilt)" source format.
+    - Deleted README.source (obsolete).
+    - Updated watch file.
+    - Bumped Standards-Version to 3.9.2. No changes needed.
+    - Changed hard-coded list of non-Linux architectures in Build-Depends to
+      "linux-any". Closes: 634628.
+    - openmpi-bin now "Suggests" openmpi-checkpoint instead of recommending it.
+    - Deleted shlibs.local (obsolete).
+    - Updated debian/copyright.
+    - Updated patches.
+    - Substituted "OpenMPI" with "Open MPI" (official writing).
+  * Acknowledge NMU. Thanks to Riku Voipio!
 
- -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 17 May 2011 16:07:48 +0200
+ -- Manuel Prinz <manuel@debian.org>  Tue, 13 Sep 2011 17:06:15 +0200
 
 openmpi (1.4.3-2.1) unstable; urgency=low
 

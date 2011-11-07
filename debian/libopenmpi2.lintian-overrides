@@ -1,0 +1,6 @@
+# Open MPI currently uses it's own (slightly modified) version of libltdl. There
+# is no support for building with libltdl provided by Debian and upstream is not
+# willed to support that (at the moment, at least).
+libopenmpi2 binary: embedded-library usr/lib/openmpi/lib/libmpi.so.1.0.2: ltdl
+libopenmpi2 binary: embedded-library usr/lib/openmpi/lib/libopen-pal.so.3.0.0: ltdl
+libopenmpi2 binary: embedded-library usr/lib/openmpi/lib/libopen-rte.so.3.0.0: ltdl
