@@ -18,8 +18,6 @@ ifneq (,$(findstring $(DEB_HOST_ARCH),$(NUMA_ARCH)))
         NUMA = --with-libnuma=/usr --with-libnuma-libdir=/usr/lib
 endif
 
-# TODO: GridEngine support. Some files do not install correctly.
-
 # Flags for the static build: see bug #502232
 #STATIC_CONFIG_PARAMS = --enable-static
 
@@ -31,6 +29,7 @@ override_dh_auto_configure:
 		$(CHKPT) $(NUMA) $(TORQUE) \
 		--with-devel-headers \
 		--enable-heterogeneous \
+		--with-sge \
 		--disable-vt \
 		--sysconfdir=/etc/openmpi 		\
 		--libdir=\$${prefix}/lib/openmpi/lib	\

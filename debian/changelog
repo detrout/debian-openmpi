@@ -17,8 +17,9 @@ openmpi (1.5.4-1) UNRELEASED; urgency=low
     - Fixed a small bug when calling dh_installdocs. Thanks to Jean-Louis Dupond
       for the patch! Closes: 634899.
   * Acknowledge NMU. Thanks to Riku Voipio!
+  * Builds support for GridEngine. Closes: 626164.
 
- -- Manuel Prinz <manuel@debian.org>  Mon, 07 Nov 2011 21:48:51 +0100
+ -- Manuel Prinz <manuel@debian.org>  Mon, 07 Nov 2011 22:02:58 +0100
 
 openmpi (1.4.3-2.1) unstable; urgency=low
 

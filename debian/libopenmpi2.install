@@ -72,6 +72,7 @@ usr/lib/openmpi/lib/openmpi/mca_pml_v.so
 usr/lib/openmpi/lib/openmpi/mca_pstat_linux.so
 usr/lib/openmpi/lib/openmpi/mca_pubsub_orte.so
 usr/lib/openmpi/lib/openmpi/mca_ras_cm.so
+usr/lib/openmpi/lib/openmpi/mca_ras_gridengine.so
 usr/lib/openmpi/lib/openmpi/mca_ras_slurm.so
 usr/lib/openmpi/lib/openmpi/mca_ras_tm.so
 usr/lib/openmpi/lib/openmpi/mca_rcache_vma.so
