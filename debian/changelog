@@ -14,9 +14,11 @@ openmpi (1.5.4-1) UNRELEASED; urgency=low
     - Updated debian/copyright.
     - Updated patches.
     - Substituted "OpenMPI" with "Open MPI" (official writing).
+    - Fixed a small bug when calling dh_installdocs. Thanks to Jean-Louis Dupond
+      for the patch! Closes: 634899.
   * Acknowledge NMU. Thanks to Riku Voipio!
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 13 Sep 2011 17:06:15 +0200
+ -- Manuel Prinz <manuel@debian.org>  Mon, 07 Nov 2011 21:48:51 +0100
 
 openmpi (1.4.3-2.1) unstable; urgency=low
 
