@@ -1,4 +1,4 @@
-openmpi (1.5.4-1) UNRELEASED; urgency=low
+openmpi (1.5.4-1) experimental; urgency=low
 
   * New upstream release. Closes: #619998.
     - ABI changes, bumped SONAME.
@@ -22,7 +22,7 @@ openmpi (1.5.4-1) UNRELEASED; urgency=low
   * Builds support for GridEngine. Closes: #626164.
   * Enabled support for MPI threads. Closes: #602132.
 
- -- Manuel Prinz <manuel@debian.org>  Wed, 21 Dec 2011 00:18:48 +0100
+ -- Manuel Prinz <manuel@debian.org>  Wed, 21 Dec 2011 00:38:25 +0100
 
 openmpi (1.4.3-2.1) unstable; urgency=low
 
