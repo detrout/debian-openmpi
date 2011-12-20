@@ -35,6 +35,7 @@ override_dh_auto_configure:
 		--with-hwloc=external \
 		--with-libltdl=external \
 		--with-devel-headers \
+		--with-slurm \
 		--with-sge \
 		--enable-heterogeneous \
 		--disable-vt \
