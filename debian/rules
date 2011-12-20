@@ -42,8 +42,6 @@ override_dh_auto_configure:
 override_dh_install:
 # Strip rpath info from all executables and libraries.
 	find debian/tmp/ -type f -perm -+x -a ! -name '*.la' -a ! -name '*.mod' -exec chrpath -d '{}' \;
-# Empty dependency_libs in all .la files.
-	find debian/tmp/ -type f -name '*.la' -exec sed -i "s,^dependency_libs=.*,dependency_libs=''," '{}' \;
 # Rename the compiler and startup wrappers.
 ##	for f in mpic++ mpicc mpiCC mpicxx mpiexec mpif77 mpif90 mpirun opalc++ opalcc ortec++ ortecc orteCC ; do \ ##
 	for f in mpic++ mpicc mpiCC mpicxx mpiexec mpif77 mpif90 mpirun ; do \
