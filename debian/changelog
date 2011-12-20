@@ -19,8 +19,9 @@ openmpi (1.5.4-1) UNRELEASED; urgency=low
     - Dropped .la files (no rdepends with .la files). Closes: #628070.
   * Acknowledge NMU. Thanks to Riku Voipio!
   * Builds support for GridEngine. Closes: #626164.
+  * Enabled support for MPI threads. Closes: #602132.
 
- -- Manuel Prinz <manuel@debian.org>  Tue, 20 Dec 2011 18:56:22 +0100
+ -- Manuel Prinz <manuel@debian.org>  Tue, 20 Dec 2011 19:59:50 +0100
 
 openmpi (1.4.3-2.1) unstable; urgency=low
 

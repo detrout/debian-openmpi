@@ -21,12 +21,17 @@ endif
 # Flags for the static build: see bug #502232
 #STATIC_CONFIG_PARAMS = --enable-static
 
+# Enable MPI thread support (user request, see #602132). Progress threads are known
+# to not work, so we do not enable them until they are supported.
+MPI_THREADS := --with-threads=posix --enable-mpi-threads
+
 %:
 	dh $@ --parallel #--with autotools_dev
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
 		$(CHKPT) $(NUMA) $(TORQUE) \
+		$(MPI_THREADS) \
 		--with-devel-headers \
 		--enable-heterogeneous \
 		--with-sge \
@@ -34,10 +39,6 @@ override_dh_auto_configure:
 		--sysconfdir=/etc/openmpi 		\
 		--libdir=\$${prefix}/lib/openmpi/lib	\
 		--includedir=\$${prefix}/lib/openmpi/include
-
-# Thread support disabled because it's broken, see bug #435581
-#                       --enable-mpi-threads                    \
-#                       --enable-progress-threads
 
 override_dh_install:
 # Strip rpath info from all executables and libraries.
