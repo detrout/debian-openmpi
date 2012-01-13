@@ -26,9 +26,6 @@ usr/lib/openmpi/lib/openmpi/mca_coll_self.so
 usr/lib/openmpi/lib/openmpi/mca_coll_sm.so
 usr/lib/openmpi/lib/openmpi/mca_coll_sync.so
 usr/lib/openmpi/lib/openmpi/mca_coll_tuned.so
-usr/lib/openmpi/lib/openmpi/mca_crcp_bkmrk.so
-usr/lib/openmpi/lib/openmpi/mca_crs_none.so
-usr/lib/openmpi/lib/openmpi/mca_crs_self.so
 usr/lib/openmpi/lib/openmpi/mca_dpm_orte.so
 usr/lib/openmpi/lib/openmpi/mca_errmgr_default.so
 usr/lib/openmpi/lib/openmpi/mca_ess_env.so

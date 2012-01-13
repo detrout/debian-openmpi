@@ -6,4 +6,7 @@ usr/bin/opal-restart
 usr/bin/orte-checkpoint
 usr/bin/orte-restart
 ## BLCR plugin
+usr/lib/openmpi/lib/openmpi/mca_crcp_bkmrk.so
 usr/lib/openmpi/lib/openmpi/mca_crs_blcr.so
+usr/lib/openmpi/lib/openmpi/mca_crs_none.so
+usr/lib/openmpi/lib/openmpi/mca_crs_self.so

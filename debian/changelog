@@ -1,3 +1,10 @@
+openmpi (1.5.4-2) UNRELEASED; urgency=low
+
+  * Moved all CR components from libopenmpi2 to openmpi-checkpoint. Fixes the
+    build issue on ia64.
+
+ -- Manuel Prinz <manuel@debian.org>  Fri, 13 Jan 2012 20:35:30 +0100
+
 openmpi (1.5.4-1) experimental; urgency=low
 
   * New upstream release. Closes: #619998.
