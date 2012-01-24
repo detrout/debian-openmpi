@@ -1,9 +1,15 @@
-openmpi (1.5.4-2) UNRELEASED; urgency=low
+openmpi (1.5.4-2~exp1) experimental; urgency=low
 
+  [ Manuel Prinz ]
   * Moved all CR components from libopenmpi2 to openmpi-checkpoint. Fixes the
     build issue on ia64.
 
- -- Manuel Prinz <manuel@debian.org>  Fri, 13 Jan 2012 20:35:30 +0100
+  [ Jani Monoses ]
+  * Build for armhf as well.
+  * Add armel/armhf specific libopenmpi2.install files.
+  * debian/patches/configure_arm_fix.patch: Fix arm FTBFS.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 24 Jan 2012 16:34:52 +0100
 
 openmpi (1.5.4-1) experimental; urgency=low
 

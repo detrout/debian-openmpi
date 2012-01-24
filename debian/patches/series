@@ -5,3 +5,4 @@ manpage_macros
 #arm_support
 # Link fix is obsolete, since we do not ship .la files anymore
 #openmpi-link-fix
+configure_arm_fix.patch

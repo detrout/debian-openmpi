@@ -7,7 +7,7 @@ ifeq (sparc,$(DEB_HOST_GNU_CPU))
 endif
 
 # BLCR checkpointing support
-BLCR_ARCH := "amd64 armel i386 powerpc"
+BLCR_ARCH := "amd64 armel armhf i386 powerpc"
 ifneq (,$(findstring $(DEB_HOST_ARCH),$(BLCR_ARCH)))
         CHKPT = --with-ft=cr --with-blcr=/usr --with-blcr-libdir=/usr/lib
 endif
