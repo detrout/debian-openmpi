@@ -11,8 +11,8 @@ usr/lib/libmca_common_sm.so.2	usr/lib/libmca_common_sm.so
 usr/lib/libmpi_cxx.so.1		usr/lib/libmpi_cxx.so
 usr/lib/libmpi_f77.so.1		usr/lib/libmpi_f77.so
 usr/lib/libmpi_f90.so.1		usr/lib/libmpi_f90.so
-usr/lib/ompitrace.so.1		usr/lib/libompitrace.so
-usr/lib/libopen-pal.so.2	usr/lib/libopen-pal.so
-usr/lib/libopen-rte.so.2	usr/lib/libopen-rte.so
+usr/lib/libompitrace.so.0	usr/lib/libompitrace.so
+usr/lib/libopen-pal.so.3	usr/lib/libopen-pal.so
+usr/lib/libopen-rte.so.3	usr/lib/libopen-rte.so
 ## Convenience link for header files, see bug #493875
 usr/lib/openmpi/include/	usr/include/openmpi
