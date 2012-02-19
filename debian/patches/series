@@ -6,3 +6,5 @@ manpage_macros
 # Link fix is obsolete, since we do not ship .la files anymore
 #openmpi-link-fix
 configure_arm_fix.patch
+# 658600: Regression of bug 531522
+fix-fakeroot-execution.patch
