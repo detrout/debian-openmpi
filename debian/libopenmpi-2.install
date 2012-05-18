@@ -1,0 +1,13 @@
+## Shared libraries
+usr/lib/openmpi/lib/libmca_common_sm.so.2.0.0
+usr/lib/openmpi/lib/libmpi_cxx.so.1.0.1
+usr/lib/openmpi/lib/libmpi_f77.so.1.0.2
+usr/lib/openmpi/lib/libmpi_f90.so.1.1.0
+usr/lib/openmpi/lib/libmpi.so.1.0.2
+usr/lib/openmpi/lib/libompitrace.so.0.0.0
+usr/lib/openmpi/lib/libopen-pal.so.3.0.0
+usr/lib/openmpi/lib/libopen-rte.so.3.0.0
+## Plugins
+usr/lib/openmpi/lib/openmpi/*.so
+## Other files
+usr/lib/openmpi/lib/mpi.mod
