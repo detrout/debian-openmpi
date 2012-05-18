@@ -32,7 +32,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		$(CHKPT) $(NUMA) $(TORQUE) \
 		$(MPI_THREADS) \
-		--with-hwloc=external \
+		--with-hwloc=/usr/ \
 		--with-libltdl=external \
 		--with-devel-headers \
 		--with-slurm \
@@ -66,7 +66,7 @@ override_dh_install:
 	dh_install
 
 override_dh_fixperms:
-	chmod 0644 debian/libopenmpi2/usr/lib/openmpi/lib/mpi.mod
+	chmod 0644 debian/tmp/usr/lib/openmpi/lib/mpi.mod
 	dh_fixperms
 
 override_dh_installdocs:
@@ -74,9 +74,9 @@ override_dh_installdocs:
 
 #override_dh_shlibdeps:
 #	export LD_LIBRARY_PATH="$(CURDIR)/debian/tmp/usr/lib/openmpi/lib"
-#	dh_shlibdeps -Llibopenmpi2
+#	dh_shlibdeps -Llibopenmpi1.6-2
 
 override_dh_strip:
-	dh_strip --dbg-package=libopenmpi-dbg
+	dh_strip --dbg-package=libopenmpi1.6-dbg
 
 override_dh_auto_test:

@@ -1,18 +1,19 @@
-Source: openmpi
+Source: openmpi1.6
 Section: net
 Priority: extra
 Homepage: http://www.open-mpi.org/
 Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
 Uploaders: Manuel Prinz <manuel@debian.org>, Sylvestre Ledru <sylvestre@debian.org>
 Build-Depends: debhelper (>= 8.0.0~), libibverbs-dev (>= 1.1.1), gfortran, gcc (>= 4:4.1.2), chrpath, quilt, libcr-dev [amd64 armel armhf i386 powerpc], libnuma-dev [amd64 i386 ia64 mips mipsel powerpc], autoconf (>= 2.59), automake1.10, libtool, libltdl-dev, libhwloc-dev, libtorque2-dev
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 
-Package: openmpi-bin
+Package: openmpi1.6-bin
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
-Suggests: gfortran, openmpi-checkpoint [amd64 armel armhf i386 powerpc]
+Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi1.6-common (= ${source:Version})
+Conflicts: openmpi-bin
+Suggests: gfortran, openmpi1.6-checkpoint [amd64 armel armhf i386 powerpc]
 Description: high performance message passing library -- binaries
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -36,13 +37,11 @@ Description: high performance message passing library -- binaries
  .
  This package contains the Open MPI utility programs.
 
-Package: libopenmpi-dev
+Package: libopenmpi1.6-dev
 Section: libdevel
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi2 (= ${binary:Version}), openmpi-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
-Conflicts: openmpi-dev
-Replaces: openmpi-dev, openmpi-bin (<= 1.2.4-0)
-Provides: openmpi-dev
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6-2 (= ${binary:Version}), openmpi1.6-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
+Conflicts: openmpi-dev, libopenmpi-dev, openmpi-bin (<= 1.2.4-0)
 Description: high performance message passing library -- header files
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -53,13 +52,11 @@ Description: high performance message passing library -- header files
  This package contains the header files and compiler wrappers which are needed
  to compile and link programs against libopenmpi.
 
-Package: libopenmpi2
+Package: libopenmpi1.6-2
 Section: libs
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: openmpi-libs0, libopenmpi1
-Replaces: openmpi-libs0, libopenmpi1
-Provides: openmpi-libs0
+Conflicts: openmpi-libs0, libopenmpi1, libopenmpi1.3, libopenmpi2
 Description: high performance message passing library -- shared library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -69,9 +66,10 @@ Description: high performance message passing library -- shared library
  .
  This package contains the Open MPI shared libraries.
 
-Package: openmpi-common
+Package: openmpi1.6-common
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: openmpi-common
 Description: high performance message passing library -- common files
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -81,13 +79,11 @@ Description: high performance message passing library -- common files
  .
  This package contains platform independent files for Open MPI.
 
-Package: openmpi-doc
+Package: openmpi1.6-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc
-Replaces: openmpi-mpidoc
-Provides: openmpi-mpidoc
+Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc, openmpi-doc, openmpi-checkpoint (<< 1.6.4-1)
 Description: high performance message passing library -- man pages
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -98,13 +94,11 @@ Description: high performance message passing library -- man pages
  This package contains man pages describing the Message Passing Interface
  standard.
 
-Package: libopenmpi-dbg
+Package: libopenmpi1.6-dbg
 Section: debug
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${misc:Depends}, openmpi-bin (= ${binary:Version}), libopenmpi2 (= ${binary:Version})
-Conflicts: openmpi-dbg
-Replaces: openmpi-dbg
-Provides: openmpi-dbg
+Depends: ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), libopenmpi1.6-2 (= ${binary:Version})
+Conflicts: openmpi-dbg, libopenmpi-dbg
 Description: high performance message passing library -- debug library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
@@ -114,9 +108,10 @@ Description: high performance message passing library -- debug library
  .
  This package contains debugging symbols for Open MPI.
 
-Package: openmpi-checkpoint
+Package: openmpi1.6-checkpoint
 Architecture: amd64 armel armhf i386 powerpc
-Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-bin (= ${binary:Version}), blcr-util
+Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), blcr-util, libopenmpi1.6-2 (= ${binary:Version})
+Conflicts: openmpi-checkpoint
 Description: high performance message passing library -- checkpoint support
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best

@@ -1,3 +1,24 @@
+openmpi1.6 (1.6-1~exp1) experimental; urgency=low
+
+  * Sync from Ubuntu (which has been uploaded with a new name).
+  * Rename openmpi 1.5 => 1.6
+  * Standards-Version updated to version 3.9.3
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 18 May 2012 17:09:12 +0200
+
+openmpi1.5 (1.5.4-0ubuntu1) precise; urgency=low
+
+  [ Robie Basak ]
+  * Fork new openmpi1.5 package for co-existence with openmpi 1.4
+    (LP: #889644).
+  * Move required plugins from openmpi-checkpoint to libopenmpi1.5-2:
+    - d/control: openmpi-checkpoint now depends on libopenmpi1-5-2
+    - d/libopenmpi1.5-2.install*: switch to wildcard plugin install, drop
+      specific install files for armel and armhf.
+    - d/openmpi-checkpoint.install: Don't install any plugins.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 18 May 2012 17:06:10 +0200
+
 openmpi (1.5.4-2~exp2) experimental; urgency=low
 
   [ Manuel Prinz ]
@@ -6,7 +27,7 @@ openmpi (1.5.4-2~exp2) experimental; urgency=low
   
   [ James Pages ]
   * The checks for FAKEROOT introduced to fix this bug upstream are
-     preceded by a new check that calls stat re-producing the original bug.
+     preceeded by a new check that calls stat re-producing the original bug.
      Re-ordering the checks to ensure that FAKEROOT is detected first
      appears to resolve this issue.
      Closes: #658600.
