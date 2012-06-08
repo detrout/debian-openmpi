@@ -40,7 +40,7 @@ Description: high performance message passing library -- binaries
 Package: libopenmpi1.6-dev
 Section: libdevel
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6-2 (= ${binary:Version}), openmpi1.6-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6 (= ${binary:Version}), openmpi1.6-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
 Conflicts: openmpi-dev, libopenmpi-dev, openmpi-bin (<= 1.2.4-0)
 Description: high performance message passing library -- header files
  Open MPI is a project combining technologies and resources from several other
@@ -52,7 +52,7 @@ Description: high performance message passing library -- header files
  This package contains the header files and compiler wrappers which are needed
  to compile and link programs against libopenmpi.
 
-Package: libopenmpi1.6-2
+Package: libopenmpi1.6
 Section: libs
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -97,7 +97,7 @@ Description: high performance message passing library -- man pages
 Package: libopenmpi1.6-dbg
 Section: debug
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), libopenmpi1.6-2 (= ${binary:Version})
+Depends: ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), libopenmpi1.6 (= ${binary:Version})
 Conflicts: openmpi-dbg, libopenmpi-dbg
 Description: high performance message passing library -- debug library
  Open MPI is a project combining technologies and resources from several other
@@ -110,7 +110,7 @@ Description: high performance message passing library -- debug library
 
 Package: openmpi1.6-checkpoint
 Architecture: amd64 armel armhf i386 powerpc
-Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), blcr-util, libopenmpi1.6-2 (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi1.6-bin (= ${binary:Version}), blcr-util, libopenmpi1.6 (= ${binary:Version})
 Conflicts: openmpi-checkpoint
 Description: high performance message passing library -- checkpoint support
  Open MPI is a project combining technologies and resources from several other

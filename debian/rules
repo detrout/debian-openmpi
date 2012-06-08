@@ -49,14 +49,20 @@ override_dh_install:
 # Rename the compiler and startup wrappers.
 ##	for f in mpic++ mpicc mpiCC mpicxx mpiexec mpif77 mpif90 mpirun opalc++ opalcc ortec++ ortecc orteCC ; do \ ##
 	for f in mpic++ mpicc mpiCC mpicxx mpiexec mpif77 mpif90 mpirun ; do \
-		mv debian/tmp/usr/bin/$${f} debian/tmp/usr/bin/$${f}.openmpi ; \
+		if test -f debian/tmp/usr/bin/$${f}; then \
+			mv debian/tmp/usr/bin/$${f} debian/tmp/usr/bin/$${f}.openmpi ; \
+		fi; \
 	done
 # Rename the compiler wrapper man pages.
 	for f in mpic++ mpicc mpicxx mpiexec mpif77 mpif90 mpirun ; do \
-		mv debian/tmp/usr/share/man/man1/$${f}.1 debian/tmp/usr/share/man/man1/$${f}.openmpi.1 ; \
+		if test -f debian/tmp/usr/share/man/man1/$${f}.1; then \
+			mv debian/tmp/usr/share/man/man1/$${f}.1 debian/tmp/usr/share/man/man1/$${f}.openmpi.1 ; \
+		fi; \
 	done
 # Rename orte-bootproxy.sh to orte-bootproxy
-	mv debian/tmp/usr/bin/orte-bootproxy.sh debian/tmp/usr/bin/orte-bootproxy
+	if test -f debian/tmp/usr/bin/orte-bootproxy.sh; then \
+		mv debian/tmp/usr/bin/orte-bootproxy.sh debian/tmp/usr/bin/orte-bootproxy; \
+	fi
 # Remove dangling symlink(s)
 	rm -f debian/tmp/usr/share/man/man1/mpiCC.1
 	rm -f debian/tmp/usr/share/man/man1/orteCC.1
@@ -73,8 +79,7 @@ override_dh_installdocs:
 	dh_installdocs --all AUTHORS NEWS README
 
 #override_dh_shlibdeps:
-#	export LD_LIBRARY_PATH="$(CURDIR)/debian/tmp/usr/lib/openmpi/lib"
-#	dh_shlibdeps -Llibopenmpi1.6-2
+#	LD_LIBRARY_PATH="$(CURDIR)/debian/tmp/usr/lib/openmpi/lib" dh_shlibdeps  -- --ignore-missing-info
 
 override_dh_strip:
 	dh_strip --dbg-package=libopenmpi1.6-dbg

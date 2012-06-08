@@ -1,10 +1,10 @@
-openmpi1.6 (1.6-1~exp1) experimental; urgency=low
+openmpi1.6 (1.6-1) unstable; urgency=low
 
   * Sync from Ubuntu (which has been uploaded with a new name).
   * Rename openmpi 1.5 => 1.6
   * Standards-Version updated to version 3.9.3
 
- -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 18 May 2012 17:09:12 +0200
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 06 Jun 2012 17:45:07 +0200
 
 openmpi1.5 (1.5.4-0ubuntu1) precise; urgency=low
 
