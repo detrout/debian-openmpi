@@ -8,3 +8,4 @@ manpage_macros
 #configure_arm_fix.patch
 # 658600: Regression of bug 531522
 #fix-fakeroot-execution.patch
+arm_detection.diff

@@ -1,3 +1,10 @@
+openmpi1.6 (1.6-2) unstable; urgency=low
+
+  * Update the detection of armel & armhf (See arm_detection.diff)
+  * Add the dependency on hwloc-dev from libopenmpi1.6-dev (Closes: #677744)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Mon, 25 Jun 2012 13:47:07 +0200
+
 openmpi1.6 (1.6-1) unstable; urgency=low
 
   * Sync from Ubuntu (which has been uploaded with a new name).

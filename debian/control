@@ -40,7 +40,7 @@ Description: high performance message passing library -- binaries
 Package: libopenmpi1.6-dev
 Section: libdevel
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6 (= ${binary:Version}), openmpi1.6-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386]
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6 (= ${binary:Version}), openmpi1.6-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], libhwloc-dev
 Conflicts: openmpi-dev, libopenmpi-dev, openmpi-bin (<= 1.2.4-0)
 Description: high performance message passing library -- header files
  Open MPI is a project combining technologies and resources from several other
