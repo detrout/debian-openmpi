@@ -18,3 +18,23 @@
              ompi_cv_asm_arch="ARM"
              OPAL_ASM_SUPPORT_64BIT=0
              OPAL_ASM_ARM_VERSION=6
+--- openmpi1.6-1.6.back/configure	2012-05-10 17:17:05.000000000 +0200
++++ openmpi1.6-1.6/configure	2012-06-25 15:09:26.727849622 +0200
+@@ -27062,7 +27062,7 @@
+             OMPI_GCC_INLINE_ASSIGN='"bis $31,$31,%0" : "=&r"(ret)'
+             ;;
+ 
+-        armv7*)
++        armv7*|arm-*-linux-gnueabihf)
+             ompi_cv_asm_arch="ARM"
+             OPAL_ASM_SUPPORT_64BIT=1
+             OPAL_ASM_ARM_VERSION=7
+@@ -27074,7 +27074,7 @@
+             OMPI_GCC_INLINE_ASSIGN='"mov %0, #0" : "=&r"(ret)'
+             ;;
+ 
+-        armv6*)
++        armv6*|arm-*-linux-gnueabi)
+             ompi_cv_asm_arch="ARM"
+             OPAL_ASM_SUPPORT_64BIT=0
+             OPAL_ASM_ARM_VERSION=6
