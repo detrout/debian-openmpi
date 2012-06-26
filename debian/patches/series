@@ -9,3 +9,4 @@ manpage_macros
 # 658600: Regression of bug 531522
 #fix-fakeroot-execution.patch
 arm_detection.diff
+fix_orte_default_hostfile_path.diff
