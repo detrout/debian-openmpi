@@ -9,7 +9,7 @@ endif
 # BLCR checkpointing support
 BLCR_ARCH := "amd64 armel armhf i386 powerpc"
 ifneq (,$(findstring $(DEB_HOST_ARCH),$(BLCR_ARCH)))
-        CHKPT = --with-ft=cr --with-blcr=/usr --with-blcr-libdir=/usr/lib
+        CHKPT = --enable-ft-thread --with-ft=cr --with-blcr=/usr --with-blcr-libdir=/usr/lib
 endif
 
 # Memory affinity support
@@ -23,7 +23,7 @@ endif
 
 # Enable MPI thread support (user request, see #602132). Progress threads are known
 # to not work, so we do not enable them until they are supported.
-MPI_THREADS := --with-threads=posix --enable-mpi-threads
+MPI_THREADS := --with-threads=posix --enable-opal-multi-threads
 
 %:
 	dh $@ --parallel #--with autotools_dev
