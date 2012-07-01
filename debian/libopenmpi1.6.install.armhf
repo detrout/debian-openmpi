@@ -1,12 +1,12 @@
 ## Shared libraries
-usr/lib/openmpi/lib/libmca_common_sm.so.2.0.0
+usr/lib/openmpi/lib/libmca_common_sm.so.3.0.0
 usr/lib/openmpi/lib/libmpi_cxx.so.1.0.1
-usr/lib/openmpi/lib/libmpi_f77.so.1.0.2
+usr/lib/openmpi/lib/libmpi_f77.so.1.0.3
 usr/lib/openmpi/lib/libmpi_f90.so.1.1.0
-usr/lib/openmpi/lib/libmpi.so.1.0.2
+usr/lib/openmpi/lib/libmpi.so.1.0.3
 usr/lib/openmpi/lib/libompitrace.so.0.0.0
-usr/lib/openmpi/lib/libopen-pal.so.3.0.0
-usr/lib/openmpi/lib/libopen-rte.so.3.0.0
+usr/lib/openmpi/lib/libopen-pal.so.4.0.0
+usr/lib/openmpi/lib/libopen-rte.so.4.0.0
 ## Plugins
 usr/lib/openmpi/lib/openmpi/libompi_dbg_msgq.so
 usr/lib/openmpi/lib/openmpi/mca_allocator_basic.so
@@ -27,6 +27,7 @@ usr/lib/openmpi/lib/openmpi/mca_coll_sm.so
 usr/lib/openmpi/lib/openmpi/mca_coll_sync.so
 usr/lib/openmpi/lib/openmpi/mca_coll_tuned.so
 usr/lib/openmpi/lib/openmpi/mca_crcp_bkmrk.so
+usr/lib/openmpi/lib/openmpi/mca_crs_blcr.so
 usr/lib/openmpi/lib/openmpi/mca_crs_none.so
 usr/lib/openmpi/lib/openmpi/mca_crs_self.so
 usr/lib/openmpi/lib/openmpi/mca_dpm_orte.so
@@ -46,7 +47,9 @@ usr/lib/openmpi/lib/openmpi/mca_grpcomm_hier.so
 usr/lib/openmpi/lib/openmpi/mca_iof_hnp.so
 usr/lib/openmpi/lib/openmpi/mca_iof_orted.so
 usr/lib/openmpi/lib/openmpi/mca_iof_tool.so
+usr/lib/openmpi/lib/openmpi/mca_io_romio.so
 usr/lib/openmpi/lib/openmpi/mca_maffinity_first_use.so
+usr/lib/openmpi/lib/openmpi/mca_maffinity_hwloc.so
 usr/lib/openmpi/lib/openmpi/mca_mpool_fake.so
 usr/lib/openmpi/lib/openmpi/mca_mpool_rdma.so
 usr/lib/openmpi/lib/openmpi/mca_mpool_sm.so
@@ -57,7 +60,6 @@ usr/lib/openmpi/lib/openmpi/mca_oob_tcp.so
 usr/lib/openmpi/lib/openmpi/mca_osc_pt2pt.so
 usr/lib/openmpi/lib/openmpi/mca_osc_rdma.so
 usr/lib/openmpi/lib/openmpi/mca_paffinity_hwloc.so
-usr/lib/openmpi/lib/openmpi/mca_plm_rshd.so
 usr/lib/openmpi/lib/openmpi/mca_plm_rsh.so
 usr/lib/openmpi/lib/openmpi/mca_plm_slurm.so
 usr/lib/openmpi/lib/openmpi/mca_plm_tm.so
@@ -70,6 +72,7 @@ usr/lib/openmpi/lib/openmpi/mca_pml_v.so
 usr/lib/openmpi/lib/openmpi/mca_pubsub_orte.so
 usr/lib/openmpi/lib/openmpi/mca_ras_cm.so
 usr/lib/openmpi/lib/openmpi/mca_ras_gridengine.so
+usr/lib/openmpi/lib/openmpi/mca_ras_loadleveler.so
 usr/lib/openmpi/lib/openmpi/mca_ras_slurm.so
 usr/lib/openmpi/lib/openmpi/mca_ras_tm.so
 usr/lib/openmpi/lib/openmpi/mca_rcache_vma.so
@@ -89,6 +92,9 @@ usr/lib/openmpi/lib/openmpi/mca_routed_direct.so
 usr/lib/openmpi/lib/openmpi/mca_routed_linear.so
 usr/lib/openmpi/lib/openmpi/mca_routed_radix.so
 usr/lib/openmpi/lib/openmpi/mca_routed_slave.so
+usr/lib/openmpi/lib/openmpi/mca_shmem_mmap.so
+usr/lib/openmpi/lib/openmpi/mca_shmem_posix.so
+usr/lib/openmpi/lib/openmpi/mca_shmem_sysv.so
 usr/lib/openmpi/lib/openmpi/mca_snapc_full.so
 usr/lib/openmpi/lib/openmpi/mca_sysinfo_linux.so
 usr/lib/openmpi/lib/openmpi/mca_topo_unity.so

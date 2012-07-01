@@ -1,5 +1,7 @@
---- openmpi1.6-1.6.back/opal/config/opal_config_asm.m4	2012-05-02 15:04:04.000000000 +0200
-+++ openmpi1.6-1.6/opal/config/opal_config_asm.m4	2012-06-25 13:45:02.505752611 +0200
+Index: openmpi1.6-1.6/opal/config/opal_config_asm.m4
+===================================================================
+--- openmpi1.6-1.6.orig/opal/config/opal_config_asm.m4	2012-06-27 22:09:25.055465878 +0200
++++ openmpi1.6-1.6/opal/config/opal_config_asm.m4	2012-06-27 22:10:54.787463876 +0200
 @@ -900,7 +900,7 @@
              OMPI_GCC_INLINE_ASSIGN='"bis [$]31,[$]31,%0" : "=&r"(ret)'
              ;;
@@ -9,17 +11,19 @@
              ompi_cv_asm_arch="ARM"
              OPAL_ASM_SUPPORT_64BIT=1
              OPAL_ASM_ARM_VERSION=7
-@@ -909,7 +909,7 @@
+@@ -918,7 +918,7 @@
              OMPI_GCC_INLINE_ASSIGN='"mov %0, #0" : "=&r"(ret)'
              ;;
  
--        armv6*)
-+        armv6*|arm-*-linux-gnueabi)
+-        armv5*linux*|armv4*linux*)
++        armv5*linux*|armv4*linux*|arm-*-linux-gnueabi)
+             # uses Linux kernel helpers for some atomic operations
              ompi_cv_asm_arch="ARM"
              OPAL_ASM_SUPPORT_64BIT=0
-             OPAL_ASM_ARM_VERSION=6
---- openmpi1.6-1.6.back/configure	2012-05-10 17:17:05.000000000 +0200
-+++ openmpi1.6-1.6/configure	2012-06-25 15:09:26.727849622 +0200
+Index: openmpi1.6-1.6/configure
+===================================================================
+--- openmpi1.6-1.6.orig/configure	2012-06-27 22:09:25.131465876 +0200
++++ openmpi1.6-1.6/configure	2012-06-27 22:10:24.559464550 +0200
 @@ -27062,7 +27062,7 @@
              OMPI_GCC_INLINE_ASSIGN='"bis $31,$31,%0" : "=&r"(ret)'
              ;;
@@ -29,12 +33,12 @@
              ompi_cv_asm_arch="ARM"
              OPAL_ASM_SUPPORT_64BIT=1
              OPAL_ASM_ARM_VERSION=7
-@@ -27074,7 +27074,7 @@
+@@ -27086,7 +27086,7 @@
              OMPI_GCC_INLINE_ASSIGN='"mov %0, #0" : "=&r"(ret)'
              ;;
  
--        armv6*)
-+        armv6*|arm-*-linux-gnueabi)
+-        armv5*linux*|armv4*linux*)
++        armv5*linux*|armv4*linux*|arm-*-linux-gnueabi)
+             # uses Linux kernel helpers for some atomic operations
              ompi_cv_asm_arch="ARM"
              OPAL_ASM_SUPPORT_64BIT=0
-             OPAL_ASM_ARM_VERSION=6

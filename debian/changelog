@@ -1,3 +1,22 @@
+openmpi1.6 (1.6-4) unstable; urgency=low
+
+  * Update library list for sparc & ia64  
+  * --enable-mpi-threads -> --enable-opal-multi-threads
+  * --enable-ft-thread is needed to have a similar level of checkpointing as 
+    before
+    Thanks to Matthieu Volat for the two last changes
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 01 Jul 2012 14:38:42 +0200
+
+openmpi1.6 (1.6-3) unstable; urgency=low
+
+  * Try another change in the detection of armel (v5 instead of v6)
+  * Fix a problem in the default hostfile with orte. Thanks to Matthieu Volat
+    for the patch
+  * Update lib library for sparc, armhf and armel 
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 27 Jun 2012 22:34:28 +0200
+
 openmpi1.6 (1.6-2) unstable; urgency=low
 
   * Update the detection of armel & armhf (See arm_detection.diff)
