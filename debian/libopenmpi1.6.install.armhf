@@ -47,7 +47,6 @@ usr/lib/openmpi/lib/openmpi/mca_grpcomm_hier.so
 usr/lib/openmpi/lib/openmpi/mca_iof_hnp.so
 usr/lib/openmpi/lib/openmpi/mca_iof_orted.so
 usr/lib/openmpi/lib/openmpi/mca_iof_tool.so
-usr/lib/openmpi/lib/openmpi/mca_io_romio.so
 usr/lib/openmpi/lib/openmpi/mca_maffinity_first_use.so
 usr/lib/openmpi/lib/openmpi/mca_maffinity_hwloc.so
 usr/lib/openmpi/lib/openmpi/mca_mpool_fake.so
@@ -82,8 +81,6 @@ usr/lib/openmpi/lib/openmpi/mca_rmaps_resilient.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_round_robin.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_seq.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_topo.so
-usr/lib/openmpi/lib/openmpi/mca_rmcast_tcp.so
-usr/lib/openmpi/lib/openmpi/mca_rmcast_udp.so
 usr/lib/openmpi/lib/openmpi/mca_rml_ftrm.so
 usr/lib/openmpi/lib/openmpi/mca_rml_oob.so
 usr/lib/openmpi/lib/openmpi/mca_routed_binomial.so

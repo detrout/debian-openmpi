@@ -29,6 +29,7 @@ MPI_THREADS := --with-threads=posix --enable-opal-multi-threads
 	dh $@ --parallel #--with autotools_dev
 
 override_dh_auto_configure:
+	./autogen.sh
 	dh_auto_configure -- \
 		$(CHKPT) $(NUMA) $(TORQUE) \
 		$(MPI_THREADS) \

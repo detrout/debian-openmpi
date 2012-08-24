@@ -1,6 +1,16 @@
+openmpi1.6 (1.6.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Some libs have been removed from upstream: mca_rmcast_tcp.so,
+    mca_rmcast_udp.so & mca_io_romio.so
+  * Remove fix_orte_default_hostfile_path.diff (applied upstream)
+  * Switch to automake as build dependency
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 23 Aug 2012 15:49:02 +0200
+
 openmpi1.6 (1.6-4) unstable; urgency=low
 
-  * Update library list for sparc & ia64  
+  * Update library list for sparc & ia64
   * --enable-mpi-threads -> --enable-opal-multi-threads
   * --enable-ft-thread is needed to have a similar level of checkpointing as 
     before
