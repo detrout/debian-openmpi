@@ -1,4 +1,4 @@
-## Shared libraries
+OB## Shared libraries
 usr/lib/openmpi/lib/libmca_common_sm.so.3.0.0
 usr/lib/openmpi/lib/libmpi_cxx.so.1.0.1
 usr/lib/openmpi/lib/libmpi_f77.so.1.0.3
@@ -43,7 +43,6 @@ usr/lib/openmpi/lib/openmpi/mca_ess_tool.so
 usr/lib/openmpi/lib/openmpi/mca_filem_rsh.so
 usr/lib/openmpi/lib/openmpi/mca_grpcomm_bad.so
 usr/lib/openmpi/lib/openmpi/mca_grpcomm_basic.so
-usr/lib/openmpi/lib/openmpi/mca_grpcomm_hier.so
 usr/lib/openmpi/lib/openmpi/mca_iof_hnp.so
 usr/lib/openmpi/lib/openmpi/mca_iof_orted.so
 usr/lib/openmpi/lib/openmpi/mca_iof_tool.so
