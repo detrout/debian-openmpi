@@ -1,3 +1,11 @@
+openmpi1.6 (1.6.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Add dpkg-dev (>= 1.16.1~) dependency (hardening)
+  * Enable hardening flags (but not taken in account everywhere)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 29 Sep 2012 09:40:58 +0200
+
 openmpi1.6 (1.6.1-1) unstable; urgency=low
 
   * New upstream release

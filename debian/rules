@@ -2,6 +2,9 @@
 
 # export DH_VERBOSE=1
 
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
 ifeq (sparc,$(DEB_HOST_GNU_CPU))
 	CFLAGS += -mcpu=v9
 endif
@@ -33,6 +36,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		$(CHKPT) $(NUMA) $(TORQUE) \
 		$(MPI_THREADS) \
+		--disable-silent-rules \
 		--with-hwloc=/usr/ \
 		--with-libltdl=external \
 		--with-devel-headers \
