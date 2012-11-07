@@ -1,3 +1,11 @@
+openmpi1.6 (1.6.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Fix bashims (Closes: #690929)
+  * Remove mca_pml_crcpw.so on ia64 & sparc
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 07 Nov 2012 11:50:54 +0100
+
 openmpi1.6 (1.6.2-2) unstable; urgency=low
 
   * Remove mca_grpcomm_hier.so on all archs

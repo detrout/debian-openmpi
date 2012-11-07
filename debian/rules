@@ -83,8 +83,8 @@ override_dh_fixperms:
 override_dh_installdocs:
 	dh_installdocs --all AUTHORS NEWS README
 
-#override_dh_shlibdeps:
-#	LD_LIBRARY_PATH="$(CURDIR)/debian/tmp/usr/lib/openmpi/lib" dh_shlibdeps  -- --ignore-missing-info
+override_dh_shlibdeps:
+	LD_LIBRARY_PATH="$(CURDIR)/debian/tmp/usr/lib/openmpi/lib" dh_shlibdeps  -- --ignore-missing-info
 
 override_dh_strip:
 	dh_strip --dbg-package=libopenmpi1.6-dbg

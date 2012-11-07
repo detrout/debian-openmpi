@@ -1,12 +1,12 @@
 ## Shared libraries
 usr/lib/openmpi/lib/libmca_common_sm.so.3.0.0
 usr/lib/openmpi/lib/libmpi_cxx.so.1.0.1
-usr/lib/openmpi/lib/libmpi_f77.so.1.0.3
-usr/lib/openmpi/lib/libmpi_f90.so.1.1.0
-usr/lib/openmpi/lib/libmpi.so.1.0.3
+usr/lib/openmpi/lib/libmpi_f77.so.1.0.6
+usr/lib/openmpi/lib/libmpi_f90.so.3.1.0
+usr/lib/openmpi/lib/libmpi.so.1.0.6
 usr/lib/openmpi/lib/libompitrace.so.0.0.0
-usr/lib/openmpi/lib/libopen-pal.so.4.0.0
-usr/lib/openmpi/lib/libopen-rte.so.4.0.0
+usr/lib/openmpi/lib/libopen-pal.so.4.0.3
+usr/lib/openmpi/lib/libopen-rte.so.4.0.3
 ## Plugins
 usr/lib/openmpi/lib/openmpi/libompi_dbg_msgq.so
 usr/lib/openmpi/lib/openmpi/mca_allocator_basic.so
@@ -60,7 +60,6 @@ usr/lib/openmpi/lib/openmpi/mca_plm_slurm.so
 usr/lib/openmpi/lib/openmpi/mca_plm_tm.so
 usr/lib/openmpi/lib/openmpi/mca_pml_bfo.so
 usr/lib/openmpi/lib/openmpi/mca_pml_cm.so
-usr/lib/openmpi/lib/openmpi/mca_pml_crcpw.so
 usr/lib/openmpi/lib/openmpi/mca_pml_csum.so
 usr/lib/openmpi/lib/openmpi/mca_pml_ob1.so
 usr/lib/openmpi/lib/openmpi/mca_pml_v.so

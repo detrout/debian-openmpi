@@ -10,7 +10,7 @@ usr/share/man/man1/opal_wrapper.1	usr/share/man/man1/ortecc.1
 usr/lib/libmca_common_sm.so.3	usr/lib/libmca_common_sm.so
 usr/lib/libmpi_cxx.so.1		usr/lib/libmpi_cxx.so
 usr/lib/libmpi_f77.so.1		usr/lib/libmpi_f77.so
-usr/lib/libmpi_f90.so.1		usr/lib/libmpi_f90.so
+usr/lib/libmpi_f90.so.3		usr/lib/libmpi_f90.so
 usr/lib/libompitrace.so.0	usr/lib/libompitrace.so
 usr/lib/libopen-pal.so.4	usr/lib/libopen-pal.so
 usr/lib/libopen-rte.so.4	usr/lib/libopen-rte.so
