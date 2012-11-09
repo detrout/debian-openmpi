@@ -1,3 +1,10 @@
+openmpi1.6 (1.6.3-2) unstable; urgency=low
+
+  * Bring back manpages for MPI functions (LP: #1027289)
+  * Remove mca_rml_ftrm.so on ia64 & sparc
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 09 Nov 2012 14:09:11 +0100
+
 openmpi1.6 (1.6.3-1) unstable; urgency=low
 
   * New upstream release

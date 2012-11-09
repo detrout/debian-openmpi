@@ -77,7 +77,6 @@ usr/lib/openmpi/lib/openmpi/mca_rmaps_resilient.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_round_robin.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_seq.so
 usr/lib/openmpi/lib/openmpi/mca_rmaps_topo.so
-usr/lib/openmpi/lib/openmpi/mca_rml_ftrm.so
 usr/lib/openmpi/lib/openmpi/mca_rml_oob.so
 usr/lib/openmpi/lib/openmpi/mca_routed_binomial.so
 usr/lib/openmpi/lib/openmpi/mca_routed_cm.so
