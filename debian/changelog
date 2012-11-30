@@ -1,3 +1,9 @@
+openmpi1.6 (1.6.3-3) unstable; urgency=low
+
+  * Rename manpages to avoid conflicts with mpich2-doc (Closes: #692937)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 16 Nov 2012 17:42:56 +0100
+
 openmpi1.6 (1.6.3-2) unstable; urgency=low
 
   * Bring back manpages for MPI functions (LP: #1027289)

@@ -63,7 +63,15 @@ override_dh_install:
 		if test -f debian/tmp/usr/share/man/man1/$${f}.1; then \
 			mv debian/tmp/usr/share/man/man1/$${f}.1 debian/tmp/usr/share/man/man1/$${f}.openmpi.1 ; \
 		fi; \
+		if test -f debian/tmp/usr/share/man/man1/$${f}.3; then \
+			mv debian/tmp/usr/share/man/man3/$${f}.3 debian/tmp/usr/share/man/man1/$${f}.openmpi.3 ; \
+		fi; \
 	done
+	cd debian/tmp/usr/share/man/man3; \
+	for f in *.3; do \
+		mv $$f $$(echo $$f|sed -e "s|\.3|.openmpi.3|g"); \
+	done; \
+
 # Rename orte-bootproxy.sh to orte-bootproxy
 	if test -f debian/tmp/usr/bin/orte-bootproxy.sh; then \
 		mv debian/tmp/usr/bin/orte-bootproxy.sh debian/tmp/usr/bin/orte-bootproxy; \
