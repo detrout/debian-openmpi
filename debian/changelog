@@ -1,3 +1,9 @@
+openmpi1.6 (1.6.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 22 Feb 2013 09:27:09 +0100
+
 openmpi1.6 (1.6.3-3) unstable; urgency=low
 
   * Rename manpages to avoid conflicts with mpich2-doc (Closes: #692937)
