@@ -1,3 +1,10 @@
+openmpi1.6 (1.6.4-2) unstable; urgency=low
+
+  * Inconsistency in debian/libopenmpi1.6.install.
+    Thanks Hiroyuki Yamamoto (Closes: #704936)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 11 Apr 2013 16:02:35 +0200
+
 openmpi1.6 (1.6.4-1) unstable; urgency=low
 
   * New upstream release
