@@ -83,7 +83,7 @@ Package: openmpi-doc
 Section: doc
 Architecture: all
 Depends: ${misc:Depends}
-Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc, openmpi-doc, openmpi-checkpoint (<< .4-1)
+Conflicts: mpi-doc, lam-mpidoc, lam4-dev, openmpi-mpidoc, openmpi-doc, openmpi-checkpoint (<< 1.4-1)
 Description: high performance message passing library -- man pages
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
