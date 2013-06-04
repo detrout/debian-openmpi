@@ -1,3 +1,10 @@
+openmpi (1.6.4-3~exp1) experimental; urgency=low
+
+  * Upload the 1.6 release over the 1.4
+    Note that this will require a transition
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 04 Jun 2013 17:16:16 +0200
+
 openmpi1.6 (1.6.4-2) unstable; urgency=low
 
   * Inconsistency in debian/libopenmpi1.6.install.
