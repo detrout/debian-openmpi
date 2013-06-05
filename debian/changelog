@@ -1,4 +1,4 @@
-openmpi (1.6.4-+1~exp1) experimental; urgency=low
+openmpi (1.6.4+-1~exp1) experimental; urgency=low
 
   * Upload the 1.6 release over the 1.4
     Note that this will require a transition
