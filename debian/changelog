@@ -2,6 +2,8 @@ openmpi (1.6.4-3~exp1) experimental; urgency=low
 
   * Upload the 1.6 release over the 1.4
     Note that this will require a transition
+  * Standards-Version updated to 3.9.4
+  * Add libfakeroot path to the LD_LIBRARY_PATH
 
  -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 04 Jun 2013 17:16:16 +0200
 
