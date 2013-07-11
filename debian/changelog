@@ -1,3 +1,10 @@
+openmpi (1.6.5-1~exp2) experimental; urgency=low
+
+  * quilt as dependency is not necessary
+  * Limit the usage of libibverbs-dev on Linux kernels
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 11 Jul 2013 09:36:23 +0200
+
 openmpi (1.6.5-1~exp1) experimental; urgency=low
 
   * New upstream release
