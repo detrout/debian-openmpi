@@ -1,3 +1,9 @@
+openmpi (1.6.5-1) unstable; urgency=low
+
+  * Upload to unstable (will need a transition)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 15 Aug 2013 08:55:11 +0200
+
 openmpi (1.6.5-1~exp2) experimental; urgency=low
 
   * quilt as dependency is not necessary
