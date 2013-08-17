@@ -1,3 +1,11 @@
+openmpi (1.6.5-2) unstable; urgency=low
+
+  * Enable the test suite of OpenMPI. Thanks to Michael Banck for doing it.
+    (Closes: 719896)
+  * Update of the HURD port (Closes: #719797)
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 17 Aug 2013 19:35:24 +0200
+
 openmpi (1.6.5-1) unstable; urgency=low
 
   * Upload to unstable (will need a transition)

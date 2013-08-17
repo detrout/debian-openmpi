@@ -1,8 +1,8 @@
 Description: Fix build problems on hurd-i386
  This patch allows Open MPI to build on Debian GNU/HURD.
-Author: Pino Toscano <pino@kde.org>
+Author: Pino Toscano <pino@debian.org>
 Forwarded: yes
-Last-Update: 2010-07-20
+Last-Update: 2013-08-15
 
 --- a/ompi/runtime/ompi_mpi_abort.c
 +++ b/ompi/runtime/ompi_mpi_abort.c
@@ -98,7 +98,7 @@ Last-Update: 2010-07-20
          }
 --- a/opal/util/stacktrace.c
 +++ b/opal/util/stacktrace.c
-@@ -444,8 +444,12 @@
+@@ -437,8 +437,12 @@
      mca_base_param_lookup_string (param, &string_value);
  
      memset(&act, 0, sizeof(act));
@@ -113,7 +113,7 @@ Last-Update: 2010-07-20
  #else
 --- a/orte/mca/odls/base/odls_base_default_fns.c
 +++ b/orte/mca/odls/base/odls_base_default_fns.c
-@@ -1338,8 +1338,13 @@
+@@ -1370,8 +1370,13 @@
      orte_local_rank_t local_rank;
      orte_node_rank_t node_rank;
      char *pathenv = NULL, *mpiexec_pathenv = NULL;
@@ -127,7 +127,19 @@ Last-Update: 2010-07-20
      char **argvptr;
      char *full_search;
      char **argvsav=NULL;
-@@ -1593,7 +1598,11 @@
+@@ -1388,7 +1393,11 @@
+      * bouncing around as we execute various apps, but we will always return
+      * to this place as our default directory
+      */
++#if !defined(MAXPATHLEN) && defined(__GLIBC__)
++    basedir = get_current_dir_name();
++#else
+     getcwd(basedir, sizeof(basedir));
++#endif
+ 
+     /* find the jobdat for this job */
+     jobdat = NULL;
+@@ -1621,7 +1630,11 @@
           * again not match getcwd! This is beyond our control - we are only
           * ensuring they start out matching.
           */
@@ -139,7 +151,7 @@ Last-Update: 2010-07-20
          opal_setenv("PWD", dir, true, &app->env);
          
          /* Search for the OMPI_exec_path and PATH settings in the environment. */
-@@ -2090,6 +2099,10 @@
+@@ -2118,6 +2131,10 @@
   GETOUT:
      opal_condition_signal(&orte_odls_globals.cond);
      OPAL_THREAD_UNLOCK(&orte_odls_globals.mutex);
@@ -152,16 +164,27 @@ Last-Update: 2010-07-20
  
 --- a/orte/orted/orted_main.c
 +++ b/orte/orted/orted_main.c
-@@ -227,7 +227,7 @@
+@@ -228,7 +228,8 @@
      int ret = 0;
      int fd;
      opal_cmd_line_t *cmd_line = NULL;
 -    char log_file[PATH_MAX];
 +    char *log_file = NULL;
++    size_t log_file_len;
      char *jobidstring;
      char *rml_uri;
      int i;
-@@ -489,6 +489,7 @@
+@@ -482,13 +483,16 @@
+         }
+ 
+         /* define a log file name in the session directory */
+-        snprintf(log_file, PATH_MAX, "output-orted-%s-%s.log",
++        log_file_len = 13 + strlen(jobidstring) + 1 + strlen(orte_process_info.nodename) + 4 + 1;
++        log_file = malloc(log_file_len);
++        snprintf(log_file, log_file_len, "output-orted-%s-%s.log",
+                  jobidstring, orte_process_info.nodename);
+         log_path = opal_os_path(false,
+                                 orte_process_info.tmpdir_base,
                                  orte_process_info.top_session_dir,
                                  log_file,
                                  NULL);
@@ -184,3 +207,70 @@ Last-Update: 2010-07-20
      
      /* If we want to chdir and the chdir fails (for any reason -- such
         as if the dir doesn't exist, it isn't a dir, we don't have
+--- a/opal/mca/pstat/darwin/configure.m4
++++ b/opal/mca/pstat/darwin/configure.m4
+@@ -23,9 +23,9 @@
+ # -----------------------------------------------------------
+ AC_DEFUN([MCA_pstat_darwin_CONFIG],[
+     OMPI_VAR_SCOPE_PUSH([paff_darwin_happy])
+-    # check to see if we have <mach/mach_host.h>
++    # check to see if we have <mach/clock.h>
+     # as this is a Darwin-specific thing
+-    AC_CHECK_HEADER([mach/mach_host.h], [paff_darwin_happy=yes], [paff_darwin_happy=no])
++    AC_CHECK_HEADER([mach/clock.h], [paff_darwin_happy=yes], [paff_darwin_happy=no])
+ 
+     AS_IF([test "$paff_darwin_happy" = "yes"], [$1], [$2])
+     OMPI_VAR_SCOPE_POP
+--- a/opal/mca/sysinfo/darwin/configure.m4
++++ b/opal/mca/sysinfo/darwin/configure.m4
+@@ -12,9 +12,9 @@
+ # -----------------------------------------------------------
+ AC_DEFUN([MCA_sysinfo_darwin_CONFIG],[
+     OMPI_VAR_SCOPE_PUSH([sysinfo_darwin_happy])
+-    # check to see if we have <mach/mach_host.h>
++    # check to see if we have <mach/clock.h>
+     # as this is a Darwin-specific thing
+-    AC_CHECK_HEADER([mach/mach_host.h], [sysinfo_darwin_happy=yes], [sysinfo_darwin_happy=no])
++    AC_CHECK_HEADER([mach/clock.h], [sysinfo_darwin_happy=yes], [sysinfo_darwin_happy=no])
+ 
+     AS_IF([test "$sysinfo_darwin_happy" = "yes"], [$1], [$2])
+     OMPI_VAR_SCOPE_POP
+--- a/opal/mca/shmem/mmap/shmem_mmap_module.c
++++ b/opal/mca/shmem/mmap/shmem_mmap_module.c
+@@ -61,6 +61,10 @@
+ 
+ /* for tons of debug output: -mca shmem_base_verbose 70 */
+ 
++#ifndef MAXHOSTNAMELEN
++# define MAXHOSTNAMELEN 256
++#endif
++
+ /* ////////////////////////////////////////////////////////////////////////// */
+ /*local functions */
+ /* local functions */
+--- a/opal/mca/shmem/posix/shmem_posix_common_utils.h
++++ b/opal/mca/shmem/posix/shmem_posix_common_utils.h
+@@ -45,6 +45,10 @@
+ OPAL_DECLSPEC extern int shmem_posix_shm_open(char *posix_file_name_buff,
+                                               size_t size);
+ 
++#ifndef MAXHOSTNAMELEN
++# define MAXHOSTNAMELEN 256
++#endif
++
+ END_C_DECLS
+ 
+ #endif /* OPAL_SHMEM_POSIX_COMMON_UTILS_H */
+--- a/opal/mca/shmem/sysv/shmem_sysv_module.c
++++ b/opal/mca/shmem/sysv/shmem_sysv_module.c
+@@ -65,6 +65,10 @@
+ 
+ /* for tons of debug output: -mca shmem_base_verbose 70 */
+ 
++#ifndef MAXHOSTNAMELEN
++# define MAXHOSTNAMELEN 256
++#endif
++
+ /* ////////////////////////////////////////////////////////////////////////// */
+ /* local functions */
+ static int

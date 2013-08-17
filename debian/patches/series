@@ -10,3 +10,4 @@ manpage_macros
 #fix-fakeroot-execution.patch
 arm_detection.diff
 fix-bashims.diff
+fix-testsuite-compile
