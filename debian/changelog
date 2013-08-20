@@ -1,3 +1,12 @@
+openmpi (1.6.5-3) unstable; urgency=low
+
+  * Increase the priority of the libopenmpi-dev package to make sure OpenMPI
+    is used before mpich. Otherwise, it causes issues like:
+    «PKGBUILDDIR»/./src/mpi.c:143: undefined reference to `ompi_mpi_comm_world'
+    «PKGBUILDDIR»/./src/mpi.c:143: undefined reference to `ompi_mpi_double'
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 20 Aug 2013 13:39:25 +0200
+
 openmpi (1.6.5-2) unstable; urgency=low
 
   * Update of the HURD port (Closes: #719797)
