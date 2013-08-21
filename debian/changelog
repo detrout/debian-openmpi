@@ -1,3 +1,9 @@
+openmpi (1.6.5-4) unstable; urgency=low
+
+  * Fix again the HURD build. Thanks to Pino Toscano (Closes: #720395)
+
+ --
+
 openmpi (1.6.5-3) unstable; urgency=low
 
   * Increase the priority of the libopenmpi-dev package to make sure OpenMPI
