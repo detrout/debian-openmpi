@@ -1,8 +1,10 @@
 openmpi (1.6.5-4) unstable; urgency=low
 
   * Fix again the HURD build. Thanks to Pino Toscano (Closes: #720395)
+  * orte_snapc manpage has moved from openmpi-checkpoint to openmpi-doc
+    (Closes: #717978)
 
- --
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 28 Aug 2013 08:54:09 +0200
 
 openmpi (1.6.5-3) unstable; urgency=low
 
