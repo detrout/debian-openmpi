@@ -63,6 +63,8 @@ Section: libs
 Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: openmpi-libs0, libopenmpi1, libopenmpi1.3, libopenmpi2
+Replaces: openmpi-checkpoint (<< 1.6.5-1)
+Breaks: openmpi-checkpoint (<< 1.6.5-1)
 Description: high performance message passing library -- shared library
  Open MPI is a project combining technologies and resources from several other
  projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in order to build the best
