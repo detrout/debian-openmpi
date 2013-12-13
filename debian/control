@@ -10,13 +10,13 @@ Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 8.0.0~),
  libnuma-dev [amd64 i386 ia64 mips mipsel mipsn32 mipsn32el mips64 mips64el powerpc], autoconf (>= 2.59),
  automake
 Build-Conflicts: libopenmpi1.3
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://www.open-mpi.org/
 Vcs-Svn: svn://svn.debian.org/svn/pkg-openmpi/openmpi/trunk/
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-openmpi/openmpi/trunk/
 
 Package: openmpi-bin
-Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el
+Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el mips mipsel
 Depends: ${shlibs:Depends}, ${misc:Depends}, openmpi-common (= ${source:Version})
 Conflicts: openmpi-bin
 Suggests: gfortran, openmpi-checkpoint [amd64 armel armhf i386 powerpc]
@@ -45,7 +45,7 @@ Description: high performance message passing library -- binaries
 
 Package: libopenmpi-dev
 Section: libdevel
-Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el
+Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el mips mipsel
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenmpi1.6 (= ${binary:Version}), openmpi-common (= ${source:Version}), libibverbs-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], libhwloc-dev
 Conflicts: openmpi-dev, libopenmpi-dev, openmpi-bin (<= 1.2.4-0)
 Description: high performance message passing library -- header files
@@ -60,7 +60,7 @@ Description: high performance message passing library -- header files
 
 Package: libopenmpi1.6
 Section: libs
-Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el
+Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el mips mipsel
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Conflicts: openmpi-libs0, libopenmpi1, libopenmpi1.3, libopenmpi2
 Replaces: openmpi-checkpoint (<< 1.6.5-1)
@@ -106,7 +106,7 @@ Description: high performance message passing library -- man pages
 
 Package: libopenmpi1.6-dbg
 Section: debug
-Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el
+Architecture: alpha amd64 armel armhf i386 ia64 powerpc powerpcspe ppc64 sparc sparc64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 mips64 mips64el mips mipsel
 Depends: ${misc:Depends}, openmpi-bin (= ${binary:Version}), libopenmpi1.6 (= ${binary:Version})
 Conflicts: openmpi-dbg, libopenmpi-dbg
 Description: high performance message passing library -- debug library

@@ -2,7 +2,10 @@ openmpi (1.6.5-6) unstable; urgency=low
 
   * Add the support of mips64 & mips64el. (Closes: #727141)
     Thanks to YunQiang Su
+  * Also support of mips & mipsel. Thanks to Jurica Stanojkovic
+    (Closes: #732027)
   * Fix an upgrade issue (Closes: #730622)
+  * Standards-Version updated to 3.9.5
 
  -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 04 Dec 2013 18:14:59 +0100
 

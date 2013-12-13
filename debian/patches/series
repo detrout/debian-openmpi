@@ -11,3 +11,6 @@ manpage_macros
 arm_detection.diff
 fix-bashims.diff
 fix-testsuite-compile
+mips-detection.diff
+mips-support-upstream-1.7.3.diff
+mips-support-fix.diff
