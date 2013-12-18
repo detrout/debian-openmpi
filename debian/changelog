@@ -1,3 +1,16 @@
+openmpi (1.6.5-7) unstable; urgency=low
+
+  [ Logan Rosen ]
+  * Bring over Ubuntu changes from openmpi1.6:
+    - Call dh_shlibdeps with -lfoo to not break fakeroot.
+    - Add basic AArch64 support (Leif Lindholm).
+    - Use and install AArch64 header files, not ARM header files.
+
+  [ Adam Conrad ]
+  * Remove unnecessary fakeroot from dh_shlibdeps call.
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 18 Dec 2013 12:10:47 -0500
+
 openmpi (1.6.5-6) unstable; urgency=low
 
   * Add the support of mips64 & mips64el. (Closes: #727141)
