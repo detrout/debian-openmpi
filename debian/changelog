@@ -1,3 +1,16 @@
+openmpi (1.6.5-8) unstable; urgency=low
+
+  [ Dimitri John Ledkov ]
+  * Set ppc64el gnu-type to use ppc atomics code-path.
+  * Attempt ppc64el build.
+
+  [ Sylvestre Ledru ]
+  * Sync changes from Ubuntu (it would be nice to have contribution
+    directly in Debian btw)
+  * Fix a link issue on libopen-pal.so (Closes: #733086)
+  
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 26 Dec 2013 14:29:07 +0100
+
 openmpi (1.6.5-7) unstable; urgency=low
 
   [ Logan Rosen ]
