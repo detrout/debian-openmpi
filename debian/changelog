@@ -2,6 +2,8 @@ openmpi (1.6.5-9) UNRELEASED; urgency=low
 
   * Install pkg-config files (*.pc) into /usr/lib/pkgconfig. Thanks to
     Gilles Filippini for the patch! Closes: #734096.
+  * Fix two incorrect soname links. Thanks to Andreas Beckmann for the
+    patch! Closes: #736675.
 
  -- Manuel Prinz <manuel@debian.org>  Sat, 01 Mar 2014 18:25:02 +0100
 
