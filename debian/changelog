@@ -1,11 +1,44 @@
-openmpi (1.6.5-9) UNRELEASED; urgency=low
+openmpi (1.6.5-11) unstable; urgency=medium
 
-  * Install pkg-config files (*.pc) into /usr/lib/pkgconfig. Thanks to
-    Gilles Filippini for the patch! Closes: #734096.
-  * Fix two incorrect soname links. Thanks to Andreas Beckmann for the
-    patch! Closes: #736675.
+  * Build against gcc,gfortran5 for transition. 
 
- -- Manuel Prinz <manuel@debian.org>  Sat, 01 Mar 2014 18:25:02 +0100
+ -- Alastair McKinstry <mckinstry@debian.org>  Mon, 10 Aug 2015 07:55:56 +0100
+
+openmpi (1.6.5-10) unstable; urgency=medium
+
+  * Acknowledge taking maintainership. Closes: #766859.
+  * Ack. patch from Willi Mann that fixes FTBFS. Closes: #782653.
+  * Move to debhelper compatabililty level 9.
+  * Use 'xz' compression
+  * Depend on libibverbs >= 1.1.7 for libibverbs ABI change (From Ubuntu)
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Mon, 22 Jun 2015 18:56:29 +0100
+
+openmpi (1.6.5-9.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * libopenmpi1.6: Fix two incorrect soname links.  (Closes: #736675)
+  * openmpi-common: Set Multi-Arch: foreign.  (Closes: #769378)
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 25 Nov 2014 12:42:38 +0100
+
+openmpi (1.6.5-9.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Disable torque support (see #767411).
+
+ -- Julien Cristau <jcristau@debian.org>  Fri, 14 Nov 2014 17:57:11 +0100
+
+openmpi (1.6.5-9) unstable; urgency=medium
+
+  * Add myself as uploader.
+  * Standards-Version: 3.9.6; no changes required.
+  * Rebuild against lastest gfortran. Closes: #647908, #675115.
+  * Patch for mpi.pc support. Closes: #752785.
+  * Patch from Michael Cree to fix bad atomic ops on Alpha that
+    causes mpi4py to segfault. Closes: #754524.
+
+ -- Alastair McKinstry <mckinstry@debian.org>  Tue, 28 Oct 2014 11:07:44 +0000
 
 openmpi (1.6.5-8) unstable; urgency=low
 

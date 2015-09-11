@@ -32,4 +32,4 @@ usr/lib/openmpi/include/*
 ## .so symlinks
 usr/lib/openmpi/lib/*.so
 ## pkg-config .pc files
-usr/lib/openmpi/lib/pkgconfig/*.pc usr/lib/pkgconfig
+usr/lib/openmpi/lib/pkgconfig/*.pc
