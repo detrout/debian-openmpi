@@ -1,6 +1,7 @@
 openmpi (1.8.8-1~) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update watch file.
 
  -- Diane Trout <diane@debian.org>  Tue, 06 Oct 2015 14:51:35 -0700
 
