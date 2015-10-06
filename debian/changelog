@@ -1,3 +1,9 @@
+openmpi (1.8.8-1~) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Diane Trout <diane@debian.org>  Tue, 06 Oct 2015 14:51:35 -0700
+
 openmpi (1.6.5-11) unstable; urgency=medium
 
   * Build against gcc,gfortran5 for transition. 
